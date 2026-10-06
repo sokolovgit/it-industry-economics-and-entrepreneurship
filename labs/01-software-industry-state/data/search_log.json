@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-04",
+  "years": [
+    "2022-01-01",
+    "2026-12-31"
+  ],
+  "queries": {
+    "S1": {
+      "openalex_query": "(\"GitHub Copilot\" OR \"AI coding assistant\" OR \"AI pair programmer\" OR \"AI tools\" OR \"AI assistance\" OR \"generative AI\") AND (\"developer productivity\" OR \"programmer productivity\" OR \"software development productivity\")",
+      "openalex": 254,
+      "arxiv_query": "(abs:\"GitHub Copilot\" OR abs:\"AI coding assistant\" OR abs:\"AI pair programmer\" OR abs:\"AI tools\") AND abs:\"developer productivity\"",
+      "arxiv": 25
+    },
+    "S2": {
+      "openalex_query": "(\"generative AI\" OR \"large language model\" OR \"LLM\" OR \"Copilot\") AND (\"software development\" OR \"software engineering\") AND (\"randomized controlled trial\" OR \"field experiment\" OR \"controlled experiment\")",
+      "openalex": 143,
+      "arxiv_query": "(abs:\"large language model\" OR abs:\"Copilot\" OR abs:\"generative AI\") AND abs:\"software development\" AND (abs:\"randomized controlled trial\" OR abs:\"field experiment\" OR abs:\"controlled experiment\")",
+      "arxiv": 9
+    },
+    "S3": {
+      "openalex_query": "(\"GitHub Copilot\" OR \"AI coding assistant\" OR \"AI-generated code\" OR \"LLM-generated code\") AND (\"code quality\" OR \"defects\" OR \"bugs\" OR \"security vulnerabilities\")",
+      "openalex": 709,
+      "arxiv_query": "(abs:\"GitHub Copilot\" OR abs:\"AI coding assistant\" OR abs:\"AI-generated code\") AND (abs:\"code quality\" OR abs:\"security\" OR abs:\"bugs\")",
+      "arxiv": 142
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "stackoverflow": {
+    "source": "Stack Overflow Developer Survey 2023–2025",
+    "years": [2023, 2024, 2025],
+    "using": [43.8, 61.8, 78.5],
+    "using_or_planning": [69.2, 75.6, 83.8],
+    "trust": [42.2, 43.0, 32.7],
+    "distrust": [27.2, 30.4, 45.7],
+    "favorable": [76.3, 72.0, 59.7]
+  },
+  "dora": {"source": "DORA 2024, DORA 2025", "years": [2024, 2025], "ai_use": [75.9, 90.0]},
+  "jetbrains": {"source": "JetBrains State of Developer Ecosystem 2025; AI Pulse 2026", "years": [2025, 2026], "ai_use": [85.0, 90.0]},
+  "gitclear": {
+    "source": "GitClear AI Copilot Code Quality 2025",
+    "years": [2020, 2021, 2022, 2023, 2024],
+    "moved": [24.1, 24.8, 20.5, 15.8, 9.5],
+    "copy_pasted": [8.3, 8.4, 9.4, 10.6, 12.3],
+    "churn": [3.1, 3.3, 3.3, 4.5, 5.7]
+  },
+  "dora2024_per_25pct_adoption": {
+    "documentation_quality": 7.5, "code_quality": 3.4, "code_review_speed": 3.1,
+    "productivity": 2.1, "delivery_throughput": -1.5, "delivery_stability": -7.2
+  },
+  "industry_effects": {
+    "DORA2024": {"label": "DORA 2024 (самооцінка, на +25% використання)", "benefit": 2.1},
+    "Uplevel2024": {"label": "Uplevel 2024 (≈800 розробників)", "benefit": 0.0}
+  },
+  "prices_usd_month": {
+    "GitHub Copilot Pro (2022)": 10,
+    "GitHub Copilot Business (2023)": 19,
+    "GitHub Copilot Enterprise (2024)": 39,
+    "Cursor Teams": 40,
+    "Claude Max (від)": 100
+  },
+  "salary_usd_month": {
+    "source": "DOU, зарплати розробників – літо 2026",
+    "middle_median": 2500,
+    "all_median": 3500,
+    "senior_median": 4500
+  }
+}
