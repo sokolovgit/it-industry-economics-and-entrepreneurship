@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Економічна ефективність AI-асистентів у розробці ПЗ – Економіка IT-індустрії та підприємництво</title>
+<link rel="stylesheet" href="shared/theme.css">
+<style>
+  .figure__img { background: #fff; border-radius: 0; }
+  .figure__img img { object-fit: contain; }
+  .body.fill { flex: 1; min-height: 0; display: flex; }
+  .body.fill > * { flex: 1; }
+  .cols.split { grid-template-columns: 2.4fr 1fr; }
+  .n { color: var(--ink-mute); font-size: .85em; white-space: nowrap; }
+  .formula { font-size: 24px; margin: 0 0 8px; }
+  .cols > table.tbl { align-self: start; }
+  .note { font-size: 16px; color: var(--ink-mute); margin-top: 14px; }
+</style>
+</head>
+<body class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <p class="eyebrow">КПІ ім. Ігоря Сікорського · Практична робота № 1</p>
+  <h1 class="hero">Економічна ефективність<br>AI-асистентів у розробці ПЗ</h1>
+  <div class="stack" style="margin-top:40px">
+    <p class="lead">Систематичний огляд літератури за 2022–2026 роки</p>
+  </div>
+  <p class="byline">Виконав: <b>Соколов Олександр</b>, студент групи ІП-33<br>Дисципліна «Економіка IT-індустрії та підприємництво»</p>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Аспект і показники</h1>
+  <div class="body">
+    <div class="cols">
+      <ul class="bullets">
+        <li>AI-асистентами користуються 44% розробників у 2023 році і 78% у 2025 році <span class="n">[1, 2]</span></li>
+        <li>Основна стаття витрат IT-компанії – зарплата розробників</li>
+        <li>Оцінки ефекту від AI в різних дослідженнях сильно відрізняються</li>
+      </ul>
+      <div class="kv" style="--k:200px">
+        <div class="kv__row"><div class="kv__k">Продуктивність</div><div class="kv__v">зміна часу задачі, обсягу роботи</div></div>
+        <div class="kv__row"><div class="kv__k">Якість</div><div class="kv__v">вразливості, дефекти, складність</div></div>
+        <div class="kv__row"><div class="kv__k">Поширеність</div><div class="kv__v">частка розробників з AI</div></div>
+        <div class="kv__row"><div class="kv__k">Вартість</div><div class="kv__v">ціна ліцензії, зарплата</div></div>
+        <div class="kv__row"><div class="kv__k">Окупність</div><div class="kv__v">точка беззбитковості</div></div>
+      </div>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Дослідницькі питання</h1>
+  <div class="body">
+    <div class="kv" style="--k:90px">
+      <div class="kv__row"><div class="kv__k">ДП1</div><div class="kv__v">Як AI-асистенти змінюють продуктивність розробників?</div></div>
+      <div class="kv__row"><div class="kv__k">ДП2</div><div class="kv__v">Як вони впливають на якість і безпеку коду?</div></div>
+      <div class="kv__row"><div class="kv__k">ДП3</div><div class="kv__v">Як змінювались поширеність, довіра і ціни у 2022–2026 роках?</div></div>
+      <div class="kv__row"><div class="kv__k">ДП4</div><div class="kv__v">За яких умов AI-асистент окупається?</div></div>
+      <div class="kv__row"><div class="kv__k">ДП5</div><div class="kv__v">Чим пояснюється розбіжність оцінок?</div></div>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Методика</h1>
+  <div class="body">
+    <div class="cols">
+      <ol class="steps">
+        <li>Пошук в OpenAlex і arXiv за трьома пошуковими рядками</li>
+        <li>Відбір за критеріями: назва, анотація, повний текст</li>
+        <li>Оцінка якості досліджень за 5 критеріями, до 5 балів</li>
+        <li>Аналіз показників і розрахунок окупності</li>
+      </ol>
+      <div>
+        <table class="tbl">
+          <thead><tr><th>Рядок</th><th class="num">OpenAlex</th><th class="num">arXiv</th></tr></thead>
+          <tbody>
+            <tr><td>S1 продуктивність</td><td class="num">254</td><td class="num">25</td></tr>
+            <tr><td>S2 експерименти</td><td class="num">143</td><td class="num">9</td></tr>
+            <tr><td>S3 якість коду</td><td class="num">709</td><td class="num">142</td></tr>
+            <tr><td>Разом</td><td class="num">1106</td><td class="num">176</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Процедура Кітченхем і Чартерс [3], схема PRISMA 2020 [4]</p>
+      </div>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Результати відбору</h1>
+  <div class="body fill">
+    <div class="cols split">
+      <div class="figure">
+        <div class="figure__img"><img src="img/00_blockscheme.png" alt="Схема PRISMA"></div>
+        <p class="figure__cap">Схема відбору досліджень</p>
+      </div>
+      <ul class="bullets">
+        <li>843 унікальні публікації</li>
+        <li>14 досліджень з пошуку і 4 зі списків літератури</li>
+        <li>7 галузевих звітів для річних показників</li>
+        <li>Середня оцінка якості 3.8 з 5</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Поширеність AI-інструментів</h1>
+  <div class="body fill">
+    <div class="cols split">
+      <div class="figure">
+        <div class="figure__img"><img src="img/02_adoption.png" alt="Поширеність і довіра"></div>
+        <p class="figure__cap">Stack Overflow [1, 2, 24], DORA [25, 26], JetBrains [27, 28]</p>
+      </div>
+      <ul class="bullets">
+        <li>У 2025 році AI використовують 78–90% розробників</li>
+        <li>Не довіряють точності AI 46% проти 27% у 2023 році</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Вплив на продуктивність</h1>
+  <div class="body fill">
+    <div class="cols split">
+      <div class="figure">
+        <div class="figure__img"><img src="img/01_effects.png" alt="Ефекти для продуктивності"></div>
+        <p class="figure__cap">Ефект AI-асистентів у включених дослідженнях, %</p>
+      </div>
+      <ul class="bullets">
+        <li>Лабораторні експерименти: від +31 до +56% <span class="n">[8, 11, 22]</span></li>
+        <li>Експерименти в компаніях: +21…+26% <span class="n">[14, 17]</span>, у METR −19% <span class="n">[18]</span></li>
+        <li>Галузеві звіти: 0…+2% <span class="n">[25, 29]</span></li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Чому оцінки відрізняються</h1>
+  <div class="body">
+    <ul class="bullets">
+      <li>Невелика задача з нуля легша за роботу в зрілому проєкті. Метааналіз 23 досліджень: g = 0.33 <span class="n">[39]</span></li>
+      <li>Менш досвідчені розробники отримують більший приріст <span class="n">[15, 17]</span></li>
+      <li>Ефект з часом слабшає: після переходу на Cursor приріст комітів знизився з 55% до 15% за два місяці <span class="n">[19]</span></li>
+      <li>Самооцінка неточна: учасники METR вважали, що працюють на 20% швидше, а насправді працювали на 19% повільніше <span class="n">[18]</span></li>
+    </ul>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Якість і безпека коду</h1>
+  <div class="body">
+    <table class="tbl">
+      <thead><tr><th>Дослідження</th><th>Показник</th><th class="num">Значення</th></tr></thead>
+      <tbody>
+        <tr><td>Pearce та ін. [6]</td><td>Програми Copilot з вразливостями</td><td class="num">≈40%</td></tr>
+        <tr><td>Perry та ін. [9]</td><td>Безпечні рішення з AI і без AI</td><td class="num">21% і 36%</td></tr>
+        <tr><td>He та ін. [19]</td><td>Складність коду після переходу на Cursor</td><td class="num">+41.6%</td></tr>
+        <tr><td>Uplevel [29]</td><td>Кількість дефектів у групі з Copilot</td><td class="num">+41%</td></tr>
+        <tr><td>DORA [25]</td><td>Стабільність поставок на +25% використання AI</td><td class="num">−7.2%</td></tr>
+        <tr><td>Borg та ін. [22]</td><td>Підтримуваність коду</td><td class="num">без змін</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Розрахунок окупності</h1>
+  <div class="body">
+    <div class="cols">
+      <div>
+        <p class="formula">ΔP* = C<sub>інстр</sub> / C<sub>розр</sub> = 19 / 2500 = 0.76%</p>
+        <p class="note" style="margin-top:0">Copilot Business [33], медіанна зарплата Middle в Україні [37]</p>
+        <ul class="bullets" style="margin-top:24px">
+          <li>Ліцензія коштує 0.3–4% зарплати розробника</li>
+          <li>Не враховано витрати на дефекти</li>
+        </ul>
+      </div>
+      <table class="tbl">
+        <thead><tr><th>Сценарій</th><th class="num">Ефект</th><th class="num">$/міс</th></tr></thead>
+        <tbody>
+          <tr><td>DORA 2024</td><td class="num">+2.1%</td><td class="num">+33.5</td></tr>
+          <tr><td>Song та ін.</td><td class="num">+5.9%</td><td class="num">+128.5</td></tr>
+          <tr><td>Cui та ін.</td><td class="num">+26.1%</td><td class="num">+633.5</td></tr>
+          <tr><td>METR</td><td class="num">−19%</td><td class="num">−495</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 11 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Висновки</h1>
+  <div class="body">
+    <ol class="steps">
+      <li>За 2023–2025 роки частка розробників, які користуються AI, зросла з 44% до 78%, а довіра до результатів знизилась</li>
+      <li>В експериментах ефект становить +21…+56%, у реальних проєктах і галузевих звітах він значно менший</li>
+      <li>Більшість досліджень якості фіксують більше вразливостей і складніший код</li>
+      <li>Ліцензія окупається вже при прирості близько 1%, тому головне – реальний ефект і витрати на якість</li>
+    </ol>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 12 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Основні джерела</h1>
+  <div class="body">
+    <ol class="srcs" style="--rows:5">
+      <li value="2"><b>Stack Overflow</b> Developer Survey 2025</li>
+      <li value="6"><b>Pearce H. et al.</b> Asleep at the Keyboard?, 2022</li>
+      <li value="8"><b>Peng S. et al.</b> The Impact of AI on Developer Productivity, 2023</li>
+      <li value="9"><b>Perry N. et al.</b> Do Users Write More Insecure Code…, 2023</li>
+      <li value="17"><b>Cui K. Z. et al.</b> The Effects of Generative AI on High-Skilled Work, 2026</li>
+      <li value="18"><b>Becker J. et al.</b> Measuring the Impact of Early-2025 AI…, 2025</li>
+      <li value="19"><b>He H. et al.</b> Speed at the Cost of Quality, 2025</li>
+      <li value="25"><b>DORA</b> Accelerate State of DevOps Report 2024</li>
+      <li value="37"><b>DOU</b> Зарплати розробників – літо 2026</li>
+      <li value="39"><b>Maier S. et al.</b> A meta-analysis of the effect of generative AI…, 2026</li>
+    </ol>
+    <p class="note">Повний список (40 джерел) – у звіті</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<script src="shared/deck.js"></script>
+</body>
+</html>

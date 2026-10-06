@@ -1,0 +1,30 @@
+{
+  "identified": 1282,
+  "unique": 843,
+  "duplicates": 439,
+  "title_screen_passed": 268,
+  "title_screen_excluded": {
+    "no_tool": 146,
+    "no_outcome": 309,
+    "no_domain": 85,
+    "excluded_topic": 35
+  },
+  "abstract_screened": 268,
+  "abstract_passed": 81,
+  "abstract_excluded": {
+    "no_abstract_to_fulltext": 42,
+    "not_empirical": 118,
+    "no_quantitative_result": 41,
+    "method_proposal": 28
+  },
+  "reinstated_manually": 6,
+  "fulltext_assessed": 87,
+  "fulltext_excluded": {
+    "Освітній контекст, студенти": 2,
+    "Оцінка моделі без розробників і реального проєкту": 25,
+    "Немає групи порівняння або базової лінії, лише сприйняття, чи недостатньо методологічних даних": 28,
+    "Пропозиція методу чи інструмента": 14,
+    "Вторинне дослідження: огляд, метааналіз, синтез": 4
+  },
+  "included_from_search": 14
+}
