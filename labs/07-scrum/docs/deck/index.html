@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Оцінка розміру в Agile на прикладі Scrum – Економіка IT-індустрії та підприємництво</title>
+<link rel="stylesheet" href="shared/theme.css">
+<style>
+  .figure__img { background: #fff; border-radius: 0; }
+  .figure__img img { object-fit: contain; }
+  .body.fill { flex: 1; min-height: 0; display: flex; }
+  .body.fill > * { flex: 1; }
+  .cols.split { grid-template-columns: 2.4fr 1fr; }
+  .n { color: var(--ink-mute); font-size: .85em; white-space: nowrap; }
+  .formula { font-size: 24px; margin: 0 0 8px; }
+  .cols > table.tbl { align-self: start; }
+  .note { font-size: 16px; color: var(--ink-mute); margin-top: 14px; }
+</style>
+</head>
+<body class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <p class="eyebrow">КПІ ім. Ігоря Сікорського · Практична робота № 7</p>
+  <h1 class="hero">Оцінка розміру в Agile<br>на прикладі Scrum</h1>
+  <div class="stack" style="margin-top:40px">
+    <p class="lead">Planning Poker для Product Backlog першого релізу Shopizer</p>
+  </div>
+  <p class="byline">Виконав: <b>Соколов Олександр</b>, студент групи ІП-33<br>Дисципліна «Економіка IT-індустрії та підприємництво»</p>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Команди і вибір методу</h1>
+  <div class="body">
+    <div class="cols">
+      <ul class="bullets">
+        <li>Дві Scrum-команди, A і B, оцінюють один backlog незалежно</li>
+        <li>У кожній 5 учасників: три Backend, QA, DevOps</li>
+        <li>Product Owner і Scrum Master не голосують <span class="n">[2]</span></li>
+        <li>Обрано Planning Poker: числові оцінки для швидкості і вартості, 27 історій, обговорення розбіжностей <span class="n">[3]</span></li>
+      </ul>
+      <table class="tbl">
+<thead><tr><th>Метод</th><th class="num">Висновок</th></tr></thead>
+<tbody>
+<tr><td>Planning Poker</td><td class="num">підходить</td></tr>
+<tr><td>T-shirt Size</td><td class="num">для огляду, порівняно далі</td></tr>
+<tr><td>Bucket System</td><td class="num">для сотень елементів</td></tr>
+<tr><td>Dot Voting</td><td class="num">пріоритет, не розмір</td></tr>
+<tr><td>Інші три</td><td class="num">не дають чисел</td></tr>
+</tbody>
+</table>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Product Backlog</h1>
+  <div class="body">
+<table class="tbl">
+<thead><tr><th>Показник</th><th class="num">Значення</th></tr></thead>
+<tbody>
+<tr><td>Користувацьких історій</td><td class="num">27</td></tr>
+<tr><td>Пріоритети MoSCoW</td><td class="num">17 Must, 7 Should, 3 Could</td></tr>
+<tr><td>Операцій REST API з ПР3</td><td class="num">63 унікальні</td></tr>
+<tr><td>Розмір за функціональними точками</td><td class="num">272 UFP, 299.2 AFP</td></tr>
+<tr><td>Частка всього продукту (1 525 AFP)</td><td class="num">19.6%</td></tr>
+</tbody>
+</table>
+    <p class="note">Історія = одна або кілька транзакцій ПР3: «Реєстрація клієнта» – 1 операція, 4 UFP; «Відновлення і зміна пароля» – 4 операції, 12 UFP <span class="n">[4]</span></p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Процедура Planning Poker</h1>
+  <div class="body">
+    <ol class="steps">
+      <li>Колода 0, 1, 2, 3, 5, 8, 13, 21, 34, 55; один story point – ідеальний день однієї людини</li>
+      <li>Product Owner пояснює історію, п'ятеро учасників одночасно показують карти</li>
+      <li>Якщо карти різняться більше ніж на одне значення, крайні пояснюють аргументи, голосування повторюється</li>
+      <li>Остаточна оцінка – медіана голосів останнього раунду</li>
+    </ol>
+    <p class="note">Голосування змодельовано програмою: розкид 12% між учасниками, 25% на історію, зближення з медіаною на 65% за раунд. Це розкрито у звіті</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Результати оцінки</h1>
+  <div class="body">
+    <div class="cols cols--wide">
+      <div class="figure">
+        <div class="figure__img"><img src="img/01_estimates.png" alt="Оцінки двох команд"></div>
+        <p class="figure__cap">Оцінки історій двома командами, story points</p>
+      </div>
+      <ul class="bullets">
+        <li>Команди: 191 і 196 SP; довідкова складність 190.4 (різниця 0.3% і 2.9%)</li>
+        <li>Збіг для 17 з 27 історій (63.0%), решта – на одну карту</li>
+        <li>Спірмен між командами 0.86, з UFP 0.94 і 0.95</li>
+        <li>Найбільша історія – керування категоріями, 21 SP</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Planning Poker і T-shirt Size</h1>
+  <div class="body">
+<table class="tbl">
+<thead><tr><th>Метод і команда</th><th class="num">Разом SP</th><th class="num">Раундів</th><th class="num">Похибка, %</th><th class="num">Спірмен з UFP</th></tr></thead>
+<tbody>
+<tr><td>Planning Poker, A</td><td class="num">191</td><td class="num">1.30</td><td class="num">15.0</td><td class="num">0.94</td></tr>
+<tr><td>Planning Poker, B</td><td class="num">196</td><td class="num">1.48</td><td class="num">13.9</td><td class="num">0.95</td></tr>
+<tr><td>T-shirt, A</td><td class="num">185</td><td class="num">1.00</td><td class="num">15.5</td><td class="num">0.89</td></tr>
+<tr><td>T-shirt, B</td><td class="num">182</td><td class="num">1.00</td><td class="num">18.6</td><td class="num">0.86</td></tr>
+</tbody>
+</table>
+    <p class="note">У межах моделі Planning Poker точніший: дрібніша шкала (9 значень проти 5) і обговорення; T-shirt швидший, занижує обсяг (XL = 13). Збіг команд вищий у T-shirt (74.1% проти 63.0%) через грубу шкалу, а не точність</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Швидкість і вартість</h1>
+  <div class="body">
+    <div class="cols">
+      <div>
+        <p class="formula">v = 5 · 10 · 0.7 = 35 SP на спринт</p>
+        <p class="formula">C<sub>спр</sub> = 6 · 2 500 · 10 / 21.67 = $6 922</p>
+        <p class="note">5 учасників, спринт 10 днів, фокус 0.7; Scrum Master і Product Owner по 0.5 ставки; $2 500 на місяць <span class="n">[5]</span>, курс 45.666 грн <span class="n">[6]</span></p>
+      </div>
+      <table class="tbl">
+<thead><tr><th>Показник</th><th class="num">Значення</th></tr></thead>
+<tbody>
+<tr><td>Спринтів</td><td class="num">6 (5.46)</td></tr>
+<tr><td>Тривалість</td><td class="num">12 тижнів</td></tr>
+<tr><td>Трудомісткість</td><td class="num">16.6 PM</td></tr>
+<tr><td>Вартість</td><td class="num">$41 532</td></tr>
+<tr><td>У гривнях</td><td class="num">1.90 млн</td></tr>
+<tr><td>За story point</td><td class="num">$217</td></tr>
+</tbody>
+</table>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">План релізу</h1>
+  <div class="body">
+    <div class="cols cols--wide">
+      <div class="figure">
+        <div class="figure__img"><img src="img/02_plan.png" alt="План релізу"></div>
+        <p class="figure__cap">Обсяг робіт за спринтами (команда A)</p>
+      </div>
+      <ul class="bullets">
+        <li>Історії впорядковано за MoSCoW і розміщено в першому спринті з вільною швидкістю</li>
+        <li>17 Must (122 SP) – у спринтах 1–4</li>
+        <li>Спринти 1–5 по 34 SP, шостий – 21 SP</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Scrum і функціональні точки</h1>
+  <div class="body">
+<table class="tbl">
+<thead><tr><th>Оцінка</th><th class="num">Людино-місяців</th><th class="num">Вартість, $</th><th class="num">Тижнів</th></tr></thead>
+<tbody>
+<tr><td>Story points (Planning Poker)</td><td class="num">16.6</td><td class="num">41 532</td><td class="num">12</td></tr>
+<tr><td>Функціональні точки, 299.2 AFP</td><td class="num">28.8</td><td class="num">71 923</td><td class="num">–</td></tr>
+</tbody>
+</table>
+    <ul class="bullets" style="margin-top:20px">
+      <li>Scrum-оцінка становить 58% від FP-оцінки; FP дає на 73% більше</li>
+      <li>Не зіставно: план – 1.32 дня на UFP (з PO і SM), 10.4 FP на місяць – весь цикл, 2.29 дня на UFP <span class="n">[7]</span></li>
+      <li>Фокус 0.7 – окреме припущення: за 25 SP на спринт буде 8 спринтів і $55 376</li>
+    </ul>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Верифікація і обмеження</h1>
+  <div class="body">
+    <div class="cols">
+      <ul class="bullets">
+        <li>Усі 63 операції історій знайдено в підрахунку ПР3, сума ваг 272 UFP</li>
+        <li>299.2 = 272 · 1.10; ⌈191 / 35⌉ = ⌈196 / 35⌉ = 6 збігається з планом</li>
+        <li>Сумарні оцінки в межах 2.9% від довідкової</li>
+      </ul>
+      <ul class="bullets">
+        <li>Голосування змодельовано: точність 14–15% і кореляція 0.94–0.95 описують метод за припущеннями, а не реальну команду</li>
+        <li>Швидкість за ємністю: після перших спринтів замінити фактичною</li>
+        <li>Довідкова складність походить від UFP: це не підтвердження методу, а властивість моделі</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 11 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Висновки</h1>
+  <div class="body">
+    <ol class="steps">
+      <li>Обрано Planning Poker; у межах моделі він точніший за T-shirt Size (14–15% проти 16–19%)</li>
+      <li>Backlog: 27 історій, 63 операції, 272 UFP; команди оцінили його в 191 і 196 SP</li>
+      <li>За швидкості 35 SP: 6 спринтів, 12 тижнів, 16.6 людино-місяця, $41 532 (1.90 млн грн)</li>
+      <li>FP-оцінка тих самих історій – 28.8 людино-місяця, $71 923, не зіставно напряму з планом спринтів</li>
+    </ol>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 12 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Основні джерела</h1>
+  <div class="body">
+    <ol class="srcs" style="--rows:4">
+      <li value="1"><b>Beck K. et al.</b> Manifesto for Agile Software Development, 2001</li>
+      <li value="2"><b>Schwaber K., Sutherland J.</b> The Scrum Guide, 2020</li>
+      <li value="3"><b>Cohn M.</b> Agile Estimating and Planning, 2005</li>
+      <li value="4"><b>Shopizer</b>, github.com/shopizer-ecommerce/shopizer</li>
+      <li value="5"><b>DOU</b> Зарплати українських розробників – літо 2026</li>
+      <li value="6"><b>НБУ</b> Офіційний курс USD на 04.11.2026</li>
+      <li value="7"><b>Jones C.</b> Software Economics and Function Point Metrics, 2017</li>
+    </ol>
+    <p class="note">Повний список – у звіті</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<script src="shared/deck.js"></script>
+</body>
+</html>
