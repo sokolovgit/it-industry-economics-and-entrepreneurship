@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Метрики розміру. Метрика Lines of Code – Економіка IT-індустрії та підприємництво</title>
+<link rel="stylesheet" href="shared/theme.css">
+<style>
+  .figure__img { background: #fff; border-radius: 0; }
+  .figure__img img { object-fit: contain; }
+  .body.fill { flex: 1; min-height: 0; display: flex; }
+  .body.fill > * { flex: 1; }
+  .cols.split { grid-template-columns: 2.4fr 1fr; }
+  .n { color: var(--ink-mute); font-size: .85em; white-space: nowrap; }
+  .formula { font-size: 24px; margin: 0 0 8px; }
+  .cols > table.tbl { align-self: start; }
+  .note { font-size: 16px; color: var(--ink-mute); margin-top: 14px; }
+</style>
+</head>
+<body class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <p class="eyebrow">КПІ ім. Ігоря Сікорського · Практична робота № 2</p>
+  <h1 class="hero">Метрики розміру.<br>Метрика Lines of Code</h1>
+  <div class="stack" style="margin-top:40px">
+    <p class="lead">Вимірювання розміру і економічні розрахунки на прикладі Shopizer</p>
+  </div>
+  <p class="byline">Виконав: <b>Соколов Олександр</b>, студент групи ІП-33<br>Дисципліна «Економіка IT-індустрії та підприємництво»</p>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Об'єкт вимірювання</h1>
+  <div class="body">
+    <div class="cols">
+      <ul class="bullets">
+        <li>Shopizer – інтернет-магазин на Java з відкритим кодом, ліцензія Apache-2.0 <span class="n">[1]</span></li>
+        <li>Коміт 6a4a0a6 від 23.03.2025</li>
+        <li>5 Maven-модулів, 1 167 Java-файлів в основному коді</li>
+        <li>Тести є лише в двох модулях і складають 4.9% обсягу</li>
+      </ul>
+      <div class="kv" style="--k:190px">
+        <div class="kv__row"><div class="kv__k">sm-core-model</div><div class="kv__v">сутності предметної області</div></div>
+        <div class="kv__row"><div class="kv__k">sm-core-modules</div><div class="kv__v">інтеграційні модулі, шифрування</div></div>
+        <div class="kv__row"><div class="kv__k">sm-core</div><div class="kv__v">бізнес-логіка, репозиторії</div></div>
+        <div class="kv__row"><div class="kv__k">sm-shop-model</div><div class="kv__v">моделі даних для API</div></div>
+        <div class="kv__row"><div class="kv__k">sm-shop</div><div class="kv__v">контролери, налаштування</div></div>
+      </div>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Засоби вимірювання</h1>
+  <div class="body">
+    <div class="cols">
+      <ul class="bullets">
+        <li>cloc 2.10 рахує рядки коду, коментарі й порожні рядки <span class="n">[2]</span></li>
+        <li>Парсер Java рахує логічні оператори: оператор або декларація – один рядок <span class="n">[3, 4]</span></li>
+        <li>Рівень коментарів F = N<sub>com</sub> / N<sub>loc</sub></li>
+      </ul>
+      <div class="kv" style="--k:150px">
+        <div class="kv__row"><div class="kv__k">N<sub>phys</sub></div><div class="kv__v">усі рядки файлів</div></div>
+        <div class="kv__row"><div class="kv__k">N<sub>loc</sub></div><div class="kv__v">без порожніх і коментарів</div></div>
+        <div class="kv__row"><div class="kv__k">N<sub>lloc</sub></div><div class="kv__v">оператори і декларації</div></div>
+      </div>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Результати вимірювання</h1>
+  <div class="body">
+    <table class="tbl">
+      <thead><tr><th>Модуль</th><th class="num">Файлів</th><th class="num">Фізичні</th><th class="num">Код</th><th class="num">Коментарі</th><th class="num">Порожні</th><th class="num">Логічні</th></tr></thead>
+      <tbody>
+        <tr><td>sm-core-model</td><td class="num">186</td><td class="num">16 586</td><td class="num">11 931</td><td class="num">652</td><td class="num">4 003</td><td class="num">7 809</td></tr>
+        <tr><td>sm-core-modules</td><td class="num">14</td><td class="num">527</td><td class="num">317</td><td class="num">68</td><td class="num">142</td><td class="num">237</td></tr>
+        <tr><td>sm-core</td><td class="num">335</td><td class="num">34 420</td><td class="num">21 207</td><td class="num">4 187</td><td class="num">9 026</td><td class="num">15 056</td></tr>
+        <tr><td>sm-shop-model</td><td class="num">322</td><td class="num">12 507</td><td class="num">7 996</td><td class="num">1 743</td><td class="num">2 768</td><td class="num">5 922</td></tr>
+        <tr><td>sm-shop</td><td class="num">310</td><td class="num">44 151</td><td class="num">30 565</td><td class="num">4 073</td><td class="num">9 513</td><td class="num">21 109</td></tr>
+        <tr><td><b>Разом</b></td><td class="num"><b>1 167</b></td><td class="num"><b>108 191</b></td><td class="num"><b>72 016</b></td><td class="num"><b>10 723</b></td><td class="num"><b>25 452</b></td><td class="num"><b>50 133</b></td></tr>
+      </tbody>
+    </table>
+    <p class="note">Основний код Java (src/main). Рівень коментарів F = 0.149</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Склад коду</h1>
+  <div class="body">
+    <div class="cols cols--wide">
+      <div class="figure">
+        <div class="figure__img"><img src="img/01_modules.png" alt="Склад коду за модулями"></div>
+        <p class="figure__cap">Склад основного коду за модулями</p>
+      </div>
+      <ul class="bullets">
+        <li>Код – 66.6% фізичних рядків, порожні рядки – 23.5%, коментарі – 9.9%</li>
+        <li>Логічних операторів 0.70 від кількості рядків коду</li>
+        <li>Тести: 3 495 рядків коду</li>
+        <li>Інші файли репозиторію (шаблони, конфігурація) – 11 106 рядків, не враховані</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Модель розрахунку</h1>
+  <div class="body">
+    <div class="cols">
+      <div>
+        <p class="formula">Effort = a · size<sup>b</sup></p>
+        <p class="formula">Schedule = c · Effort<sup>d</sup></p>
+        <p class="formula">Cost = Effort · salary</p>
+        <p class="note">Базова модель COCOMO <span class="n">[5]</span>; size у KLOC, Effort у людино-місяцях</p>
+      </div>
+      <div class="kv" style="--k:170px">
+        <div class="kv__row"><div class="kv__k">size</div><div class="kv__v">72.016 KLOC (рядки коду)</div></div>
+        <div class="kv__row"><div class="kv__k">Тип проєкту</div><div class="kv__v">напіврозділений, a = 3.0, b = 1.12, c = 2.5, d = 0.35</div></div>
+        <div class="kv__row"><div class="kv__k">salary</div><div class="kv__v">$2 500 на місяць, Middle (усі мови) <span class="n">[6]</span></div></div>
+        <div class="kv__row"><div class="kv__k">Курс</div><div class="kv__v">45.666 грн за долар, НБУ <span class="n">[7]</span></div></div>
+      </div>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Економічні показники</h1>
+  <div class="body">
+    <table class="tbl">
+      <thead><tr><th>Показник</th><th class="num">Органічний</th><th class="num">Напіврозділений</th><th class="num">Вбудований</th></tr></thead>
+      <tbody>
+        <tr><td>Трудомісткість, людино-місяців</td><td class="num">214.0</td><td class="num"><b>360.9</b></td><td class="num">609.8</td></tr>
+        <tr><td>Тривалість, місяців</td><td class="num">19.2</td><td class="num"><b>19.6</b></td><td class="num">19.5</td></tr>
+        <tr><td>Середня кількість розробників</td><td class="num">11.1</td><td class="num"><b>18.4</b></td><td class="num">31.3</td></tr>
+        <tr><td>Вартість, $</td><td class="num">535 121</td><td class="num"><b>902 364</b></td><td class="num">1 524 605</td></tr>
+        <tr><td>Вартість, млн грн</td><td class="num">24.4</td><td class="num"><b>41.2</b></td><td class="num">69.6</td></tr>
+        <tr><td>Вартість рядка, $/LOC</td><td class="num">7.43</td><td class="num"><b>12.53</b></td><td class="num">21.17</td></tr>
+        <tr><td>Продуктивність, LOC на людино-місяць</td><td class="num">336</td><td class="num"><b>200</b></td><td class="num">118</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Для Shopizer обрано напіврозділений тип: розмір 72.0 KLOC входить у діапазон 25–75 KLOC</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Залежність від розміру і типу</h1>
+  <div class="body">
+    <div class="cols cols--wide">
+      <div class="figure">
+        <div class="figure__img"><img src="img/02_effort.png" alt="Трудомісткість залежно від розміру"></div>
+        <p class="figure__cap">Трудомісткість за базовою моделлю COCOMO</p>
+      </div>
+      <ul class="bullets">
+        <li>Тип проєкту змінює трудомісткість у 2.8 раза</li>
+        <li>Тривалість майже не залежить від типу: 19.2–19.6 місяця</li>
+        <li>Різниця проявляється в кількості розробників: від 11 до 31</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Чутливість до способу вимірювання</h1>
+  <div class="body">
+    <table class="tbl">
+      <thead><tr><th>Розмір</th><th class="num">KLOC</th><th class="num">Трудомісткість</th><th class="num">Тривалість</th><th class="num">Вартість, $</th></tr></thead>
+      <tbody>
+        <tr><td>Фізичні рядки</td><td class="num">108.191</td><td class="num">569.4</td><td class="num">23.0</td><td class="num">1 423 493</td></tr>
+        <tr><td>Рядки коду (основний код)</td><td class="num">72.016</td><td class="num"><b>360.9</b></td><td class="num">19.6</td><td class="num"><b>902 364</b></td></tr>
+        <tr><td>Логічні оператори</td><td class="num">50.133</td><td class="num">240.6</td><td class="num">17.0</td><td class="num">601 450</td></tr>
+        <tr><td>Рядки коду, основний код і тести</td><td class="num">75.511</td><td class="num">380.6</td><td class="num">20.0</td><td class="num">951 552</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Трудомісткість у людино-місяцях, тривалість у місяцях, напіврозділений тип. Між фізичними рядками і логічними операторами оцінка відрізняється в 2.4 раза</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Рівні мов C# та Java</h1>
+  <div class="body">
+    <table class="tbl">
+      <thead><tr><th>Мова</th><th class="num">Рівень (Джонс)</th><th class="num">Операторів на FP (Джонс)</th><th class="num">QSM, середнє</th><th class="num">QSM, медіана</th></tr></thead>
+      <tbody>
+        <tr><td>Асемблер</td><td class="num">1.0</td><td class="num">320.00</td><td class="num">119</td><td class="num">98</td></tr>
+        <tr><td>C</td><td class="num">2.5</td><td class="num">128.00</td><td class="num">97</td><td class="num">99</td></tr>
+        <tr><td>Java</td><td class="num"><b>6.0</b></td><td class="num"><b>53.33</b></td><td class="num"><b>53</b></td><td class="num"><b>53</b></td></tr>
+        <tr><td>C#</td><td class="num"><b>6.25</b></td><td class="num"><b>51.20</b></td><td class="num"><b>54</b></td><td class="num"><b>59</b></td></tr>
+      </tbody>
+    </table>
+    <p class="note">Рівень L дає приблизно 320 / L операторів на функціональну точку <span class="n">[8, 9]</span>. Джонс ставить C# трохи вище за Java, QSM – трохи нижче</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 11 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Вплив рівня мови</h1>
+  <div class="body">
+    <div class="cols cols--wide">
+      <div class="figure">
+        <div class="figure__img"><img src="img/03_languages.png" alt="Обсяг коду і продуктивність за мовами"></div>
+        <p class="figure__cap">Той самий функціонал (940 FP) за зворотним розрахунком <span class="n">[8]</span></p>
+      </div>
+      <ul class="bullets">
+        <li>C# дає на 4% менший розмір і на 4.5% меншу трудомісткість, ніж Java</li>
+        <li>C дає в 2.4 раза більше коду, асемблер – у 6.0 раза</li>
+        <li>За LOC на місяць асемблер найпродуктивніший, за FP на місяць – найменш</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 12 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Висновки</h1>
+  <div class="body">
+    <ol class="steps">
+      <li>Основний код Shopizer: 108 191 фізичний рядок, 72 016 рядків коду, 50 133 логічні оператори</li>
+      <li>За COCOMO для напіврозділеного типу: 360.9 людино-місяців, 19.6 місяця, 18.4 розробника, $902 364 (41.2 млн грн)</li>
+      <li>Спосіб вимірювання змінює оцінку в 2.4 раза, тому треба вказувати, що саме рахувалося</li>
+      <li>C# і Java мають однаковий рівень, близько 6; для мов нижчого рівня різниця в розмірі значна</li>
+      <li>Для порівняння проєктів на різних мовах LOC непридатна, потрібні функціональні точки</li>
+    </ol>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 13 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Основні джерела</h1>
+  <div class="body">
+    <ol class="srcs" style="--rows:5">
+      <li value="1"><b>Shopizer</b>, github.com/shopizer-ecommerce/shopizer</li>
+      <li value="2"><b>Adler D.</b> cloc: Count Lines of Code, 2.10</li>
+      <li value="3"><b>Park R. E.</b> Software Size Measurement, SEI, 1992</li>
+      <li value="4"><b>javalang</b>: Pure Python Java parser</li>
+      <li value="5"><b>Boehm B. W.</b> Software Engineering Economics, 1981</li>
+      <li value="6"><b>DOU</b> Зарплати українських розробників – літо 2026</li>
+      <li value="7"><b>НБУ</b> Офіційний курс USD на 04.11.2026</li>
+      <li value="8"><b>Jones C.</b> Software Economics and Function Point Metrics, 2017</li>
+      <li value="9"><b>QSM</b> Function Point Languages Table, v5.0</li>
+    </ol>
+    <p class="note">Повний список – у звіті</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<script src="shared/deck.js"></script>
+</body>
+</html>
