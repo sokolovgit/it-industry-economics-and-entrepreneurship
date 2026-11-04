@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Конструктивна модель вартості COCOMO – Економіка IT-індустрії та підприємництво</title>
+<link rel="stylesheet" href="shared/theme.css">
+<style>
+  .figure__img { background: #fff; border-radius: 0; }
+  .figure__img img { object-fit: contain; }
+  .body.fill { flex: 1; min-height: 0; display: flex; }
+  .body.fill > * { flex: 1; }
+  .cols.split { grid-template-columns: 2.4fr 1fr; }
+  .n { color: var(--ink-mute); font-size: .85em; white-space: nowrap; }
+  .formula { font-size: 24px; margin: 0 0 8px; }
+  .cols > table.tbl { align-self: start; }
+  .note { font-size: 16px; color: var(--ink-mute); margin-top: 14px; }
+</style>
+</head>
+<body class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <p class="eyebrow">КПІ ім. Ігоря Сікорського · Практична робота № 6</p>
+  <h1 class="hero">Конструктивна модель<br>вартості COCOMO</h1>
+  <div class="stack" style="margin-top:40px">
+    <p class="lead">Базова, проміжна моделі і COCOMO II для Shopizer</p>
+  </div>
+  <p class="byline">Виконав: <b>Соколов Олександр</b>, студент групи ІП-33<br>Дисципліна «Економіка IT-індустрії та підприємництво»</p>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Вихідні дані</h1>
+  <div class="body">
+    <div class="cols">
+      <ul class="bullets">
+        <li>Shopizer, понад 25 000 рядків коду <span class="n">[1]</span></li>
+        <li>Базова і проміжна моделі: 72.016 KLOC рядків коду без коментарів <span class="n">[2]</span></li>
+        <li>COCOMO II: 50.133 KSLOC логічних операторів <span class="n">[3]</span></li>
+        <li>Зарплата $2 500 на місяць <span class="n">[4]</span>, курс 45.666 грн <span class="n">[5]</span></li>
+      </ul>
+      <div class="kv" style="--k:120px">
+        <div class="kv__row"><div class="kv__k">PM</div><div class="kv__v">трудомісткість, людино-місяці</div></div>
+        <div class="kv__row"><div class="kv__k">TM</div><div class="kv__v">час розробки, місяці</div></div>
+        <div class="kv__row"><div class="kv__k">N</div><div class="kv__v">PM / TM, розробників</div></div>
+      </div>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Базова модель</h1>
+  <div class="body">
+<table class="tbl">
+<thead><tr><th>Тип проєкту</th><th class="num">PM</th><th class="num">TM</th><th class="num">Розробників</th><th class="num">Вартість, $</th></tr></thead>
+<tbody>
+<tr><td>Органічний</td><td class="num">214.0</td><td class="num">19.2</td><td class="num">11.1</td><td class="num">535 121</td></tr>
+<tr><td>Напіврозділений</td><td class="num">360.9</td><td class="num">19.6</td><td class="num">18.4</td><td class="num">902 364</td></tr>
+<tr><td>Вбудований</td><td class="num">609.8</td><td class="num">19.5</td><td class="num">31.3</td><td class="num">1 524 605</td></tr>
+</tbody>
+</table>
+    <p class="note">PM = a · SIZE<sup>b</sup>, TM = c · PM<sup>d</sup>; для Shopizer обрано напіврозділений тип, як у ПР2 <span class="n">[2]</span></p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Проміжна модель</h1>
+  <div class="body">
+    <div class="cols">
+      <div>
+        <p class="formula">PM = a · SIZE<sup>b</sup> · EAF</p>
+        <p class="formula">EAF = 1.15 · 1.15 · 0.91 · 0.91 = 1.095</p>
+        <p class="note">RELY, CPLX, MODP, TOOL відхиляються від номіналу, ще 11 номінальні. Напіврозділений тип на 9.5% більше за базову</p>
+      </div>
+      <table class="tbl">
+<thead><tr><th>Тип проєкту</th><th class="num">PM</th><th class="num">TM</th></tr></thead>
+<tbody>
+<tr><td>Органічний</td><td class="num">312.6</td><td class="num">22.2</td></tr>
+<tr><td>Напіврозділений</td><td class="num">395.3</td><td class="num">20.3</td></tr>
+<tr><td>Вбудований</td><td class="num">519.5</td><td class="num">18.5</td></tr>
+</tbody>
+</table>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">COCOMO II: формули і фактори масштабу</h1>
+  <div class="body">
+    <div class="cols">
+      <div>
+        <p class="formula">PM = 2.94 · SIZE<sup>E</sup> · ΠEM</p>
+        <p class="formula">E = 0.91 + 0.01 · ΣSF</p>
+        <p class="formula">TM = 3.67 · PM<sub>NS</sub><sup>F</sup></p>
+        <p class="note">F = 0.28 + 0.2 · (E − 0.91); тут E = 1.0419, F = 0.3064 <span class="n">[3]</span></p>
+      </div>
+      <table class="tbl">
+<thead><tr><th>Фактор</th><th class="num">Рівень</th><th class="num">Значення</th></tr></thead>
+<tbody>
+<tr><td>PREC</td><td class="num">високий</td><td class="num">2.48</td></tr>
+<tr><td>FLEX</td><td class="num">дуже високий</td><td class="num">1.01</td></tr>
+<tr><td>RESL</td><td class="num">високий</td><td class="num">2.83</td></tr>
+<tr><td>TEAM</td><td class="num">високий</td><td class="num">2.19</td></tr>
+<tr><td>PMAT</td><td class="num">номінальний</td><td class="num">4.68</td></tr>
+<tr><td><b>ΣSF</b></td><td class="num"><b></b></td><td class="num"><b>13.19</b></td></tr>
+</tbody>
+</table>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Early Design: попередня оцінка</h1>
+  <div class="body">
+    <div class="cols">
+      <table class="tbl">
+<thead><tr><th>Множник</th><th class="num">Рівень</th><th class="num">Значення</th></tr></thead>
+<tbody>
+<tr><td>RCPX</td><td class="num">високий</td><td class="num">1.33</td></tr>
+<tr><td>RUSE</td><td class="num">високий</td><td class="num">1.07</td></tr>
+<tr><td>PERS, PDIF, PREX, FCIL, SCED</td><td class="num">номінальні</td><td class="num">1.00</td></tr>
+<tr><td><b>EM</b></td><td class="num"><b></b></td><td class="num"><b>1.423</b></td></tr>
+</tbody>
+</table>
+      <div>
+        <p class="formula">PM = 2.94 · 50.133<sup>1.0419</sup> · 1.423 = 247.1</p>
+        <p class="formula">TM = 3.67 · 247.1<sup>0.3064</sup> = 19.9</p>
+      </div>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Post-Architecture: детальна оцінка</h1>
+  <div class="body">
+    <div class="cols">
+      <table class="tbl">
+<thead><tr><th>Множник</th><th class="num">Рівень</th><th class="num">Значення</th></tr></thead>
+<tbody>
+<tr><td>RELY</td><td class="num">високий</td><td class="num">1.10</td></tr>
+<tr><td>CPLX</td><td class="num">високий</td><td class="num">1.17</td></tr>
+<tr><td>RUSE</td><td class="num">високий</td><td class="num">1.07</td></tr>
+<tr><td>TOOL</td><td class="num">високий</td><td class="num">0.90</td></tr>
+<tr><td>SITE</td><td class="num">низький</td><td class="num">1.09</td></tr>
+<tr><td>Ще 12 множників</td><td class="num">номінальні</td><td class="num">1.00</td></tr>
+<tr><td><b>EM</b></td><td class="num"><b></b></td><td class="num"><b>1.351</b></td></tr>
+</tbody>
+</table>
+      <div>
+        <p class="formula">PM = 2.94 · 50.133<sup>1.0419</sup> · 1.351 = 234.6</p>
+        <p class="formula">TM = 3.67 · 234.6<sup>0.3064</sup> = 19.5</p>
+        <p class="note">12 множників номінальні: немає вимог понад норму або даних про команду</p>
+      </div>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">COCOMO II: підсумок</h1>
+  <div class="body">
+    <div class="cols cols--wide">
+      <div class="figure">
+        <div class="figure__img"><img src="img/02_models.png" alt="Трудомісткість за моделями"></div>
+        <p class="figure__cap">Трудомісткість Shopizer за моделями, людино-місяців</p>
+      </div>
+      <ul class="bullets">
+        <li>Post-Architecture: PM = 234.6, TM = 19.5, 12 розробників</li>
+        <li>Вартість $586 513, 26.8 млн грн</li>
+        <li>За 72.0 KSLOC: Early 360.4, Post 342.2</li>
+        <li>Логічні оператори замість рядків зменшують оцінку на 31%</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Вплив розміру</h1>
+  <div class="body">
+    <div class="cols cols--wide">
+      <div class="figure">
+        <div class="figure__img"><img src="img/01_size_effect.png" alt="Вплив розміру"></div>
+        <p class="figure__cap">PM і TM для розмірів від 25 до 200 KSLOC</p>
+      </div>
+      <ul class="bullets">
+        <li>Подвоєння розміру збільшує PM у 2.06–2.17 раза</li>
+        <li>Від 25 до 200 KSLOC PM росте в 8.7–10.3 раза, TM у 1.94–2.26</li>
+        <li>Розробників за Post-Architecture від 7.3 до 32.6</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Однаковий розмір і висока новизна</h1>
+  <div class="body">
+<table class="tbl">
+<thead><tr><th>Модель</th><th class="num">PM</th><th class="num">TM</th></tr></thead>
+<tbody>
+<tr><td>Базова, напіврозділений</td><td class="num">360.9</td><td class="num">19.6</td></tr>
+<tr><td>Базова, вбудований</td><td class="num">609.8</td><td class="num">19.5</td></tr>
+<tr><td>Проміжна, напіврозділений</td><td class="num">360.9</td><td class="num">19.6</td></tr>
+<tr><td>Проміжна, вбудований</td><td class="num">474.3</td><td class="num">18.0</td></tr>
+<tr><td>COCOMO II Early Design</td><td class="num">360.6</td><td class="num">24.6</td></tr>
+<tr><td>COCOMO II Post-Architecture</td><td class="num">360.6</td><td class="num">24.6</td></tr>
+</tbody>
+</table>
+    <p class="note">SIZE = 72.016, усі множники номінальні, PREC дуже низький (6.20): ΣSF = 21.45, E = 1.1245. Early і Post збігаються, бо множники рівні 1</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 11 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Верифікація</h1>
+  <div class="body">
+    <div class="cols">
+      <ul class="bullets">
+        <li>Формули COCOMO II перевірено за прикладом керівництва: 100 KSLOC, E = 1.15 дає PM = 586.6 і TM = 29.7 <span class="n">[3]</span></li>
+        <li>Базова модель збігається з ПР2: 360.9 і 19.6</li>
+        <li>Моделі за однаковим розміром відрізняються не більше ніж на 16%</li>
+      </ul>
+      <ul class="bullets">
+        <li>Вимірювання розміру впливає сильніше, ніж модель</li>
+        <li>5 з 15 факторів проміжної моделі і 6 з 17 множників Post-Architecture, що описують команду, номінальні: склад невідомий</li>
+        <li>Повторне використання бібліотек не враховано</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 12 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Висновки</h1>
+  <div class="body">
+    <ol class="steps">
+      <li>Базова модель: PM = 360.9, TM = 19.6; проміжна: PM = 395.3, TM = 20.3</li>
+      <li>COCOMO II за 50.1 KSLOC: Early Design 247.1, Post-Architecture 234.6 людино-місяців; $586 513</li>
+      <li>PM росте швидше за розмір, TM повільніше, тому з розміром зростає кількість розробників</li>
+      <li>За однакового розміру, номінальної складності і високої новизни COCOMO II дає 360.6 людино-місяців і 24.6 місяця</li>
+    </ol>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 13 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Основні джерела</h1>
+  <div class="body">
+    <ol class="srcs" style="--rows:3">
+      <li value="1"><b>Shopizer</b>, github.com/shopizer-ecommerce/shopizer</li>
+      <li value="2"><b>Boehm B. W.</b> Software Engineering Economics, 1981</li>
+      <li value="3"><b>USC CSE</b> COCOMO II Model Definition Manual 2.1, 2000</li>
+      <li value="4"><b>DOU</b> Зарплати українських розробників – літо 2026</li>
+      <li value="5"><b>НБУ</b> Офіційний курс USD на 04.11.2026</li>
+      <li value="6"><b>Boehm B. W. et al.</b> Software Cost Estimation with COCOMO II, 2000</li>
+    </ol>
+    <p class="note">Повний список – у звіті</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<script src="shared/deck.js"></script>
+</body>
+</html>
