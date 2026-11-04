@@ -1,0 +1,33 @@
+SKILL := env_var('HOME') / '.claude/skills/kpi-lab-report'
+DECK := env_var('HOME') / '.claude/skills/kpi-html-deck'
+REPORT := 'docs/report/report.md'
+
+# Список доступних рецептів
+default:
+    @just --list
+
+# Клонувати Shopizer на зафіксований коміт (один раз)
+clone:
+    git clone https://github.com/shopizer-ecommerce/shopizer.git data/src/shopizer
+    git -C data/src/shopizer checkout 6a4a0a65a3408ee8f62597b51d1b3aac24b77dee
+
+# Виміряти розмір, порахувати економіку і побудувати рисунки
+data:
+    uv run --no-project --with javalang python data/measure.py
+    python3 data/economy.py
+    uv run --no-project --with matplotlib python data/figures.py
+
+# Пронумерувати посилання [@Key] і згенерувати список джерел: report.src.md -> report.md
+cite:
+    python3 data/cite.py
+
+# Зібрати звіт і зберегти PDF через Word: report.docx + report.pdf
+report: cite
+    python3 {{SKILL}}/scripts/build_report.py {{REPORT}} report.docx
+    python3 {{SKILL}}/scripts/export_pdf.py docs/report/report.docx
+
+# Зібрати презентацію: PDF + pptx з нотатками з speech.md лягають у docs/deck (PNG – в out/deck)
+deck:
+    PPTX=1 bash {{DECK}}/scripts/build.sh docs/deck out/deck presentation
+    uv run --quiet --no-project --with python-pptx python docs/deck/notes.py docs/deck/speech.md out/deck/presentation.pptx
+    cp out/deck/presentation.pdf out/deck/presentation.pptx docs/deck/

@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Додаткові види точок для оцінки розміру ПЗ – Економіка IT-індустрії та підприємництво</title>
+<link rel="stylesheet" href="shared/theme.css">
+<style>
+  .figure__img { background: #fff; border-radius: 0; }
+  .figure__img img { object-fit: contain; }
+  .body.fill { flex: 1; min-height: 0; display: flex; }
+  .body.fill > * { flex: 1; }
+  .cols.split { grid-template-columns: 2.4fr 1fr; }
+  .n { color: var(--ink-mute); font-size: .85em; white-space: nowrap; }
+  .formula { font-size: 24px; margin: 0 0 8px; }
+  .cols > table.tbl { align-self: start; }
+  .note { font-size: 16px; color: var(--ink-mute); margin-top: 14px; }
+</style>
+</head>
+<body class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <p class="eyebrow">КПІ ім. Ігоря Сікорського · Практична робота № 4</p>
+  <h1 class="hero">Додаткові види точок<br>для оцінки розміру ПЗ</h1>
+  <div class="stack" style="margin-top:40px">
+    <p class="lead">Feature points, Object points і Use-case points для Shopizer</p>
+  </div>
+  <p class="byline">Виконав: <b>Соколов Олександр</b>, студент групи ІП-33<br>Дисципліна «Економіка IT-індустрії та підприємництво»</p>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Вихідні дані</h1>
+  <div class="body">
+    <div class="cols">
+      <ul class="bullets">
+        <li>Shopizer, той самий застосунок, що в ПР2 і ПР3 <span class="n">[1]</span></li>
+        <li>Взято з ПР3: 153 EI, 21 EO, 132 EQ, 26 ILF, 2 EIF; VAF = 1.10, AFP = 1 525</li>
+        <li>Взято з ПР2: 72.0 KLOC, 360.9 людино-місяців за COCOMO</li>
+        <li>Зарплата $2 500 на місяць <span class="n">[2]</span>, курс 45.666 грн <span class="n">[3]</span></li>
+      </ul>
+      <div class="kv" style="--k:170px">
+        <div class="kv__row"><div class="kv__k">Feature points</div><div class="kv__v">до FP додано алгоритми</div></div>
+        <div class="kv__row"><div class="kv__k">Object points</div><div class="kv__v">екрани, звіти, компоненти 3GL</div></div>
+        <div class="kv__row"><div class="kv__k">Use-case points</div><div class="kv__v">актори і варіанти використання</div></div>
+      </div>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Feature points: метод</h1>
+  <div class="body">
+    <div class="cols">
+      <div>
+        <p class="formula">UFeP = 4·EI + 5·EO + 4·EQ + 7·ILF + 7·EIF + 3·ALG</p>
+        <p class="formula">AFeP = UFeP · VAF</p>
+        <p class="note">Одна вага для компонента, без розрізнення складності. Вага алгоритму від 1 до 10, типова 3 <span class="n">[4, 5]</span></p>
+      </div>
+      <ul class="bullets">
+        <li>Алгоритм – обчислювальна задача, яку користувач безпосередньо не бачить</li>
+        <li>У коді виділено 19 алгоритмів, кожен знайдено за класом чи методом</li>
+        <li>VAF = 1.10 з ПР3</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Алгоритми Shopizer</h1>
+  <div class="body">
+<table class="tbl">
+<thead><tr><th>Алгоритм</th><th class="num">Клас або модуль</th></tr></thead>
+<tbody>
+<tr><td>Остаточна ціна товару</td><td class="num">PricingServiceImpl</td></tr>
+<tr><td>Підсумок кошика</td><td class="num">ShoppingCartCalculationServiceImpl</td></tr>
+<tr><td>Підсумок замовлення</td><td class="num">OrderServiceImpl</td></tr>
+<tr><td>Розрахунок податків</td><td class="num">TaxServiceImpl</td></tr>
+<tr><td>Вартість доставки: вага, відстань, правила</td><td class="num">3 модулі доставки</td></tr>
+<tr><td>Пакування товарів у коробки</td><td class="num">DefaultPackagingImpl</td></tr>
+<tr><td>Запит до UPS і USPS</td><td class="num">UPSShippingQuote, USPSShippingQuote</td></tr>
+<tr><td>Промокод і код доставки виробника</td><td class="num">модулі підсумку</td></tr>
+<tr><td>Шифрування, JWT, паролі, перевірка картки</td><td class="num">4 класи</td></tr>
+<tr><td>Масштабування зображень, рейтинг, пошук</td><td class="num">3 класи</td></tr>
+</tbody>
+</table>
+    <p class="note">Усього 19 алгоритмів, перелік – у звіті</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Feature points: результат</h1>
+  <div class="body">
+    <div class="cols cols--wide">
+      <div class="figure">
+        <div class="figure__img"><img src="img/01_feature_vs_fp.png" alt="Feature points і функціональні точки"></div>
+        <p class="figure__cap">Feature points і функціональні точки за компонентами</p>
+      </div>
+      <ul class="bullets">
+        <li>UFeP = 1 498, AFeP = 1 648</li>
+        <li>Алгоритми дають 57 точок (3.8%)</li>
+        <li>Вага алгоритмів 1–10 змінює результат від −2.5% до +8.9%</li>
+        <li>На 8.1% більше за UFP = 1 386</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Object points: припущення</h1>
+  <div class="body">
+    <div class="cols">
+      <ul class="bullets">
+        <li>Shopizer не має власного інтерфейсу: продукт – REST API</li>
+        <li>Екран – ресурс API (контролер): транзакції як представлення, файли як таблиці</li>
+        <li>Звіти – 20 шаблонів листів і рахунок-фактура</li>
+        <li>Компоненти 3GL – модулі оплати, доставки, пошти, сховищ, шифрування</li>
+      </ul>
+      <div class="kv" style="--k:150px">
+        <div class="kv__row"><div class="kv__k">Екран</div><div class="kv__v">1, 2 або 3 <span class="n">[6]</span></div></div>
+        <div class="kv__row"><div class="kv__k">Звіт</div><div class="kv__v">2, 5 або 8</div></div>
+        <div class="kv__row"><div class="kv__k">Компонент 3GL</div><div class="kv__v">10</div></div>
+        <div class="kv__row"><div class="kv__k">Трудомісткість</div><div class="kv__v">NOP / PROD, PROD від 4 до 50</div></div>
+      </div>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Object points: розрахунок</h1>
+  <div class="body">
+    <table class="tbl">
+<thead><tr><th>Компонент</th><th class="num">Кількість</th><th class="num">Бали</th></tr></thead>
+<tbody>
+<tr><td>Екрани: 39 простих, 13 середніх, 2 складних</td><td class="num">54</td><td class="num">71</td></tr>
+<tr><td>Звіти (прості)</td><td class="num">21</td><td class="num">42</td></tr>
+<tr><td>Компоненти 3GL</td><td class="num">23</td><td class="num">230</td></tr>
+<tr><td><b>Разом OP</b></td><td class="num"><b></b></td><td class="num"><b>343</b></td></tr>
+</tbody>
+</table>
+    <p class="note">Трудомісткість: 26.4 людино-місяця за PROD = 13; від 6.9 до 85.8 за PROD від 50 до 4. Повторне використання не враховано</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Use-case points: актори і варіанти</h1>
+  <div class="body">
+    <div class="cols">
+      <div class="kv" style="--k:210px">
+        <div class="kv__row"><div class="kv__k">Особи (4 ролі)</div><div class="kv__v">складні, вага 3: разом 12</div></div>
+        <div class="kv__row"><div class="kv__k">Платіжний шлюз, UPS, USPS, сховище</div><div class="kv__v">прості, вага 1: разом 4</div></div>
+        <div class="kv__row"><div class="kv__k">Поштовий сервер</div><div class="kv__v">середній, вага 2</div></div>
+        <div class="kv__row"><div class="kv__k">UAW</div><div class="kv__v"><b>18</b></div></div>
+      </div>
+      <ul class="bullets">
+        <li>22 варіанти використання з транзакцій ПР3</li>
+        <li>3 прості (5), 2 середніх (10), 17 складних (15)</li>
+        <li>UUCW = 290, UUCP = 308</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Use-case points: розрахунок</h1>
+  <div class="body">
+    <div class="cols">
+      <div>
+        <p class="formula">TCF = 0.6 + 0.01 · 48.0 = 1.08</p>
+        <p class="formula">EF = 1.4 − 0.03 · 18.0 = 0.86</p>
+        <p class="formula">UCP = 308 · 1.08 · 0.86 = 286.1</p>
+        <p class="note">13 технічних факторів, 8 факторів середовища <span class="n">[7]</span></p>
+      </div>
+      <table class="tbl">
+        <thead><tr><th>Варіант</th><th class="num">Години</th><th class="num">Людино-міс.</th></tr></thead>
+        <tbody>
+          <tr><td>20 год на точку</td><td class="num">5 721</td><td class="num">35.8</td></tr>
+          <tr><td>36 год на точку</td><td class="num">10 299</td><td class="num">64.4</td></tr>
+          <tr><td>54 варіанти, 20 год</td><td class="num">9 437</td><td class="num">59.0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Use-case points: другий метод</h1>
+  <div class="body">
+    <div class="cols">
+      <ul class="bullets">
+        <li>Розмір рахується як FP, але за варіантами використання</li>
+        <li>Унікальні операції без версій API і псевдонімів шляхів: 289 замість 306</li>
+        <li>146 входів, 20 виходів, 123 запити</li>
+        <li>UFP = 1 063 + 250 = 1 313, AFP = 1 444</li>
+      </ul>
+      <div class="kv" style="--k:200px">
+        <div class="kv__row"><div class="kv__k">Підрахунок за кодом (ПР3)</div><div class="kv__v">AFP = 1 525</div></div>
+        <div class="kv__row"><div class="kv__k">Метод 2</div><div class="kv__v">AFP = 1 444, на 5.3% менше</div></div>
+      </div>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 11 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Економічний вплив</h1>
+  <div class="body">
+    <div class="cols cols--wide">
+      <div class="figure">
+        <div class="figure__img"><img src="img/02_efforts.png" alt="Трудомісткість за методами"></div>
+        <p class="figure__cap">Трудомісткість, людино-місяців</p>
+      </div>
+      <table class="tbl">
+<thead><tr><th>Метод</th><th class="num">Вартість, $</th></tr></thead>
+<tbody>
+<tr><td>COCOMO за LOC</td><td class="num">902 364</td></tr>
+<tr><td>Feature points</td><td class="num">396 106</td></tr>
+<tr><td>FP (ПР3)</td><td class="num">366 490</td></tr>
+<tr><td>UCP, метод 2</td><td class="num">347 188</td></tr>
+<tr><td>UCP, метод 1</td><td class="num">89 397 – 160 915</td></tr>
+<tr><td>Object points</td><td class="num">65 962</td></tr>
+</tbody>
+</table>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 12 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Верифікація і обмеження</h1>
+  <div class="body">
+    <div class="cols">
+      <ul class="bullets">
+        <li>Feature points і FP: різниця 112 точок: входи +60, запити +54, алгоритми +57, файли −54, виходи −5</li>
+        <li>Метод 2 і FP відрізняються на 5.3%, різниця – 17 дубльованих транзакцій</li>
+        <li>Усі 19 алгоритмів знайдено в коді за класом і методом</li>
+      </ul>
+      <ul class="bullets">
+        <li>Вага одного варіанта використання обмежена 15, тому для великої системи метод 1 занижує розмір</li>
+        <li>Для серверної частини без екранів Object points визначають компоненти 3GL: 67% точок</li>
+        <li>Фактори середовища прийнято на середньому рівні, склад команди невідомий</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 13 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Висновки</h1>
+  <div class="body">
+    <ol class="steps">
+      <li>Feature points: UFeP = 1 498, AFeP = 1 648, на 8.1% більше за функціональні точки</li>
+      <li>Object points: OP = 343, трудомісткість 26.4 людино-місяця за номінальної продуктивності</li>
+      <li>Use-case points: UCP = 286.1 за першим методом, AFP = 1 444 за другим</li>
+      <li>Feature points і другий метод дають 139–158 людино-місяців, як і FP; перший метод і Object points – 26–64 і для великого серверного застосунку непридатні</li>
+      <li>Практична оцінка: 140–360 людино-місяців, $350–900 тисяч</li>
+    </ol>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 14 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Основні джерела</h1>
+  <div class="body">
+    <ol class="srcs" style="--rows:4">
+      <li value="1"><b>Shopizer</b>, github.com/shopizer-ecommerce/shopizer</li>
+      <li value="2"><b>DOU</b> Зарплати українських розробників – літо 2026</li>
+      <li value="3"><b>НБУ</b> Офіційний курс USD на 04.11.2026</li>
+      <li value="4"><b>Jones C.</b> Applied Software Measurement, 1991</li>
+      <li value="5"><b>GeeksforGeeks</b> Extended Function Point Metrics (ваги Джонса)</li>
+      <li value="6"><b>Boehm B. W. et al.</b> Software Cost Estimation with COCOMO II, 2000</li>
+      <li value="7"><b>Anda B. et al.</b> Use Case Points: multiple-case study, 2005</li>
+    </ol>
+    <p class="note">Повний список – у звіті</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<script src="shared/deck.js"></script>
+</body>
+</html>

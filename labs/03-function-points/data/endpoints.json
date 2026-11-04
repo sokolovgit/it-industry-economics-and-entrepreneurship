@@ -1,0 +1,6496 @@
+[
+ {
+  "controller": "FilesController",
+  "file": "com/salesmanager/shop/controller/FilesController.java",
+  "method": "downloadFile",
+  "http": "GET",
+  "base": "",
+  "paths": [
+   "/static/files/{storeCode}/{fileName}.{extension}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "storeCode",
+   "fileName",
+   "extension"
+  ],
+  "response_type": "byte",
+  "response_det": 1,
+  "uses": [
+   "ContentService",
+   "Logger"
+  ]
+ },
+ {
+  "controller": "FilesController",
+  "file": "com/salesmanager/shop/controller/FilesController.java",
+  "method": "downloadProduct",
+  "http": "GET",
+  "base": "",
+  "paths": [
+   "/admin/files/downloads/{storeCode}/{fileName}.{extension}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "storeCode",
+   "fileName",
+   "extension"
+  ],
+  "response_type": "byte",
+  "response_det": 1,
+  "uses": [
+   "ContentService",
+   "Logger"
+  ]
+ },
+ {
+  "controller": "ImagesController",
+  "file": "com/salesmanager/shop/controller/ImagesController.java",
+  "method": "printImage",
+  "http": "GET",
+  "base": "",
+  "paths": [
+   "/static/files/{storeCode}/{imageType}/{imageName}.{extension}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "storeCode",
+   "imageType",
+   "imageName",
+   "extension"
+  ],
+  "response_type": "byte",
+  "response_det": 1,
+  "uses": [
+   "ContentService"
+  ]
+ },
+ {
+  "controller": "ImagesController",
+  "file": "com/salesmanager/shop/controller/ImagesController.java",
+  "method": "printImage",
+  "http": "GET",
+  "base": "",
+  "paths": [
+   "/static/{storeCode}/{imageType}/{productCode}/{imageName}.{extension}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "storeCode",
+   "productCode",
+   "imageType",
+   "imageName",
+   "extension"
+  ],
+  "response_type": "byte",
+  "response_det": 1,
+  "uses": [
+   "Logger",
+   "ProductImageService"
+  ]
+ },
+ {
+  "controller": "ImagesController",
+  "file": "com/salesmanager/shop/controller/ImagesController.java",
+  "method": "printImage",
+  "http": "GET",
+  "base": "",
+  "paths": [
+   "/static/products/{storeCode}/{productCode}/{imageSize}/{imageName}.{extension}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "storeCode",
+   "productCode",
+   "imageSize",
+   "imageName",
+   "extension"
+  ],
+  "response_type": "byte",
+  "response_det": 1,
+  "uses": [
+   "Logger",
+   "ProductImageService"
+  ]
+ },
+ {
+  "controller": "ImagesController",
+  "file": "com/salesmanager/shop/controller/ImagesController.java",
+  "method": "printImage",
+  "http": "GET",
+  "base": "",
+  "paths": [
+   "/static/products/{storeCode}/{productCode}/{imageName}.{extension}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "storeCode",
+   "productCode",
+   "imageName",
+   "extension"
+  ],
+  "response_type": "byte",
+  "response_det": 1,
+  "uses": [
+   "Logger",
+   "ProductImageService"
+  ]
+ },
+ {
+  "controller": "DefaultController",
+  "file": "com/salesmanager/shop/store/api/DefaultController.java",
+  "method": "version",
+  "http": "GET",
+  "base": "",
+  "paths": [
+   "/"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "String",
+  "response_det": 1,
+  "uses": [
+   "Environment"
+  ]
+ },
+ {
+  "controller": "StoreContactRESTController",
+  "file": "com/salesmanager/shop/store/api/v0/store/StoreContactRESTController.java",
+  "method": "store",
+  "http": "GET",
+  "base": "/services",
+  "paths": [
+   "/services/public/{store}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "store"
+  ],
+  "response_type": "AjaxResponse",
+  "response_det": 1,
+  "uses": [
+   "LanguageService",
+   "Logger",
+   "MerchantStoreService"
+  ]
+ },
+ {
+  "controller": "StoreContactRESTController",
+  "file": "com/salesmanager/shop/store/api/v0/store/StoreContactRESTController.java",
+  "method": "contact",
+  "http": "POST",
+  "base": "/services",
+  "paths": [
+   "/services/public/{store}/contact"
+  ],
+  "request_type": "ContactForm",
+  "request_det": 4,
+  "params": [],
+  "path_vars": [
+   "store"
+  ],
+  "response_type": "AjaxResponse",
+  "response_det": 1,
+  "uses": [
+   "EmailTemplatesUtils",
+   "LanguageService",
+   "Logger",
+   "MerchantStoreService"
+  ]
+ },
+ {
+  "controller": "SystemRESTController",
+  "file": "com/salesmanager/shop/store/api/v0/system/SystemRESTController.java",
+  "method": "createOrUpdateModule",
+  "http": "POST",
+  "base": "/services",
+  "paths": [
+   "/services/private/system/module"
+  ],
+  "request_type": "String",
+  "request_det": 1,
+  "params": [],
+  "path_vars": [],
+  "response_type": "AjaxResponse",
+  "response_det": 1,
+  "uses": [
+   "Logger",
+   "ModuleConfigurationService"
+  ]
+ },
+ {
+  "controller": "SystemRESTController",
+  "file": "com/salesmanager/shop/store/api/v0/system/SystemRESTController.java",
+  "method": "createOptin",
+  "http": "POST",
+  "base": "/services",
+  "paths": [
+   "/services/private/system/optin"
+  ],
+  "request_type": "String",
+  "request_det": 1,
+  "params": [],
+  "path_vars": [],
+  "response_type": "AjaxResponse",
+  "response_det": 1,
+  "uses": [
+   "Logger"
+  ]
+ },
+ {
+  "controller": "SystemRESTController",
+  "file": "com/salesmanager/shop/store/api/v0/system/SystemRESTController.java",
+  "method": "deleteOptin",
+  "http": "DELETE",
+  "base": "/services",
+  "paths": [
+   "/services/private/system/optin/{code}"
+  ],
+  "request_type": "String",
+  "request_det": 1,
+  "params": [],
+  "path_vars": [],
+  "response_type": "AjaxResponse",
+  "response_det": 1,
+  "uses": [
+   "Logger"
+  ]
+ },
+ {
+  "controller": "SystemRESTController",
+  "file": "com/salesmanager/shop/store/api/v0/system/SystemRESTController.java",
+  "method": "createOptinCustomer",
+  "http": "POST",
+  "base": "/services",
+  "paths": [
+   "/services/private/system/optin/{code}/customer"
+  ],
+  "request_type": "String",
+  "request_det": 1,
+  "params": [],
+  "path_vars": [],
+  "response_type": "AjaxResponse",
+  "response_det": 1,
+  "uses": [
+   "Logger"
+  ]
+ },
+ {
+  "controller": "CatalogApi",
+  "file": "com/salesmanager/shop/store/api/v1/catalog/CatalogApi.java",
+  "method": "getCatalogs",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/catalogs"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableEntityList",
+  "response_det": 5,
+  "uses": [
+   "CatalogFacade"
+  ]
+ },
+ {
+  "controller": "CatalogApi",
+  "file": "com/salesmanager/shop/store/api/v1/catalog/CatalogApi.java",
+  "method": "exists",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/catalog/unique"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "code"
+  ],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 1,
+  "uses": [
+   "CatalogFacade"
+  ]
+ },
+ {
+  "controller": "CatalogApi",
+  "file": "com/salesmanager/shop/store/api/v1/catalog/CatalogApi.java",
+  "method": "createCatalog",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/catalog"
+  ],
+  "request_type": "PersistableCatalog",
+  "request_det": 4,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableCatalog",
+  "response_det": 49,
+  "uses": [
+   "CatalogFacade"
+  ]
+ },
+ {
+  "controller": "CatalogApi",
+  "file": "com/salesmanager/shop/store/api/v1/catalog/CatalogApi.java",
+  "method": "updateCatalog",
+  "http": "PATCH",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/catalog/{id}"
+  ],
+  "request_type": "PersistableCatalog",
+  "request_det": 4,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "CatalogFacade"
+  ]
+ },
+ {
+  "controller": "CatalogApi",
+  "file": "com/salesmanager/shop/store/api/v1/catalog/CatalogApi.java",
+  "method": "getCatalog",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/catalog/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableCatalog",
+  "response_det": 49,
+  "uses": [
+   "CatalogFacade"
+  ]
+ },
+ {
+  "controller": "CatalogApi",
+  "file": "com/salesmanager/shop/store/api/v1/catalog/CatalogApi.java",
+  "method": "deleteCatalog",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/catalog/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "CatalogFacade"
+  ]
+ },
+ {
+  "controller": "CatalogApi",
+  "file": "com/salesmanager/shop/store/api/v1/catalog/CatalogApi.java",
+  "method": "addCatalogEntry",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/catalog/{id}"
+  ],
+  "request_type": "PersistableCatalogCategoryEntry",
+  "request_det": 5,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableCatalogCategoryEntry",
+  "response_det": 20,
+  "uses": [
+   "CatalogFacade"
+  ]
+ },
+ {
+  "controller": "CatalogApi",
+  "file": "com/salesmanager/shop/store/api/v1/catalog/CatalogApi.java",
+  "method": "removeCatalogEntry",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/catalog/{id}/entry/{entryId}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id",
+   "entryId"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "CatalogFacade"
+  ]
+ },
+ {
+  "controller": "CatalogApi",
+  "file": "com/salesmanager/shop/store/api/v1/catalog/CatalogApi.java",
+  "method": "getCatalogEntry",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/catalog/{id}/entry"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableEntityList",
+  "response_det": 5,
+  "uses": [
+   "CatalogFacade"
+  ]
+ },
+ {
+  "controller": "CategoryApi",
+  "file": "com/salesmanager/shop/store/api/v1/category/CategoryApi.java",
+  "method": "get",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/category/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "categoryId"
+  ],
+  "response_type": "ReadableCategory",
+  "response_det": 17,
+  "uses": [
+   "CategoryFacade"
+  ]
+ },
+ {
+  "controller": "CategoryApi",
+  "file": "com/salesmanager/shop/store/api/v1/category/CategoryApi.java",
+  "method": "getByfriendlyUrl",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/category/{friendlyUrl}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "friendlyUrl"
+  ],
+  "response_type": "ReadableCategory",
+  "response_det": 17,
+  "uses": [
+   "CategoryFacade"
+  ]
+ },
+ {
+  "controller": "CategoryApi",
+  "file": "com/salesmanager/shop/store/api/v1/category/CategoryApi.java",
+  "method": "exists",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/category/unique"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "code"
+  ],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 1,
+  "uses": [
+   "CategoryFacade"
+  ]
+ },
+ {
+  "controller": "CategoryApi",
+  "file": "com/salesmanager/shop/store/api/v1/category/CategoryApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/category"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "filter",
+   "name"
+  ],
+  "path_vars": [],
+  "response_type": "ReadableCategoryList",
+  "response_det": 21,
+  "uses": [
+   "CategoryFacade"
+  ]
+ },
+ {
+  "controller": "CategoryApi",
+  "file": "com/salesmanager/shop/store/api/v1/category/CategoryApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/category/product/{ProductId}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableCategoryList",
+  "response_det": 21,
+  "uses": [
+   "CategoryFacade"
+  ]
+ },
+ {
+  "controller": "CategoryApi",
+  "file": "com/salesmanager/shop/store/api/v1/category/CategoryApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/category"
+  ],
+  "request_type": "PersistableCategory",
+  "request_det": 15,
+  "params": [],
+  "path_vars": [],
+  "response_type": "PersistableCategory",
+  "response_det": 15,
+  "uses": [
+   "CategoryFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "CategoryApi",
+  "file": "com/salesmanager/shop/store/api/v1/category/CategoryApi.java",
+  "method": "update",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/category/{id}"
+  ],
+  "request_type": "PersistableCategory",
+  "request_det": 15,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "PersistableCategory",
+  "response_det": 15,
+  "uses": [
+   "CategoryFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "CategoryApi",
+  "file": "com/salesmanager/shop/store/api/v1/category/CategoryApi.java",
+  "method": "updateVisible",
+  "http": "PATCH",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/category/{id}/visible"
+  ],
+  "request_type": "PersistableCategory",
+  "request_det": 15,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "CategoryFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "CategoryApi",
+  "file": "com/salesmanager/shop/store/api/v1/category/CategoryApi.java",
+  "method": "move",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/category/{id}/move/{parent}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id",
+   "parent"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "CategoryFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "CategoryApi",
+  "file": "com/salesmanager/shop/store/api/v1/category/CategoryApi.java",
+  "method": "delete",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/category/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "categoryId"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "CategoryFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "CacheApi",
+  "file": "com/salesmanager/shop/store/api/v1/configurations/CacheApi.java",
+  "method": "clearCache",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/auth/cache/store/{storeId}/clear"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "cacheKey"
+  ],
+  "path_vars": [
+   "storeCode"
+  ],
+  "response_type": "ResponseEntity",
+  "response_det": 1,
+  "uses": [
+   "CacheUtils",
+   "Logger",
+   "StoreFacade"
+  ]
+ },
+ {
+  "controller": "ConfigurationsApi",
+  "file": "com/salesmanager/shop/store/api/v1/configurations/ConfigurationsApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/configurations/payment"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "Void",
+  "response_det": 0,
+  "uses": []
+ },
+ {
+  "controller": "ConfigurationsApi",
+  "file": "com/salesmanager/shop/store/api/v1/configurations/ConfigurationsApi.java",
+  "method": "listPaymentConfigurations",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/configurations/payment"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "List",
+  "response_det": 8,
+  "uses": []
+ },
+ {
+  "controller": "ConfigurationsApi",
+  "file": "com/salesmanager/shop/store/api/v1/configurations/ConfigurationsApi.java",
+  "method": "listShippingConfigurations",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/configurations/shipping"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "List",
+  "response_det": 8,
+  "uses": []
+ },
+ {
+  "controller": "ContentAdministrationApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentAdministrationApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/content/list"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "parentPath"
+  ],
+  "path_vars": [],
+  "response_type": "List",
+  "response_det": 6,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentAdministrationApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentAdministrationApi.java",
+  "method": "folder",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/content/folder"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "path"
+  ],
+  "path_vars": [],
+  "response_type": "ContentFolder",
+  "response_det": 3,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentAdministrationApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentAdministrationApi.java",
+  "method": "upload",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/content/images/add"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "qqfile",
+   "qquuid",
+   "qqfilename",
+   "qqtotalfilesize",
+   "parentPath",
+   "qqpartindex",
+   "qqtotalparts"
+  ],
+  "path_vars": [],
+  "response_type": "FileStatus",
+  "response_det": 3,
+  "uses": [
+   "ContentFacade",
+   "FileNameUtils",
+   "Logger"
+  ]
+ },
+ {
+  "controller": "ContentAdministrationApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentAdministrationApi.java",
+  "method": "download",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/content/images/download"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "path"
+  ],
+  "path_vars": [],
+  "response_type": "String",
+  "response_det": 1,
+  "uses": [
+   "Logger"
+  ]
+ },
+ {
+  "controller": "ContentAdministrationApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentAdministrationApi.java",
+  "method": "rename",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/content/images/rename"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "path",
+   "newName"
+  ],
+  "path_vars": [],
+  "response_type": "FileStatus",
+  "response_det": 3,
+  "uses": [
+   "ContentFacade",
+   "Logger"
+  ]
+ },
+ {
+  "controller": "ContentAdministrationApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentAdministrationApi.java",
+  "method": "remove",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/content/images/remove"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "path"
+  ],
+  "path_vars": [],
+  "response_type": "FileStatus",
+  "response_det": 3,
+  "uses": [
+   "ContentFacade",
+   "Logger"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "pages",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/content/pages",
+   "/api/v1/content/pages"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableEntityList",
+  "response_det": 5,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "pagesSummary",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/content/summary"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "List",
+  "response_det": 11,
+  "uses": []
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "boxes",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/content/boxes",
+   "/api/v1/private/content/boxes"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableEntityList",
+  "response_det": 5,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "page",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/content/pages/{code}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ReadableContentPage",
+  "response_det": 13,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "pageByName",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/content/pages/name/{name}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "name"
+  ],
+  "response_type": "ReadableContentPage",
+  "response_det": 13,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "createBox",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/content/box"
+  ],
+  "request_type": "PersistableContentBox",
+  "request_det": 11,
+  "params": [],
+  "path_vars": [],
+  "response_type": "Entity",
+  "response_det": 1,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "boxExists",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/content/box/{code}/exists"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "EntityExists",
+  "response_det": 1,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "pageExists",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/content/page/{code}/exists"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "EntityExists",
+  "response_det": 1,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "createPage",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/content/page"
+  ],
+  "request_type": "PersistableContentPage",
+  "request_det": 12,
+  "params": [],
+  "path_vars": [],
+  "response_type": "Entity",
+  "response_det": 1,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "deletePage",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/content/page/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "deleteBox",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/content/box/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "updatePage",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/content/page/{id}"
+  ],
+  "request_type": "PersistableContentPage",
+  "request_det": 12,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "updateBox",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/content/box/{id}"
+  ],
+  "request_type": "PersistableContentBox",
+  "request_det": 11,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "content",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/content/any/{code}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ReadableContentFull",
+  "response_det": 13,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "contents",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/contents/any"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "List",
+  "response_det": 13,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "manageBoxByCode",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/content/boxes/{code}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ReadableContentBox",
+  "response_det": 11,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "getBoxByCode",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/content/boxes/{code}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ReadableContentBox",
+  "response_det": 11,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "addFolder",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/content/folder"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "parent",
+   "folder"
+  ],
+  "path_vars": [],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": []
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "images",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/content/images"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "path"
+  ],
+  "path_vars": [],
+  "response_type": "ContentFolder",
+  "response_det": 3,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "upload",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/file"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "file"
+  ],
+  "path_vars": [],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "uploadMultipleFiles",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/files"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "file[]"
+  ],
+  "path_vars": [],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "updatePage",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/content/{id}"
+  ],
+  "request_type": "PersistableContentEntity",
+  "request_det": 13,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": []
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "deleteContent",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/content/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "ContentApi",
+  "file": "com/salesmanager/shop/store/api/v1/content/ContentApi.java",
+  "method": "deleteFile",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/content/"
+  ],
+  "request_type": "ContentName",
+  "request_det": 2,
+  "params": [],
+  "path_vars": [],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ContentFacade"
+  ]
+ },
+ {
+  "controller": "AuthenticateCustomerApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/AuthenticateCustomerApi.java",
+  "method": "register",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/customer/register"
+  ],
+  "request_type": "PersistableCustomer",
+  "request_det": 22,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 0,
+  "uses": [
+   "AuthenticationManager",
+   "CustomerFacade",
+   "JWTTokenUtil",
+   "UserDetailsService"
+  ]
+ },
+ {
+  "controller": "AuthenticateCustomerApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/AuthenticateCustomerApi.java",
+  "method": "authenticate",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/customer/login"
+  ],
+  "request_type": "AuthenticationRequest",
+  "request_det": 2,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 0,
+  "uses": [
+   "AuthenticationManager",
+   "JWTTokenUtil",
+   "UserDetailsService"
+  ]
+ },
+ {
+  "controller": "AuthenticateCustomerApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/AuthenticateCustomerApi.java",
+  "method": "refreshToken",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/auth/customer/refresh"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 0,
+  "uses": [
+   "JWTTokenUtil",
+   "UserDetailsService"
+  ]
+ },
+ {
+  "controller": "AuthenticateCustomerApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/AuthenticateCustomerApi.java",
+  "method": "changePassword",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/auth/customer/password"
+  ],
+  "request_type": "PasswordRequest",
+  "request_det": 4,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 0,
+  "uses": [
+   "CustomerFacade",
+   "StoreFacade"
+  ]
+ },
+ {
+  "controller": "CustomerApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/CustomerApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/customer"
+  ],
+  "request_type": "PersistableCustomer",
+  "request_det": 22,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableCustomer",
+  "response_det": 34,
+  "uses": [
+   "CustomerFacade"
+  ]
+ },
+ {
+  "controller": "CustomerApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/CustomerApi.java",
+  "method": "update",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/customer/{id}"
+  ],
+  "request_type": "PersistableCustomer",
+  "request_det": 22,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "PersistableCustomer",
+  "response_det": 22,
+  "uses": [
+   "CustomerFacade"
+  ]
+ },
+ {
+  "controller": "CustomerApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/CustomerApi.java",
+  "method": "updateAddress",
+  "http": "PATCH",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/customer/{id}/address"
+  ],
+  "request_type": "PersistableCustomer",
+  "request_det": 22,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "CustomerFacade"
+  ]
+ },
+ {
+  "controller": "CustomerApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/CustomerApi.java",
+  "method": "delete",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/customer/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "CustomerFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "CustomerApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/CustomerApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/customers"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableCustomerList",
+  "response_det": 38,
+  "uses": [
+   "CustomerFacade"
+  ]
+ },
+ {
+  "controller": "CustomerApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/CustomerApi.java",
+  "method": "get",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/customer/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableCustomer",
+  "response_det": 34,
+  "uses": [
+   "CustomerFacade"
+  ]
+ },
+ {
+  "controller": "CustomerApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/CustomerApi.java",
+  "method": "getAuthUser",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/customer/profile",
+   "/api/v1/auth/customer/profile"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableCustomer",
+  "response_det": 34,
+  "uses": [
+   "CustomerFacade"
+  ]
+ },
+ {
+  "controller": "CustomerApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/CustomerApi.java",
+  "method": "updateAuthUserAddress",
+  "http": "PATCH",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/auth/customer/address"
+  ],
+  "request_type": "PersistableCustomer",
+  "request_det": 22,
+  "params": [],
+  "path_vars": [],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "CustomerFacade"
+  ]
+ },
+ {
+  "controller": "CustomerApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/CustomerApi.java",
+  "method": "update",
+  "http": "PATCH",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/auth/customer/"
+  ],
+  "request_type": "PersistableCustomer",
+  "request_det": 22,
+  "params": [],
+  "path_vars": [],
+  "response_type": "PersistableCustomer",
+  "response_det": 22,
+  "uses": [
+   "CustomerFacade"
+  ]
+ },
+ {
+  "controller": "CustomerApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/CustomerApi.java",
+  "method": "delete",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/auth/customer/"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "CustomerFacade"
+  ]
+ },
+ {
+  "controller": "CustomerNewsletterApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/CustomerNewsletterApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/newsletter"
+  ],
+  "request_type": "PersistableCustomerOptin",
+  "request_det": 4,
+  "params": [],
+  "path_vars": [],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "CustomerFacade"
+  ]
+ },
+ {
+  "controller": "CustomerNewsletterApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/CustomerNewsletterApi.java",
+  "method": "update",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/newsletter/{email}"
+  ],
+  "request_type": "PersistableCustomer",
+  "request_det": 22,
+  "params": [],
+  "path_vars": [
+   "email"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": []
+ },
+ {
+  "controller": "CustomerNewsletterApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/CustomerNewsletterApi.java",
+  "method": "delete",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/newsletter/{email}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "email"
+  ],
+  "response_type": "ResponseEntity",
+  "response_det": 0,
+  "uses": []
+ },
+ {
+  "controller": "CustomerReviewApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/CustomerReviewApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/customers/{id}/reviews"
+  ],
+  "request_type": "PersistableCustomerReview",
+  "request_det": 7,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "PersistableCustomerReview",
+  "response_det": 7,
+  "uses": [
+   "CustomerFacade"
+  ]
+ },
+ {
+  "controller": "CustomerReviewApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/CustomerReviewApi.java",
+  "method": "getAll",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/customers/{id}/reviews"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "List",
+  "response_det": 38,
+  "uses": [
+   "CustomerFacade"
+  ]
+ },
+ {
+  "controller": "CustomerReviewApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/CustomerReviewApi.java",
+  "method": "update",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/customers/{id}/reviews/{reviewid}"
+  ],
+  "request_type": "PersistableCustomerReview",
+  "request_det": 7,
+  "params": [],
+  "path_vars": [
+   "id",
+   "reviewId"
+  ],
+  "response_type": "PersistableCustomerReview",
+  "response_det": 7,
+  "uses": [
+   "CustomerFacade"
+  ]
+ },
+ {
+  "controller": "CustomerReviewApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/CustomerReviewApi.java",
+  "method": "delete",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/customers/{id}/reviews/{reviewId}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id",
+   "reviewId"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "CustomerFacade"
+  ]
+ },
+ {
+  "controller": "ResetCustomerPasswordApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/ResetCustomerPasswordApi.java",
+  "method": "passwordResetRequest",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/customer/password/reset/request"
+  ],
+  "request_type": "ResetPasswordRequest",
+  "request_det": 2,
+  "params": [],
+  "path_vars": [],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "com"
+  ]
+ },
+ {
+  "controller": "ResetCustomerPasswordApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/ResetCustomerPasswordApi.java",
+  "method": "passwordResetVerify",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/customer/{store}/reset/{token}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "store",
+   "token"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "com"
+  ]
+ },
+ {
+  "controller": "ResetCustomerPasswordApi",
+  "file": "com/salesmanager/shop/store/api/v1/customer/ResetCustomerPasswordApi.java",
+  "method": "changePassword",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/customer/{store}/password/{token}"
+  ],
+  "request_type": "PasswordRequest",
+  "request_det": 4,
+  "params": [],
+  "path_vars": [
+   "store",
+   "token"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "com"
+  ]
+ },
+ {
+  "controller": "MarketPlaceApi",
+  "file": "com/salesmanager/shop/store/api/v1/marketplace/MarketPlaceApi.java",
+  "method": "marketPlace",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/marketplace/{store}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "store"
+  ],
+  "response_type": "ReadableMarketPlace",
+  "response_det": 29,
+  "uses": [
+   "LanguageUtils",
+   "MarketPlaceFacade"
+  ]
+ },
+ {
+  "controller": "MarketPlaceApi",
+  "file": "com/salesmanager/shop/store/api/v1/marketplace/MarketPlaceApi.java",
+  "method": "signup",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/store/signup"
+  ],
+  "request_type": "SignupStore",
+  "request_det": 13,
+  "params": [],
+  "path_vars": [],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "StoreFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "MarketPlaceApi",
+  "file": "com/salesmanager/shop/store/api/v1/marketplace/MarketPlaceApi.java",
+  "method": "storeSignupVerify",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/store/{store}/signup/{token}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "store",
+   "token"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": []
+ },
+ {
+  "controller": "OrderApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/orders/customers/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableOrderList",
+  "response_det": 133,
+  "uses": [
+   "CustomerService",
+   "Logger",
+   "OrderFacade"
+  ]
+ },
+ {
+  "controller": "OrderApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/auth/orders"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableOrderList",
+  "response_det": 133,
+  "uses": [
+   "CustomerService",
+   "OrderFacade"
+  ]
+ },
+ {
+  "controller": "OrderApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/orders"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "name",
+   "id",
+   "status",
+   "phone",
+   "email"
+  ],
+  "path_vars": [],
+  "response_type": "ReadableOrderList",
+  "response_det": 133,
+  "uses": [
+   "AuthorizationUtils",
+   "OrderFacade"
+  ]
+ },
+ {
+  "controller": "OrderApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderApi.java",
+  "method": "get",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/orders/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableOrder",
+  "response_det": 147,
+  "uses": [
+   "AuthorizationUtils",
+   "OrderFacade"
+  ]
+ },
+ {
+  "controller": "OrderApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderApi.java",
+  "method": "getOrder",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/auth/orders/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableOrder",
+  "response_det": 147,
+  "uses": [
+   "CustomerService",
+   "Logger",
+   "OrderFacade"
+  ]
+ },
+ {
+  "controller": "OrderApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderApi.java",
+  "method": "checkout",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/auth/cart/{code}/checkout"
+  ],
+  "request_type": "PersistableOrder",
+  "request_det": 12,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ReadableOrderConfirmation",
+  "response_det": 123,
+  "uses": [
+   "CustomerService",
+   "Logger",
+   "OrderFacade",
+   "ShoppingCartService",
+   "com"
+  ]
+ },
+ {
+  "controller": "OrderApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderApi.java",
+  "method": "checkout",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/cart/{code}/checkout"
+  ],
+  "request_type": "PersistableAnonymousOrder",
+  "request_det": 33,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ReadableOrderConfirmation",
+  "response_det": 123,
+  "uses": [
+   "CredentialsService",
+   "CustomerFacade",
+   "OrderFacade",
+   "ShoppingCartService",
+   "com"
+  ]
+ },
+ {
+  "controller": "OrderApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderApi.java",
+  "method": "updateOrderCustomer",
+  "http": "PATCH",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/orders/{id}/customer"
+  ],
+  "request_type": "PersistableCustomer",
+  "request_det": 22,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "AuthorizationUtils",
+   "OrderFacade"
+  ]
+ },
+ {
+  "controller": "OrderApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderApi.java",
+  "method": "updateOrderStatus",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/orders/{id}/status"
+  ],
+  "request_type": "String",
+  "request_det": 1,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "AuthorizationUtils",
+   "OrderFacade",
+   "OrderService"
+  ]
+ },
+ {
+  "controller": "OrderPaymentApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderPaymentApi.java",
+  "method": "init",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/cart/{code}/payment/init"
+  ],
+  "request_type": "PersistablePayment",
+  "request_det": 5,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ReadableTransaction",
+  "response_det": 7,
+  "uses": [
+   "PaymentService",
+   "ShoppingCartService"
+  ]
+ },
+ {
+  "controller": "OrderPaymentApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderPaymentApi.java",
+  "method": "init",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/auth/cart/{code}/payment/init"
+  ],
+  "request_type": "PersistablePayment",
+  "request_det": 5,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ReadableTransaction",
+  "response_det": 7,
+  "uses": [
+   "CustomerService",
+   "Logger",
+   "PaymentService",
+   "ShoppingCartService"
+  ]
+ },
+ {
+  "controller": "OrderPaymentApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderPaymentApi.java",
+  "method": "nextTransaction",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/orders/{id}/payment/nextTransaction"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "String",
+  "response_det": 1,
+  "uses": [
+   "AuthorizationUtils",
+   "OrderFacade"
+  ]
+ },
+ {
+  "controller": "OrderPaymentApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderPaymentApi.java",
+  "method": "listTransactions",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/orders/{id}/payment/transactions"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "List",
+  "response_det": 7,
+  "uses": [
+   "AuthorizationUtils",
+   "OrderFacade"
+  ]
+ },
+ {
+  "controller": "OrderPaymentApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderPaymentApi.java",
+  "method": "listCapturableOrders",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/orders/payment/capturable"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "startDate",
+   "endDate"
+  ],
+  "path_vars": [],
+  "response_type": "ReadableOrderList",
+  "response_det": 133,
+  "uses": [
+   "Logger",
+   "OrderFacade"
+  ]
+ },
+ {
+  "controller": "OrderPaymentApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderPaymentApi.java",
+  "method": "capturePayment",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/orders/{id}/capture"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableTransaction",
+  "response_det": 7,
+  "uses": []
+ },
+ {
+  "controller": "OrderPaymentApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderPaymentApi.java",
+  "method": "refundPayment",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/orders/{id}/refund"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableTransaction",
+  "response_det": 7,
+  "uses": []
+ },
+ {
+  "controller": "OrderPaymentApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderPaymentApi.java",
+  "method": "authorizePayment",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/orders/{id}/authorize"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableTransaction",
+  "response_det": 7,
+  "uses": []
+ },
+ {
+  "controller": "OrderShippingApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderShippingApi.java",
+  "method": "shipping",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/auth/cart/{code}/shipping"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ReadableShippingSummary",
+  "response_det": 30,
+  "uses": [
+   "CustomerService",
+   "LabelUtils",
+   "Logger",
+   "OrderFacade",
+   "ShoppingCartFacade"
+  ]
+ },
+ {
+  "controller": "OrderShippingApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderShippingApi.java",
+  "method": "shipping",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/cart/{code}/shipping"
+  ],
+  "request_type": "AddressLocation",
+  "request_det": 2,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ReadableShippingSummary",
+  "response_det": 30,
+  "uses": [
+   "CountryService",
+   "LabelUtils",
+   "Logger",
+   "OrderFacade",
+   "ShoppingCartFacade"
+  ]
+ },
+ {
+  "controller": "OrderStatusHistoryApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderStatusHistoryApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1private/orders/{id}/history"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "List",
+  "response_det": 5,
+  "uses": [
+   "AuthorizationUtils",
+   "OrderFacade"
+  ]
+ },
+ {
+  "controller": "OrderStatusHistoryApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderStatusHistoryApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1private/orders/{id}/history"
+  ],
+  "request_type": "PersistableOrderStatusHistory",
+  "request_det": 5,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "AuthorizationUtils",
+   "OrderFacade"
+  ]
+ },
+ {
+  "controller": "OrderTotalApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderTotalApi.java",
+  "method": "payment",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/auth/cart/{id}/total"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "quote"
+  ],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableOrderTotalSummary",
+  "response_det": 12,
+  "uses": [
+   "CustomerService",
+   "Logger",
+   "OrderService",
+   "ShippingQuoteService",
+   "ShoppingCartFacade"
+  ]
+ },
+ {
+  "controller": "OrderTotalApi",
+  "file": "com/salesmanager/shop/store/api/v1/order/OrderTotalApi.java",
+  "method": "calculateTotal",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/cart/{code}/total"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "quote"
+  ],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ReadableOrderTotalSummary",
+  "response_det": 12,
+  "uses": [
+   "Logger",
+   "OrderService",
+   "ShippingQuoteService",
+   "ShoppingCartFacade"
+  ]
+ },
+ {
+  "controller": "PaymentApi",
+  "file": "com/salesmanager/shop/store/api/v1/payment/PaymentApi.java",
+  "method": "paymentModules",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/modules/payment"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "List",
+  "response_det": 7,
+  "uses": [
+   "Logger",
+   "PaymentService"
+  ]
+ },
+ {
+  "controller": "PaymentApi",
+  "file": "com/salesmanager/shop/store/api/v1/payment/PaymentApi.java",
+  "method": "configure",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/modules/payment"
+  ],
+  "request_type": "IntegrationModuleConfiguration",
+  "request_det": 7,
+  "params": [],
+  "path_vars": [],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "Logger",
+   "PaymentService"
+  ]
+ },
+ {
+  "controller": "PaymentApi",
+  "file": "com/salesmanager/shop/store/api/v1/payment/PaymentApi.java",
+  "method": "paymentModule",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/modules/payment/{code}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "IntegrationModuleConfiguration",
+  "response_det": 7,
+  "uses": [
+   "Logger",
+   "PaymentService"
+  ]
+ },
+ {
+  "controller": "ProductApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product",
+   "/api/v1/auth/products"
+  ],
+  "request_type": "PersistableProduct",
+  "request_det": 85,
+  "params": [],
+  "path_vars": [],
+  "response_type": "Entity",
+  "response_det": 1,
+  "uses": [
+   "ProductCommonFacade"
+  ]
+ },
+ {
+  "controller": "ProductApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductApi.java",
+  "method": "update",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{id}",
+   "/api/v1/auth/product/{id}"
+  ],
+  "request_type": "PersistableProduct",
+  "request_det": 85,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "Logger",
+   "ProductCommonFacade"
+  ]
+ },
+ {
+  "controller": "ProductApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductApi.java",
+  "method": "update",
+  "http": "PATCH",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{id}"
+  ],
+  "request_type": "LightPersistableProduct",
+  "request_det": 4,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductCommonFacade"
+  ]
+ },
+ {
+  "controller": "ProductApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductApi.java",
+  "method": "delete",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{id}",
+   "/api/v1/auth/product/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductCommonFacade"
+  ]
+ },
+ {
+  "controller": "ProductApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/products"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "category",
+   "name",
+   "sku",
+   "manufacturer",
+   "optionValues",
+   "status",
+   "owner",
+   "origin",
+   "slug",
+   "available"
+  ],
+  "path_vars": [],
+  "response_type": "ReadableProductList",
+  "response_det": 106,
+  "uses": [
+   "CategoryService",
+   "Logger",
+   "ProductFacade"
+  ]
+ },
+ {
+  "controller": "ProductApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductApi.java",
+  "method": "getByfriendlyUrl",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/product/{friendlyUrl}",
+   "/api/v1/product/friendly/{friendlyUrl}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "friendlyUrl"
+  ],
+  "response_type": "ReadableProduct",
+  "response_det": 102,
+  "uses": [
+   "ProductFacade"
+  ]
+ },
+ {
+  "controller": "ProductApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductApi.java",
+  "method": "exists",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/unique"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "code"
+  ],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 1,
+  "uses": [
+   "ProductCommonFacade"
+  ]
+ },
+ {
+  "controller": "ProductApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductApi.java",
+  "method": "addProductToCategory",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{productId}/category/{categoryId}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "productId",
+   "categoryId"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "CategoryService",
+   "ProductCommonFacade",
+   "ProductService"
+  ]
+ },
+ {
+  "controller": "ProductApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductApi.java",
+  "method": "removeProductFromCategory",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{productId}/category/{categoryId}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "productId",
+   "categoryId"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "CategoryService",
+   "ProductCommonFacade",
+   "ProductService"
+  ]
+ },
+ {
+  "controller": "ProductApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductApi.java",
+  "method": "changeProductOrder",
+  "http": "PATCH",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{id}",
+   "/api/v1/auth/product/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "Logger",
+   "ProductService"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "createOption",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/option"
+  ],
+  "request_type": "PersistableProductOptionEntity",
+  "request_det": 14,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableProductOptionEntity",
+  "response_det": 14,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "optionExists",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/option/unique"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "code"
+  ],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 1,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "optionValueExists",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/option/value/unique"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "code"
+  ],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 1,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "createOptionValue",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/option/value"
+  ],
+  "request_type": "PersistableProductOptionValue",
+  "request_det": 15,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableProductOptionValue",
+  "response_det": 9,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "addOptionValueImage",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/option/value/{id}/image"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "file"
+  ],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "removeOptionValueImage",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/option/value/{id}/image"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "getOption",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/option/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableProductOptionEntity",
+  "response_det": 14,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "getOptionValue",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/option/value/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableProductOptionValue",
+  "response_det": 9,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "updateOption",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/option/{optionId}"
+  ],
+  "request_type": "PersistableProductOptionEntity",
+  "request_det": 14,
+  "params": [],
+  "path_vars": [
+   "optionId"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "deleteOption",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/option/{optionId}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "optionId"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "updateOptionValue",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/option/value/{id}"
+  ],
+  "request_type": "PersistableProductOptionValue",
+  "request_det": 15,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "deleteOptionValue",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/option/value/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "options",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/options"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "name"
+  ],
+  "path_vars": [],
+  "response_type": "ReadableProductOptionList",
+  "response_det": 18,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "optionsValues",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/options/values"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "name"
+  ],
+  "path_vars": [],
+  "response_type": "ReadableProductOptionValueList",
+  "response_det": 13,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "attributes",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{id}/attributes"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableProductAttributeList",
+  "response_det": 32,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "getAttribute",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{id}/attribute/{attributeId}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id",
+   "attributeId"
+  ],
+  "response_type": "ReadableProductAttributeEntity",
+  "response_det": 28,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "createAttribute",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{id}/attribute"
+  ],
+  "request_type": "PersistableProductAttribute",
+  "request_det": 24,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "Entity",
+  "response_det": 1,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "createAttributes",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{id}/attributes"
+  ],
+  "request_type": "List",
+  "request_det": 24,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "List",
+  "response_det": 2,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "updateAttribute",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{id}/attribute/{attributeId}"
+  ],
+  "request_type": "PersistableProductAttribute",
+  "request_det": 24,
+  "params": [],
+  "path_vars": [
+   "id",
+   "attributeId"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductAttributeOptionApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductAttributeOptionApi.java",
+  "method": "deleteAttribute",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{id}/attribute/{attributeId}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id",
+   "attributeId"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductOptionFacade"
+  ]
+ },
+ {
+  "controller": "ProductGroupApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductGroupApi.java",
+  "method": "creteGroup",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/products/group"
+  ],
+  "request_type": "ProductGroup",
+  "request_det": 3,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ProductGroup",
+  "response_det": 3,
+  "uses": [
+   "ProductItemsFacade"
+  ]
+ },
+ {
+  "controller": "ProductGroupApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductGroupApi.java",
+  "method": "updateGroup",
+  "http": "PATCH",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/products/group/{code}"
+  ],
+  "request_type": "ProductGroup",
+  "request_det": 3,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductItemsFacade"
+  ]
+ },
+ {
+  "controller": "ProductGroupApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductGroupApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/groups"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "java",
+  "response_det": 1,
+  "uses": [
+   "ProductItemsFacade"
+  ]
+ },
+ {
+  "controller": "ProductGroupApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductGroupApi.java",
+  "method": "getProductItemsByGroup",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/products/group/{code}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ReadableProductList",
+  "response_det": 106,
+  "uses": [
+   "Logger",
+   "ProductItemsFacade"
+  ]
+ },
+ {
+  "controller": "ProductGroupApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductGroupApi.java",
+  "method": "addProductToGroup",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/products/{productId}/group/{code}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "productId",
+   "code"
+  ],
+  "response_type": "ReadableProductList",
+  "response_det": 106,
+  "uses": [
+   "Logger",
+   "ProductItemsFacade",
+   "ProductService"
+  ]
+ },
+ {
+  "controller": "ProductGroupApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductGroupApi.java",
+  "method": "removeProductFromGroup",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/products/{productId}/group/{code}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "productId",
+   "code"
+  ],
+  "response_type": "ReadableProductList",
+  "response_det": 106,
+  "uses": [
+   "Logger",
+   "ProductItemsFacade",
+   "ProductService"
+  ]
+ },
+ {
+  "controller": "ProductGroupApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductGroupApi.java",
+  "method": "deleteGroup",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/products/group/{code}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductItemsFacade"
+  ]
+ },
+ {
+  "controller": "ProductImageApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductImageApi.java",
+  "method": "uploadImage",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{id}/image",
+   "/api/v1/auth/product/{id}/image"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "file",
+   "defaultImage"
+  ],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "Logger",
+   "ProductImageService",
+   "ProductService"
+  ]
+ },
+ {
+  "controller": "ProductImageApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductImageApi.java",
+  "method": "deleteImage",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/image/{id}",
+   "/api/v1/auth/product/images/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "Logger",
+   "ProductImageService"
+  ]
+ },
+ {
+  "controller": "ProductImageApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductImageApi.java",
+  "method": "deleteImage",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{id}/image/{imageId}"
+  ],
+  "request_type": "NameEntity",
+  "request_det": 2,
+  "params": [],
+  "path_vars": [
+   "id",
+   "imageId"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "Logger",
+   "ProductImageService"
+  ]
+ },
+ {
+  "controller": "ProductImageApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductImageApi.java",
+  "method": "images",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/product/{productId}/images"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "productId"
+  ],
+  "response_type": "List",
+  "response_det": 2,
+  "uses": [
+   "ProductService"
+  ]
+ },
+ {
+  "controller": "ProductImageApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductImageApi.java",
+  "method": "imageDetails",
+  "http": "PATCH",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{id}/image/{imageId}",
+   "/api/v1/auth/product/{id}/image/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id",
+   "imageId"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "Logger",
+   "ProductImageService",
+   "ProductService"
+  ]
+ },
+ {
+  "controller": "ProductInventoryApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductInventoryApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{productId}/inventory"
+  ],
+  "request_type": "PersistableInventory",
+  "request_det": 30,
+  "params": [],
+  "path_vars": [
+   "productId"
+  ],
+  "response_type": "ReadableInventory",
+  "response_det": 53,
+  "uses": [
+   "ProductInventoryFacade"
+  ]
+ },
+ {
+  "controller": "ProductInventoryApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductInventoryApi.java",
+  "method": "update",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{productId}/inventory/{id}"
+  ],
+  "request_type": "PersistableInventory",
+  "request_det": 30,
+  "params": [],
+  "path_vars": [
+   "productId",
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductInventoryFacade"
+  ]
+ },
+ {
+  "controller": "ProductInventoryApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductInventoryApi.java",
+  "method": "delete",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{productId}/inventory/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "productId",
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductInventoryFacade"
+  ]
+ },
+ {
+  "controller": "ProductInventoryApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductInventoryApi.java",
+  "method": "getBySku",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{sku}/inventory"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "sku"
+  ],
+  "response_type": "ReadableEntityList",
+  "response_det": 5,
+  "uses": [
+   "ProductInventoryFacade"
+  ]
+ },
+ {
+  "controller": "ProductInventoryApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductInventoryApi.java",
+  "method": "getByProductId",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/inventory"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "productId"
+  ],
+  "path_vars": [],
+  "response_type": "ReadableEntityList",
+  "response_det": 5,
+  "uses": [
+   "ProductInventoryFacade"
+  ]
+ },
+ {
+  "controller": "ProductManufacturerApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductManufacturerApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/manufacturer"
+  ],
+  "request_type": "PersistableManufacturer",
+  "request_det": 11,
+  "params": [],
+  "path_vars": [],
+  "response_type": "PersistableManufacturer",
+  "response_det": 11,
+  "uses": [
+   "Logger",
+   "ManufacturerFacade"
+  ]
+ },
+ {
+  "controller": "ProductManufacturerApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductManufacturerApi.java",
+  "method": "get",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/manufacturer/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableManufacturer",
+  "response_det": 11,
+  "uses": [
+   "Logger",
+   "ManufacturerFacade"
+  ]
+ },
+ {
+  "controller": "ProductManufacturerApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductManufacturerApi.java",
+  "method": "listByStore",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/manufacturers"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "name"
+  ],
+  "path_vars": [],
+  "response_type": "ReadableManufacturerList",
+  "response_det": 15,
+  "uses": [
+   "ManufacturerFacade"
+  ]
+ },
+ {
+  "controller": "ProductManufacturerApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductManufacturerApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/manufacturers"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "name"
+  ],
+  "path_vars": [],
+  "response_type": "ReadableManufacturerList",
+  "response_det": 15,
+  "uses": [
+   "ManufacturerFacade"
+  ]
+ },
+ {
+  "controller": "ProductManufacturerApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductManufacturerApi.java",
+  "method": "exists",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/manufacturer/unique"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "code"
+  ],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 1,
+  "uses": [
+   "ManufacturerFacade"
+  ]
+ },
+ {
+  "controller": "ProductManufacturerApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductManufacturerApi.java",
+  "method": "update",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/manufacturer/{id}"
+  ],
+  "request_type": "PersistableManufacturer",
+  "request_det": 11,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "Logger",
+   "ManufacturerFacade"
+  ]
+ },
+ {
+  "controller": "ProductManufacturerApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductManufacturerApi.java",
+  "method": "delete",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/manufacturer/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "Logger",
+   "ManufacturerFacade",
+   "ManufacturerService"
+  ]
+ },
+ {
+  "controller": "ProductManufacturerApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductManufacturerApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/category/{id}/manufacturer"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "List",
+  "response_det": 11,
+  "uses": [
+   "ManufacturerFacade"
+  ]
+ },
+ {
+  "controller": "ProductPriceApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductPriceApi.java",
+  "method": "save",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{sku}/inventory/{inventoryId}/price"
+  ],
+  "request_type": "PersistableProductPrice",
+  "request_det": 19,
+  "params": [],
+  "path_vars": [
+   "sku",
+   "inventoryId"
+  ],
+  "response_type": "Entity",
+  "response_det": 1,
+  "uses": [
+   "ProductPriceFacade"
+  ]
+ },
+ {
+  "controller": "ProductPriceApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductPriceApi.java",
+  "method": "save",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{sku}/price"
+  ],
+  "request_type": "PersistableProductPrice",
+  "request_det": 19,
+  "params": [],
+  "path_vars": [
+   "sku"
+  ],
+  "response_type": "Entity",
+  "response_det": 1,
+  "uses": [
+   "ProductPriceFacade"
+  ]
+ },
+ {
+  "controller": "ProductPriceApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductPriceApi.java",
+  "method": "edit",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{sku}/inventory/{inventoryId}/price/{priceId}"
+  ],
+  "request_type": "PersistableProductPrice",
+  "request_det": 19,
+  "params": [],
+  "path_vars": [
+   "sku",
+   "inventoryId",
+   "priceId"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductPriceFacade"
+  ]
+ },
+ {
+  "controller": "ProductPriceApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductPriceApi.java",
+  "method": "get",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{sku}/price/{priceId}"
+  ],
+  "request_type": "PersistableProductPrice",
+  "request_det": 19,
+  "params": [],
+  "path_vars": [
+   "sku",
+   "priceId"
+  ],
+  "response_type": "ReadableProductPrice",
+  "response_det": 14,
+  "uses": [
+   "ProductPriceFacade"
+  ]
+ },
+ {
+  "controller": "ProductPriceApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductPriceApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{sku}/inventory/{inventoryId}/price"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "sku",
+   "inventoryId"
+  ],
+  "response_type": "List",
+  "response_det": 14,
+  "uses": [
+   "ProductPriceFacade"
+  ]
+ },
+ {
+  "controller": "ProductPriceApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductPriceApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{sku}/prices"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "sku"
+  ],
+  "response_type": "List",
+  "response_det": 14,
+  "uses": [
+   "ProductPriceFacade"
+  ]
+ },
+ {
+  "controller": "ProductPriceApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductPriceApi.java",
+  "method": "delete",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/{sku}/price/{priceId}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "sku",
+   "priceId"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductPriceFacade"
+  ]
+ },
+ {
+  "controller": "ProductPropertySetApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductPropertySetApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/property/set"
+  ],
+  "request_type": "PersistableProductOptionSet",
+  "request_det": 6,
+  "params": [],
+  "path_vars": [],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductOptionSetFacade"
+  ]
+ },
+ {
+  "controller": "ProductPropertySetApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductPropertySetApi.java",
+  "method": "exists",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/property/set/unique"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "code"
+  ],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 1,
+  "uses": [
+   "ProductOptionSetFacade"
+  ]
+ },
+ {
+  "controller": "ProductPropertySetApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductPropertySetApi.java",
+  "method": "get",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/property/set/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableProductOptionSet",
+  "response_det": 29,
+  "uses": [
+   "ProductOptionSetFacade"
+  ]
+ },
+ {
+  "controller": "ProductPropertySetApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductPropertySetApi.java",
+  "method": "update",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/property/set/{id}"
+  ],
+  "request_type": "PersistableProductOptionSet",
+  "request_det": 6,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductOptionSetFacade"
+  ]
+ },
+ {
+  "controller": "ProductPropertySetApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductPropertySetApi.java",
+  "method": "delete",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/property/set/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductOptionSetFacade"
+  ]
+ },
+ {
+  "controller": "ProductPropertySetApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductPropertySetApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/property/set"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "productType"
+  ],
+  "path_vars": [],
+  "response_type": "List",
+  "response_det": 29,
+  "uses": [
+   "ProductOptionSetFacade"
+  ]
+ },
+ {
+  "controller": "ProductRelationshipApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductRelationshipApi.java",
+  "method": "getAll",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/product/{id}/related"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "List",
+  "response_det": 102,
+  "uses": [
+   "Logger",
+   "ProductFacade",
+   "ProductService"
+  ]
+ },
+ {
+  "controller": "ProductReviewApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductReviewApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/products/{id}/reviews",
+   "/api/v1/auth/products/{id}/reviews",
+   "/api/v1/auth/products/{id}/reviews",
+   "/api/v1/auth/products/{id}/reviews"
+  ],
+  "request_type": "PersistableProductReview",
+  "request_det": 7,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "PersistableProductReview",
+  "response_det": 7,
+  "uses": [
+   "Logger",
+   "ProductCommonFacade",
+   "ProductReviewService"
+  ]
+ },
+ {
+  "controller": "ProductReviewApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductReviewApi.java",
+  "method": "getAll",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/product/{id}/reviews"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "List",
+  "response_det": 38,
+  "uses": [
+   "Logger",
+   "ProductCommonFacade",
+   "ProductService"
+  ]
+ },
+ {
+  "controller": "ProductReviewApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductReviewApi.java",
+  "method": "update",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/products/{id}/reviews/{reviewid}",
+   "/api/v1/auth/products/{id}/reviews/{reviewid}"
+  ],
+  "request_type": "PersistableProductReview",
+  "request_det": 7,
+  "params": [],
+  "path_vars": [
+   "id",
+   "reviewId"
+  ],
+  "response_type": "PersistableProductReview",
+  "response_det": 7,
+  "uses": [
+   "Logger",
+   "ProductCommonFacade",
+   "ProductReviewService"
+  ]
+ },
+ {
+  "controller": "ProductReviewApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductReviewApi.java",
+  "method": "delete",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/products/{id}/reviews/{reviewid}",
+   "/api/v1/auth/products/{id}/reviews/{reviewid}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id",
+   "reviewId"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "Logger",
+   "ProductCommonFacade",
+   "ProductReviewService"
+  ]
+ },
+ {
+  "controller": "ProductTypeApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductTypeApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/types"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableProductTypeList",
+  "response_det": 16,
+  "uses": [
+   "ProductTypeFacade"
+  ]
+ },
+ {
+  "controller": "ProductTypeApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductTypeApi.java",
+  "method": "get",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/type/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableProductType",
+  "response_det": 12,
+  "uses": [
+   "ProductTypeFacade"
+  ]
+ },
+ {
+  "controller": "ProductTypeApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductTypeApi.java",
+  "method": "exists",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/type/unique"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "code"
+  ],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 1,
+  "uses": [
+   "ProductTypeFacade"
+  ]
+ },
+ {
+  "controller": "ProductTypeApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductTypeApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/type"
+  ],
+  "request_type": "PersistableProductType",
+  "request_det": 12,
+  "params": [],
+  "path_vars": [],
+  "response_type": "Entity",
+  "response_det": 1,
+  "uses": [
+   "ProductTypeFacade"
+  ]
+ },
+ {
+  "controller": "ProductTypeApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductTypeApi.java",
+  "method": "update",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/type/{id}"
+  ],
+  "request_type": "PersistableProductType",
+  "request_det": 12,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductTypeFacade"
+  ]
+ },
+ {
+  "controller": "ProductTypeApi",
+  "file": "com/salesmanager/shop/store/api/v1/product/ProductTypeApi.java",
+  "method": "delete",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/product/type/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductTypeFacade"
+  ]
+ },
+ {
+  "controller": "ReferencesApi",
+  "file": "com/salesmanager/shop/store/api/v1/references/ReferencesApi.java",
+  "method": "getLanguages",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/languages"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "List",
+  "response_det": 2,
+  "uses": [
+   "LanguageFacade"
+  ]
+ },
+ {
+  "controller": "ReferencesApi",
+  "file": "com/salesmanager/shop/store/api/v1/references/ReferencesApi.java",
+  "method": "getCountry",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/country"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "List",
+  "response_det": 7,
+  "uses": [
+   "CountryFacade",
+   "StoreFacade"
+  ]
+ },
+ {
+  "controller": "ReferencesApi",
+  "file": "com/salesmanager/shop/store/api/v1/references/ReferencesApi.java",
+  "method": "getZones",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/zones"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "code"
+  ],
+  "path_vars": [],
+  "response_type": "List",
+  "response_det": 4,
+  "uses": [
+   "StoreFacade",
+   "ZoneFacade"
+  ]
+ },
+ {
+  "controller": "ReferencesApi",
+  "file": "com/salesmanager/shop/store/api/v1/references/ReferencesApi.java",
+  "method": "getCurrency",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/currency"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "List",
+  "response_det": 5,
+  "uses": [
+   "CurrencyFacade"
+  ]
+ },
+ {
+  "controller": "ReferencesApi",
+  "file": "com/salesmanager/shop/store/api/v1/references/ReferencesApi.java",
+  "method": "measures",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/measures"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "SizeReferences",
+  "response_det": 2,
+  "uses": []
+ },
+ {
+  "controller": "SearchApi",
+  "file": "com/salesmanager/shop/store/api/v1/search/SearchApi.java",
+  "method": "search",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/search"
+  ],
+  "request_type": "SearchProductRequest",
+  "request_det": 3,
+  "params": [],
+  "path_vars": [],
+  "response_type": "List",
+  "response_det": 1,
+  "uses": [
+   "SearchFacade"
+  ]
+ },
+ {
+  "controller": "SearchApi",
+  "file": "com/salesmanager/shop/store/api/v1/search/SearchApi.java",
+  "method": "autocomplete",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/search/autocomplete"
+  ],
+  "request_type": "SearchProductRequest",
+  "request_det": 3,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ValueList",
+  "response_det": 1,
+  "uses": [
+   "SearchFacade"
+  ]
+ },
+ {
+  "controller": "SecurityApi",
+  "file": "com/salesmanager/shop/store/api/v1/security/SecurityApi.java",
+  "method": "listPermissions",
+  "http": "GET",
+  "base": "/api/v1/sec",
+  "paths": [
+   "/api/v1/sec/private/{group}/permissions"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "group"
+  ],
+  "response_type": "List",
+  "response_det": 2,
+  "uses": [
+   "GroupService",
+   "Logger"
+  ]
+ },
+ {
+  "controller": "SecurityApi",
+  "file": "com/salesmanager/shop/store/api/v1/security/SecurityApi.java",
+  "method": "permissions",
+  "http": "GET",
+  "base": "/api/v1/sec",
+  "paths": [
+   "/api/v1/sec/private/permissions"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "List",
+  "response_det": 2,
+  "uses": [
+   "PermissionService"
+  ]
+ },
+ {
+  "controller": "SecurityApi",
+  "file": "com/salesmanager/shop/store/api/v1/security/SecurityApi.java",
+  "method": "groups",
+  "http": "GET",
+  "base": "/api/v1/sec",
+  "paths": [
+   "/api/v1/sec/private/groups"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "List",
+  "response_det": 3,
+  "uses": [
+   "GroupService"
+  ]
+ },
+ {
+  "controller": "ShippingConfigurationApi",
+  "file": "com/salesmanager/shop/store/api/v1/shipping/ShippingConfigurationApi.java",
+  "method": "shippingOrigin",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/shipping/origin"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableAddress",
+  "response_det": 6,
+  "uses": [
+   "AuthorizationUtils",
+   "ShippingFacade"
+  ]
+ },
+ {
+  "controller": "ShippingConfigurationApi",
+  "file": "com/salesmanager/shop/store/api/v1/shipping/ShippingConfigurationApi.java",
+  "method": "saveShippingOrigin",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/shipping/origin"
+  ],
+  "request_type": "PersistableAddress",
+  "request_det": 6,
+  "params": [],
+  "path_vars": [],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "AuthorizationUtils",
+   "ShippingFacade"
+  ]
+ },
+ {
+  "controller": "ShippingConfigurationApi",
+  "file": "com/salesmanager/shop/store/api/v1/shipping/ShippingConfigurationApi.java",
+  "method": "listPackages",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/shipping/packages"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "List",
+  "response_det": 10,
+  "uses": [
+   "AuthorizationUtils",
+   "ShippingFacade"
+  ]
+ },
+ {
+  "controller": "ShippingConfigurationApi",
+  "file": "com/salesmanager/shop/store/api/v1/shipping/ShippingConfigurationApi.java",
+  "method": "getPackage",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/shipping/package/{code}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "PackageDetails",
+  "response_det": 10,
+  "uses": [
+   "AuthorizationUtils",
+   "ShippingFacade"
+  ]
+ },
+ {
+  "controller": "ShippingConfigurationApi",
+  "file": "com/salesmanager/shop/store/api/v1/shipping/ShippingConfigurationApi.java",
+  "method": "createPackage",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/shipping/package"
+  ],
+  "request_type": "PackageDetails",
+  "request_det": 10,
+  "params": [],
+  "path_vars": [],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "AuthorizationUtils",
+   "ShippingFacade"
+  ]
+ },
+ {
+  "controller": "ShippingConfigurationApi",
+  "file": "com/salesmanager/shop/store/api/v1/shipping/ShippingConfigurationApi.java",
+  "method": "updatePackage",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/shipping/package/{code}"
+  ],
+  "request_type": "PackageDetails",
+  "request_det": 10,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "AuthorizationUtils",
+   "ShippingFacade"
+  ]
+ },
+ {
+  "controller": "ShippingConfigurationApi",
+  "file": "com/salesmanager/shop/store/api/v1/shipping/ShippingConfigurationApi.java",
+  "method": "deletePackage",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/shipping/package/{code}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "AuthorizationUtils",
+   "ShippingFacade"
+  ]
+ },
+ {
+  "controller": "ShippingConfigurationApi",
+  "file": "com/salesmanager/shop/store/api/v1/shipping/ShippingConfigurationApi.java",
+  "method": "shippingModules",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/modules/shipping"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "List",
+  "response_det": 7,
+  "uses": [
+   "Logger",
+   "ShippingService"
+  ]
+ },
+ {
+  "controller": "ShippingConfigurationApi",
+  "file": "com/salesmanager/shop/store/api/v1/shipping/ShippingConfigurationApi.java",
+  "method": "shippingModule",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/modules/shipping/{code}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "IntegrationConfiguration",
+  "response_det": 6,
+  "uses": [
+   "Logger",
+   "ShippingService"
+  ]
+ },
+ {
+  "controller": "ShippingConfigurationApi",
+  "file": "com/salesmanager/shop/store/api/v1/shipping/ShippingConfigurationApi.java",
+  "method": "configure",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/modules/shipping"
+  ],
+  "request_type": "IntegrationModuleConfiguration",
+  "request_det": 7,
+  "params": [],
+  "path_vars": [],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "Logger",
+   "ShippingService"
+  ]
+ },
+ {
+  "controller": "ShippingExpeditionApi",
+  "file": "com/salesmanager/shop/store/api/v1/shipping/ShippingExpeditionApi.java",
+  "method": "expedition",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/shipping/expedition"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ExpeditionConfiguration",
+  "response_det": 3,
+  "uses": [
+   "AuthorizationUtils",
+   "ShippingFacade"
+  ]
+ },
+ {
+  "controller": "ShippingExpeditionApi",
+  "file": "com/salesmanager/shop/store/api/v1/shipping/ShippingExpeditionApi.java",
+  "method": "getCountry",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/shipping/country"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "List",
+  "response_det": 7,
+  "uses": [
+   "ShippingFacade"
+  ]
+ },
+ {
+  "controller": "ShippingExpeditionApi",
+  "file": "com/salesmanager/shop/store/api/v1/shipping/ShippingExpeditionApi.java",
+  "method": "saveExpedition",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/shipping/expedition"
+  ],
+  "request_type": "ExpeditionConfiguration",
+  "request_det": 3,
+  "params": [],
+  "path_vars": [],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "AuthorizationUtils",
+   "ShippingFacade"
+  ]
+ },
+ {
+  "controller": "ShoppingCartApi",
+  "file": "com/salesmanager/shop/store/api/v1/shoppingCart/ShoppingCartApi.java",
+  "method": "addToCart",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/cart"
+  ],
+  "request_type": "PersistableShoppingCartItem",
+  "request_det": 4,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableShoppingCart",
+  "response_det": 92,
+  "uses": [
+   "ShoppingCartFacade"
+  ]
+ },
+ {
+  "controller": "ShoppingCartApi",
+  "file": "com/salesmanager/shop/store/api/v1/shoppingCart/ShoppingCartApi.java",
+  "method": "modifyCart",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/cart/{code}"
+  ],
+  "request_type": "PersistableShoppingCartItem",
+  "request_det": 4,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ResponseEntity",
+  "response_det": 92,
+  "uses": [
+   "ShoppingCartFacade"
+  ]
+ },
+ {
+  "controller": "ShoppingCartApi",
+  "file": "com/salesmanager/shop/store/api/v1/shoppingCart/ShoppingCartApi.java",
+  "method": "modifyCart",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/cart/{code}/promo/{promo}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code",
+   "promo"
+  ],
+  "response_type": "ResponseEntity",
+  "response_det": 92,
+  "uses": [
+   "ShoppingCartFacade"
+  ]
+ },
+ {
+  "controller": "ShoppingCartApi",
+  "file": "com/salesmanager/shop/store/api/v1/shoppingCart/ShoppingCartApi.java",
+  "method": "modifyCart",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/cart/{code}/multi"
+  ],
+  "request_type": "PersistableShoppingCartItem",
+  "request_det": 1,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ResponseEntity",
+  "response_det": 92,
+  "uses": [
+   "ShoppingCartFacade"
+  ]
+ },
+ {
+  "controller": "ShoppingCartApi",
+  "file": "com/salesmanager/shop/store/api/v1/shoppingCart/ShoppingCartApi.java",
+  "method": "getByCode",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/cart/{code}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ReadableShoppingCart",
+  "response_det": 92,
+  "uses": [
+   "ShoppingCartFacade"
+  ]
+ },
+ {
+  "controller": "ShoppingCartApi",
+  "file": "com/salesmanager/shop/store/api/v1/shoppingCart/ShoppingCartApi.java",
+  "method": "addToCart",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/customers/{id}/cart"
+  ],
+  "request_type": "PersistableShoppingCartItem",
+  "request_det": 4,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableShoppingCart",
+  "response_det": 92,
+  "uses": []
+ },
+ {
+  "controller": "ShoppingCartApi",
+  "file": "com/salesmanager/shop/store/api/v1/shoppingCart/ShoppingCartApi.java",
+  "method": "getByCustomer",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/auth/customer/{id}/cart"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "cart"
+  ],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableShoppingCart",
+  "response_det": 92,
+  "uses": [
+   "CustomerFacade",
+   "CustomerService",
+   "com"
+  ]
+ },
+ {
+  "controller": "ShoppingCartApi",
+  "file": "com/salesmanager/shop/store/api/v1/shoppingCart/ShoppingCartApi.java",
+  "method": "getByCustomer",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/auth/customer/cart"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "cart"
+  ],
+  "path_vars": [],
+  "response_type": "ReadableShoppingCart",
+  "response_det": 92,
+  "uses": [
+   "CustomerFacade",
+   "com"
+  ]
+ },
+ {
+  "controller": "ShoppingCartApi",
+  "file": "com/salesmanager/shop/store/api/v1/shoppingCart/ShoppingCartApi.java",
+  "method": "deleteCartItem",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/cart/{code}/product/{sku}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "body"
+  ],
+  "path_vars": [
+   "cartCode",
+   "sku"
+  ],
+  "response_type": "ResponseEntity",
+  "response_det": 92,
+  "uses": [
+   "ShoppingCartFacade"
+  ]
+ },
+ {
+  "controller": "MerchantStoreApi",
+  "file": "com/salesmanager/shop/store/api/v1/store/MerchantStoreApi.java",
+  "method": "store",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/store/{code}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ReadableMerchantStore",
+  "response_det": 28,
+  "uses": [
+   "StoreFacade"
+  ]
+ },
+ {
+  "controller": "MerchantStoreApi",
+  "file": "com/salesmanager/shop/store/api/v1/store/MerchantStoreApi.java",
+  "method": "storeFull",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/store/{code}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ReadableMerchantStore",
+  "response_det": 28,
+  "uses": [
+   "StoreFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "MerchantStoreApi",
+  "file": "com/salesmanager/shop/store/api/v1/store/MerchantStoreApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/merchant/{code}/stores"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ReadableMerchantStoreList",
+  "response_det": 32,
+  "uses": [
+   "StoreFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "MerchantStoreApi",
+  "file": "com/salesmanager/shop/store/api/v1/store/MerchantStoreApi.java",
+  "method": "get",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/stores"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableMerchantStoreList",
+  "response_det": 32,
+  "uses": [
+   "StoreFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "MerchantStoreApi",
+  "file": "com/salesmanager/shop/store/api/v1/store/MerchantStoreApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/stores/names"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "List",
+  "response_det": 28,
+  "uses": [
+   "StoreFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "MerchantStoreApi",
+  "file": "com/salesmanager/shop/store/api/v1/store/MerchantStoreApi.java",
+  "method": "supportedLanguages",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/store/languages"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "List",
+  "response_det": 2,
+  "uses": [
+   "StoreFacade"
+  ]
+ },
+ {
+  "controller": "MerchantStoreApi",
+  "file": "com/salesmanager/shop/store/api/v1/store/MerchantStoreApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/store"
+  ],
+  "request_type": "PersistableMerchantStore",
+  "request_det": 22,
+  "params": [],
+  "path_vars": [],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "StoreFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "MerchantStoreApi",
+  "file": "com/salesmanager/shop/store/api/v1/store/MerchantStoreApi.java",
+  "method": "update",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/store/{code}"
+  ],
+  "request_type": "PersistableMerchantStore",
+  "request_det": 22,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "StoreFacade"
+  ]
+ },
+ {
+  "controller": "MerchantStoreApi",
+  "file": "com/salesmanager/shop/store/api/v1/store/MerchantStoreApi.java",
+  "method": "getStoreMarketing",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/store/{code}/marketing"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ReadableBrand",
+  "response_det": 7,
+  "uses": [
+   "StoreFacade"
+  ]
+ },
+ {
+  "controller": "MerchantStoreApi",
+  "file": "com/salesmanager/shop/store/api/v1/store/MerchantStoreApi.java",
+  "method": "children",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/merchant/{code}/children"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ReadableMerchantStoreList",
+  "response_det": 32,
+  "uses": [
+   "StoreFacade"
+  ]
+ },
+ {
+  "controller": "MerchantStoreApi",
+  "file": "com/salesmanager/shop/store/api/v1/store/MerchantStoreApi.java",
+  "method": "saveStoreMarketing",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/store/{code}/marketing"
+  ],
+  "request_type": "PersistableBrand",
+  "request_det": 5,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "StoreFacade"
+  ]
+ },
+ {
+  "controller": "MerchantStoreApi",
+  "file": "com/salesmanager/shop/store/api/v1/store/MerchantStoreApi.java",
+  "method": "addLogo",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/store/{code}/marketing/logo"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "file"
+  ],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "StoreFacade"
+  ]
+ },
+ {
+  "controller": "MerchantStoreApi",
+  "file": "com/salesmanager/shop/store/api/v1/store/MerchantStoreApi.java",
+  "method": "deleteStoreLogo",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/store/{code}/marketing/logo"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "StoreFacade"
+  ]
+ },
+ {
+  "controller": "MerchantStoreApi",
+  "file": "com/salesmanager/shop/store/api/v1/store/MerchantStoreApi.java",
+  "method": "exists",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/store/unique",
+   "/api/v1/private/store/unique"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "code"
+  ],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 1,
+  "uses": [
+   "StoreFacade"
+  ]
+ },
+ {
+  "controller": "MerchantStoreApi",
+  "file": "com/salesmanager/shop/store/api/v1/store/MerchantStoreApi.java",
+  "method": "delete",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/store/{code}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "StoreFacade"
+  ]
+ },
+ {
+  "controller": "ContactApi",
+  "file": "com/salesmanager/shop/store/api/v1/system/ContactApi.java",
+  "method": "contact",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/contact"
+  ],
+  "request_type": "ContactForm",
+  "request_det": 4,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 0,
+  "uses": [
+   "EmailTemplatesUtils",
+   "LanguageService"
+  ]
+ },
+ {
+  "controller": "OptinApi",
+  "file": "com/salesmanager/shop/store/api/v1/system/OptinApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/optin"
+  ],
+  "request_type": "PersistableOptin",
+  "request_det": 7,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableOptin",
+  "response_det": 7,
+  "uses": [
+   "Logger",
+   "OptinFacade"
+  ]
+ },
+ {
+  "controller": "PublicConfigsApi",
+  "file": "com/salesmanager/shop/store/api/v1/system/PublicConfigsApi.java",
+  "method": "getConfig",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/config"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "Configs",
+  "response_det": 12,
+  "uses": [
+   "MerchantConfigurationFacade"
+  ]
+ },
+ {
+  "controller": "SearchToolsApi",
+  "file": "com/salesmanager/shop/store/api/v1/system/SearchToolsApi.java",
+  "method": "contact",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/system/search/index"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 0,
+  "uses": [
+   "SearchFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "TaxClassApi",
+  "file": "com/salesmanager/shop/store/api/v1/tax/TaxClassApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/tax/class"
+  ],
+  "request_type": "PersistableTaxClass",
+  "request_det": 4,
+  "params": [],
+  "path_vars": [],
+  "response_type": "Entity",
+  "response_det": 1,
+  "uses": [
+   "TaxFacade"
+  ]
+ },
+ {
+  "controller": "TaxClassApi",
+  "file": "com/salesmanager/shop/store/api/v1/tax/TaxClassApi.java",
+  "method": "exists",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/tax/class/unique"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "code"
+  ],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 1,
+  "uses": [
+   "TaxFacade"
+  ]
+ },
+ {
+  "controller": "TaxClassApi",
+  "file": "com/salesmanager/shop/store/api/v1/tax/TaxClassApi.java",
+  "method": "update",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/tax/class/{id}"
+  ],
+  "request_type": "PersistableTaxClass",
+  "request_det": 4,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "TaxFacade"
+  ]
+ },
+ {
+  "controller": "TaxClassApi",
+  "file": "com/salesmanager/shop/store/api/v1/tax/TaxClassApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/tax/class"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableEntityList",
+  "response_det": 5,
+  "uses": [
+   "TaxFacade"
+  ]
+ },
+ {
+  "controller": "TaxClassApi",
+  "file": "com/salesmanager/shop/store/api/v1/tax/TaxClassApi.java",
+  "method": "get",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/tax/class/{code}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "code"
+  ],
+  "response_type": "ReadableTaxClass",
+  "response_det": 4,
+  "uses": [
+   "TaxFacade"
+  ]
+ },
+ {
+  "controller": "TaxClassApi",
+  "file": "com/salesmanager/shop/store/api/v1/tax/TaxClassApi.java",
+  "method": "delete",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/tax/class/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "TaxFacade"
+  ]
+ },
+ {
+  "controller": "TaxRatesApi",
+  "file": "com/salesmanager/shop/store/api/v1/tax/TaxRatesApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/tax/rate"
+  ],
+  "request_type": "PersistableTaxRate",
+  "request_det": 16,
+  "params": [],
+  "path_vars": [],
+  "response_type": "Entity",
+  "response_det": 1,
+  "uses": [
+   "TaxFacade"
+  ]
+ },
+ {
+  "controller": "TaxRatesApi",
+  "file": "com/salesmanager/shop/store/api/v1/tax/TaxRatesApi.java",
+  "method": "exists",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/tax/rate/unique"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "code"
+  ],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 1,
+  "uses": [
+   "TaxFacade"
+  ]
+ },
+ {
+  "controller": "TaxRatesApi",
+  "file": "com/salesmanager/shop/store/api/v1/tax/TaxRatesApi.java",
+  "method": "update",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/tax/rate/{id}"
+  ],
+  "request_type": "PersistableTaxRate",
+  "request_det": 16,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "TaxFacade"
+  ]
+ },
+ {
+  "controller": "TaxRatesApi",
+  "file": "com/salesmanager/shop/store/api/v1/tax/TaxRatesApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/tax/rates"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableEntityList",
+  "response_det": 5,
+  "uses": [
+   "TaxFacade"
+  ]
+ },
+ {
+  "controller": "TaxRatesApi",
+  "file": "com/salesmanager/shop/store/api/v1/tax/TaxRatesApi.java",
+  "method": "get",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/tax/rate/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableTaxRate",
+  "response_det": 18,
+  "uses": [
+   "TaxFacade"
+  ]
+ },
+ {
+  "controller": "TaxRatesApi",
+  "file": "com/salesmanager/shop/store/api/v1/tax/TaxRatesApi.java",
+  "method": "delete",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/tax/rate/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "TaxFacade"
+  ]
+ },
+ {
+  "controller": "AuthenticateUserApi",
+  "file": "com/salesmanager/shop/store/api/v1/user/AuthenticateUserApi.java",
+  "method": "authenticate",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/login"
+  ],
+  "request_type": "AuthenticationRequest",
+  "request_det": 2,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 0,
+  "uses": [
+   "AuthenticationManager",
+   "JWTTokenUtil",
+   "Logger",
+   "UserDetailsService"
+  ]
+ },
+ {
+  "controller": "AuthenticateUserApi",
+  "file": "com/salesmanager/shop/store/api/v1/user/AuthenticateUserApi.java",
+  "method": "refreshAndGetAuthenticationToken",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/auth/refresh"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 2,
+  "uses": [
+   "JWTTokenUtil",
+   "UserDetailsService"
+  ]
+ },
+ {
+  "controller": "ResetUserPasswordApi",
+  "file": "com/salesmanager/shop/store/api/v1/user/ResetUserPasswordApi.java",
+  "method": "passwordResetRequest",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/user/password/reset/request"
+  ],
+  "request_type": "ResetPasswordRequest",
+  "request_det": 2,
+  "params": [],
+  "path_vars": [],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "ResetUserPasswordApi",
+  "file": "com/salesmanager/shop/store/api/v1/user/ResetUserPasswordApi.java",
+  "method": "passwordResetVerify",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/user/{store}/reset/{token}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "store",
+   "token"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "ResetUserPasswordApi",
+  "file": "com/salesmanager/shop/store/api/v1/user/ResetUserPasswordApi.java",
+  "method": "changePassword",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/user/{store}/password/{token}"
+  ],
+  "request_type": "PasswordRequest",
+  "request_det": 4,
+  "params": [],
+  "path_vars": [
+   "store",
+   "token"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "UserApi",
+  "file": "com/salesmanager/shop/store/api/v1/user/UserApi.java",
+  "method": "get",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/users/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableUser",
+  "response_det": 17,
+  "uses": [
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "UserApi",
+  "file": "com/salesmanager/shop/store/api/v1/user/UserApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/user/"
+  ],
+  "request_type": "PersistableUser",
+  "request_det": 14,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableUser",
+  "response_det": 17,
+  "uses": [
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "UserApi",
+  "file": "com/salesmanager/shop/store/api/v1/user/UserApi.java",
+  "method": "update",
+  "http": "PUT",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/user/{id}"
+  ],
+  "request_type": "PersistableUser",
+  "request_det": 14,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableUser",
+  "response_det": 17,
+  "uses": [
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "UserApi",
+  "file": "com/salesmanager/shop/store/api/v1/user/UserApi.java",
+  "method": "password",
+  "http": "PATCH",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/user/{id}/password"
+  ],
+  "request_type": "UserPassword",
+  "request_det": 2,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "UserApi",
+  "file": "com/salesmanager/shop/store/api/v1/user/UserApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/users"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "emailAddress"
+  ],
+  "path_vars": [],
+  "response_type": "ReadableUserList",
+  "response_det": 21,
+  "uses": [
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "UserApi",
+  "file": "com/salesmanager/shop/store/api/v1/user/UserApi.java",
+  "method": "updateEnabled",
+  "http": "PATCH",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/user/{id}/enabled"
+  ],
+  "request_type": "PersistableUser",
+  "request_det": 14,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "UserApi",
+  "file": "com/salesmanager/shop/store/api/v1/user/UserApi.java",
+  "method": "delete",
+  "http": "DELETE",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/user/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "UserApi",
+  "file": "com/salesmanager/shop/store/api/v1/user/UserApi.java",
+  "method": "exists",
+  "http": "POST",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/user/unique"
+  ],
+  "request_type": "UniqueEntity",
+  "request_det": 2,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 1,
+  "uses": [
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "UserApi",
+  "file": "com/salesmanager/shop/store/api/v1/user/UserApi.java",
+  "method": "getAuthUser",
+  "http": "GET",
+  "base": "/api/v1",
+  "paths": [
+   "/api/v1/private/user/profile"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableUser",
+  "response_det": 17,
+  "uses": [
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "ProductApiV2",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductApiV2.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/inventory"
+  ],
+  "request_type": "PersistableProduct",
+  "request_det": 85,
+  "params": [],
+  "path_vars": [],
+  "response_type": "Entity",
+  "response_det": 1,
+  "uses": [
+   "ProductCommonFacade"
+  ]
+ },
+ {
+  "controller": "ProductApiV2",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductApiV2.java",
+  "method": "createV2",
+  "http": "POST",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product"
+  ],
+  "request_type": "PersistableProductDefinition",
+  "request_det": 45,
+  "params": [],
+  "path_vars": [],
+  "response_type": "Entity",
+  "response_det": 1,
+  "uses": [
+   "ProductDefinitionFacade"
+  ]
+ },
+ {
+  "controller": "ProductApiV2",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductApiV2.java",
+  "method": "updateV2",
+  "http": "PUT",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/{id}"
+  ],
+  "request_type": "PersistableProductDefinition",
+  "request_det": 45,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductDefinitionFacade"
+  ]
+ },
+ {
+  "controller": "ProductApiV2",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductApiV2.java",
+  "method": "getV2",
+  "http": "GET",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableProductDefinition",
+  "response_det": 97,
+  "uses": [
+   "ProductDefinitionFacade"
+  ]
+ },
+ {
+  "controller": "ProductApiV2",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductApiV2.java",
+  "method": "deleteV2",
+  "http": "DELETE",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductCommonFacade"
+  ]
+ },
+ {
+  "controller": "ProductApiV2",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductApiV2.java",
+  "method": "getByfriendlyUrl",
+  "http": "GET",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/product/name/{friendlyUrl}",
+   "/api/v2/product/friendly/{friendlyUrl}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "friendlyUrl"
+  ],
+  "response_type": "ReadableProduct",
+  "response_det": 102,
+  "uses": [
+   "ProductFacade"
+  ]
+ },
+ {
+  "controller": "ProductApiV2",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductApiV2.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/products/category/{friendlyUrl}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "friendlyUrl"
+  ],
+  "response_type": "ReadableProductList",
+  "response_det": 106,
+  "uses": [
+   "CategoryFacade",
+   "Logger",
+   "ProductFacade"
+  ]
+ },
+ {
+  "controller": "ProductApiV2",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductApiV2.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/products"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableProductList",
+  "response_det": 106,
+  "uses": [
+   "Logger",
+   "ProductFacade"
+  ]
+ },
+ {
+  "controller": "ProductApiV2",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductApiV2.java",
+  "method": "update",
+  "http": "PATCH",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/{sku}"
+  ],
+  "request_type": "LightPersistableProduct",
+  "request_det": 4,
+  "params": [],
+  "path_vars": [
+   "sku"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductCommonFacade"
+  ]
+ },
+ {
+  "controller": "ProductApiV2",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductApiV2.java",
+  "method": "get",
+  "http": "GET",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/product/{sku}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "sku"
+  ],
+  "response_type": "ReadableProduct",
+  "response_det": 102,
+  "uses": [
+   "ProductFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariantApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariantApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/{productId}/variant"
+  ],
+  "request_type": "PersistableProductVariant",
+  "request_det": 38,
+  "params": [],
+  "path_vars": [
+   "productId"
+  ],
+  "response_type": "Entity",
+  "response_det": 1,
+  "uses": [
+   "ProductVariantFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariantApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariantApi.java",
+  "method": "update",
+  "http": "PUT",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/{id}/variant/{variantId}"
+  ],
+  "request_type": "PersistableProductVariant",
+  "request_det": 38,
+  "params": [],
+  "path_vars": [
+   "id",
+   "variantId"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductVariantFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariantApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariantApi.java",
+  "method": "exists",
+  "http": "GET",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/{id}/variant/{sku}/unique"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id",
+   "sku"
+  ],
+  "response_type": "ResponseEntity",
+  "response_det": 1,
+  "uses": [
+   "ProductVariantFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariantApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariantApi.java",
+  "method": "get",
+  "http": "GET",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/{id}/variant/{variantId}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id",
+   "variantId"
+  ],
+  "response_type": "ReadableProductVariant",
+  "response_det": 9,
+  "uses": [
+   "ProductVariantFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariantApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariantApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/{id}/variants"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableEntityList",
+  "response_det": 5,
+  "uses": [
+   "ProductVariantFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariantApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariantApi.java",
+  "method": "delete",
+  "http": "DELETE",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/{id}/variant/{variantId}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id",
+   "variantId"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductVariantFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariantGroupApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariantGroupApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/productVariantGroup"
+  ],
+  "request_type": "PersistableProductVariantGroup",
+  "request_det": 2,
+  "params": [],
+  "path_vars": [],
+  "response_type": "Entity",
+  "response_det": 1,
+  "uses": [
+   "ProductVariantGroupFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariantGroupApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariantGroupApi.java",
+  "method": "update",
+  "http": "PUT",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/productVariantGroup/{id}"
+  ],
+  "request_type": "PersistableProductVariantGroup",
+  "request_det": 2,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductVariantGroupFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariantGroupApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariantGroupApi.java",
+  "method": "get",
+  "http": "GET",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/productVariantGroup/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableProductVariantGroup",
+  "response_det": 11,
+  "uses": [
+   "ProductVariantGroupFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariantGroupApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariantGroupApi.java",
+  "method": "delete",
+  "http": "DELETE",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/productVariantGroup/{id}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductVariantGroupFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariantGroupApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariantGroupApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/{id}/productVariantGroup"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableEntityList",
+  "response_det": 5,
+  "uses": [
+   "ProductVariantGroupFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariantGroupApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariantGroupApi.java",
+  "method": "addImage",
+  "http": "POST",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/productVariantGroup/{id}/image"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "file"
+  ],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductVariantGroupFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariantGroupApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariantGroupApi.java",
+  "method": "removeImage",
+  "http": "DELETE",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/productVariantGroup/{id}/image/{imageId}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id",
+   "imageId"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductVariantGroupFacade",
+   "UserFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariationApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariationApi.java",
+  "method": "calculateVariant",
+  "http": "POST",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/product/{id}/variation"
+  ],
+  "request_type": "ReadableSelectedProductVariant",
+  "request_det": 6,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "ReadableProductPrice",
+  "response_det": 14,
+  "uses": [
+   "PricingService",
+   "ProductService"
+  ]
+ },
+ {
+  "controller": "ProductVariationApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariationApi.java",
+  "method": "categoryVariantList",
+  "http": "GET",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/category/{id}/variations"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "id"
+  ],
+  "response_type": "List",
+  "response_det": 9,
+  "uses": [
+   "CategoryFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariationApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariationApi.java",
+  "method": "create",
+  "http": "POST",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/variation"
+  ],
+  "request_type": "PersistableProductVariation",
+  "request_det": 7,
+  "params": [],
+  "path_vars": [],
+  "response_type": "Entity",
+  "response_det": 1,
+  "uses": [
+   "ProductVariationFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariationApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariationApi.java",
+  "method": "exists",
+  "http": "GET",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/variation/unique"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [
+   "code"
+  ],
+  "path_vars": [],
+  "response_type": "ResponseEntity",
+  "response_det": 1,
+  "uses": [
+   "ProductVariationFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariationApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariationApi.java",
+  "method": "get",
+  "http": "GET",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/variation/{variationId}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "variationId"
+  ],
+  "response_type": "ReadableProductVariation",
+  "response_det": 19,
+  "uses": [
+   "ProductVariationFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariationApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariationApi.java",
+  "method": "update",
+  "http": "PUT",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/variation/{variationId}"
+  ],
+  "request_type": "PersistableProductVariation",
+  "request_det": 7,
+  "params": [],
+  "path_vars": [
+   "variationId"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductVariationFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariationApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariationApi.java",
+  "method": "delete",
+  "http": "DELETE",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/variation/{variationId}"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [
+   "variationId"
+  ],
+  "response_type": "void",
+  "response_det": 0,
+  "uses": [
+   "ProductVariationFacade"
+  ]
+ },
+ {
+  "controller": "ProductVariationApi",
+  "file": "com/salesmanager/shop/store/api/v2/product/ProductVariationApi.java",
+  "method": "list",
+  "http": "GET",
+  "base": "/api/v2",
+  "paths": [
+   "/api/v2/private/product/variations"
+  ],
+  "request_type": null,
+  "request_det": 0,
+  "params": [],
+  "path_vars": [],
+  "response_type": "ReadableEntityList",
+  "response_det": 5,
+  "uses": [
+   "ProductVariationFacade"
+  ]
+ }
+]

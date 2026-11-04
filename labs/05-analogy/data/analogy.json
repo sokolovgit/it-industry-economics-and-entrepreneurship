@@ -1,0 +1,1106 @@
+{
+ "n": 20,
+ "analogs": [
+  {
+   "repo": "1Panel-dev/CordysCRM",
+   "commit": "c3b249784",
+   "java_files": 1752,
+   "code": 137350,
+   "comment": 22730,
+   "test": 31585,
+   "modules": 6,
+   "deps": 57,
+   "beans": 367,
+   "endpoints": 962,
+   "commits": 6431,
+   "authors": 67,
+   "contributor_months": 276,
+   "first": "2024-12-25",
+   "last": "2026-11-03",
+   "kloc": 137.35,
+   "test_share": 22.995995631598106,
+   "comment_ratio": 16.548962504550417,
+   "effort": 276
+  },
+  {
+   "repo": "201206030/novel",
+   "commit": "119319c",
+   "java_files": 190,
+   "code": 7373,
+   "comment": 3676,
+   "test": 79,
+   "modules": 1,
+   "deps": 35,
+   "beans": 58,
+   "endpoints": 52,
+   "commits": 252,
+   "authors": 7,
+   "contributor_months": 30,
+   "first": "2022-05-11",
+   "last": "2026-11-01",
+   "kloc": 7.373,
+   "test_share": 1.0714770107147702,
+   "comment_ratio": 49.857588498575886,
+   "effort": 30
+  },
+  {
+   "repo": "alfio-event/alf.io",
+   "commit": "f115d16a7",
+   "java_files": 859,
+   "code": 83064,
+   "comment": 16425,
+   "test": 25426,
+   "modules": 1,
+   "deps": 62,
+   "beans": 148,
+   "endpoints": 435,
+   "commits": 4036,
+   "authors": 66,
+   "contributor_months": 386,
+   "first": "2014-07-26",
+   "last": "2026-11-01",
+   "kloc": 83.064,
+   "test_share": 30.61013194645093,
+   "comment_ratio": 19.773909274776077,
+   "effort": 386
+  },
+  {
+   "repo": "chillzhuang/SpringBlade",
+   "commit": "4995ddb",
+   "java_files": 258,
+   "code": 7773,
+   "comment": 7703,
+   "test": 117,
+   "modules": 23,
+   "deps": 85,
+   "beans": 85,
+   "endpoints": 234,
+   "commits": 80,
+   "authors": 2,
+   "contributor_months": 48,
+   "first": "2019-01-30",
+   "last": "2026-09-18",
+   "kloc": 7.773,
+   "test_share": 1.5052103434967194,
+   "comment_ratio": 99.09944680303614,
+   "effort": 48
+  },
+  {
+   "repo": "diyhi/bbs",
+   "commit": "695cdc3",
+   "java_files": 819,
+   "code": 75537,
+   "comment": 31578,
+   "test": 182,
+   "modules": 1,
+   "deps": 69,
+   "beans": 371,
+   "endpoints": 468,
+   "commits": 63,
+   "authors": 2,
+   "contributor_months": 43,
+   "first": "2018-07-03",
+   "last": "2026-04-15",
+   "kloc": 75.537,
+   "test_share": 0.24094152534519506,
+   "comment_ratio": 41.80467850192621,
+   "effort": 43
+  },
+  {
+   "repo": "FJ-OMS/oms-erp",
+   "commit": "34d8852",
+   "java_files": 1171,
+   "code": 47206,
+   "comment": 16029,
+   "test": 103,
+   "modules": 7,
+   "deps": 273,
+   "beans": 286,
+   "endpoints": 422,
+   "commits": 94,
+   "authors": 7,
+   "contributor_months": 20,
+   "first": "2022-05-27",
+   "last": "2025-12-24",
+   "kloc": 47.206,
+   "test_share": 0.21819260263525822,
+   "comment_ratio": 33.95542939456849,
+   "effort": 20
+  },
+  {
+   "repo": "getrebuild/rebuild",
+   "commit": "741e3e50",
+   "java_files": 771,
+   "code": 70906,
+   "comment": 22932,
+   "test": 3946,
+   "modules": 1,
+   "deps": 64,
+   "beans": 160,
+   "endpoints": 528,
+   "commits": 4005,
+   "authors": 11,
+   "contributor_months": 206,
+   "first": "2018-05-18",
+   "last": "2026-11-03",
+   "kloc": 70.906,
+   "test_share": 5.565114376780526,
+   "comment_ratio": 32.3414097537585,
+   "effort": 206
+  },
+  {
+   "repo": "halo-dev/halo",
+   "commit": "80b9d42c2",
+   "java_files": 1380,
+   "code": 106949,
+   "comment": 11240,
+   "test": 47757,
+   "modules": 6,
+   "deps": 83,
+   "beans": 300,
+   "endpoints": 18,
+   "commits": 6389,
+   "authors": 191,
+   "contributor_months": 571,
+   "first": "2018-01-21",
+   "last": "2026-11-02",
+   "kloc": 106.949,
+   "test_share": 44.65399395973782,
+   "comment_ratio": 10.509682184966666,
+   "effort": 571
+  },
+  {
+   "repo": "jishenghua/jshERP",
+   "commit": "8f5dc087",
+   "java_files": 273,
+   "code": 54472,
+   "comment": 5419,
+   "test": 0,
+   "modules": 1,
+   "deps": 21,
+   "beans": 67,
+   "endpoints": 369,
+   "commits": 3827,
+   "authors": 24,
+   "contributor_months": 156,
+   "first": "2016-09-20",
+   "last": "2026-10-21",
+   "kloc": 54.472,
+   "test_share": 0.0,
+   "comment_ratio": 9.948230283448376,
+   "effort": 156
+  },
+  {
+   "repo": "malizhigithub/CRM",
+   "commit": "5a0cfa2",
+   "java_files": 169,
+   "code": 24212,
+   "comment": 6673,
+   "test": 500,
+   "modules": 1,
+   "deps": 48,
+   "beans": 49,
+   "endpoints": 122,
+   "commits": 22,
+   "authors": 1,
+   "contributor_months": 9,
+   "first": "2018-08-03",
+   "last": "2020-09-06",
+   "kloc": 24.212,
+   "test_share": 2.065091690071039,
+   "comment_ratio": 27.56071369568809,
+   "effort": 9
+  },
+  {
+   "repo": "merikbest/OnlineShop",
+   "commit": "df76951",
+   "java_files": 61,
+   "code": 2817,
+   "comment": 0,
+   "test": 1057,
+   "modules": 1,
+   "deps": 21,
+   "beans": 23,
+   "endpoints": 46,
+   "commits": 54,
+   "authors": 1,
+   "contributor_months": 10,
+   "first": "2020-03-27",
+   "last": "2023-07-01",
+   "kloc": 2.817,
+   "test_share": 37.52218672346468,
+   "comment_ratio": 0.0,
+   "effort": 10
+  },
+  {
+   "repo": "michaelliao/itranswarp",
+   "commit": "adc7d73",
+   "java_files": 165,
+   "code": 11267,
+   "comment": 962,
+   "test": 608,
+   "modules": 1,
+   "deps": 18,
+   "beans": 65,
+   "endpoints": 183,
+   "commits": 394,
+   "authors": 3,
+   "contributor_months": 33,
+   "first": "2019-03-23",
+   "last": "2024-04-10",
+   "kloc": 11.267,
+   "test_share": 5.39629005059022,
+   "comment_ratio": 8.538208928729919,
+   "effort": 33
+  },
+  {
+   "repo": "RainbowForest/e-commerce-microservices",
+   "commit": "a8a6d33",
+   "java_files": 76,
+   "code": 2629,
+   "comment": 110,
+   "test": 801,
+   "modules": 6,
+   "deps": 68,
+   "beans": 30,
+   "endpoints": 23,
+   "commits": 23,
+   "authors": 4,
+   "contributor_months": 6,
+   "first": "2019-06-03",
+   "last": "2022-09-28",
+   "kloc": 2.629,
+   "test_share": 30.467858501331303,
+   "comment_ratio": 4.184100418410042,
+   "effort": 6
+  },
+  {
+   "repo": "shashirajraja/shopping-cart",
+   "commit": "30fcead",
+   "java_files": 37,
+   "code": 2463,
+   "comment": 82,
+   "test": 0,
+   "modules": 1,
+   "deps": 6,
+   "beans": 0,
+   "endpoints": 0,
+   "commits": 50,
+   "authors": 3,
+   "contributor_months": 12,
+   "first": "2019-11-19",
+   "last": "2023-10-22",
+   "kloc": 2.463,
+   "test_share": 0.0,
+   "comment_ratio": 3.329273244011368,
+   "effort": 12
+  },
+  {
+   "repo": "spring-petclinic/spring-petclinic-microservices",
+   "commit": "e8b747a",
+   "java_files": 64,
+   "code": 1864,
+   "comment": 952,
+   "test": 453,
+   "modules": 9,
+   "deps": 131,
+   "beans": 18,
+   "endpoints": 19,
+   "commits": 768,
+   "authors": 56,
+   "contributor_months": 169,
+   "first": "2009-05-05",
+   "last": "2026-10-19",
+   "kloc": 1.864,
+   "test_share": 24.302575107296136,
+   "comment_ratio": 51.072961373390555,
+   "effort": 169
+  },
+  {
+   "repo": "spring-projects/spring-petclinic",
+   "commit": "500158f",
+   "java_files": 50,
+   "code": 2542,
+   "comment": 1125,
+   "test": 1621,
+   "modules": 2,
+   "deps": 52,
+   "beans": 10,
+   "endpoints": 19,
+   "commits": 1047,
+   "authors": 168,
+   "contributor_months": 359,
+   "first": "2009-05-05",
+   "last": "2026-09-29",
+   "kloc": 2.542,
+   "test_share": 63.76868607395751,
+   "comment_ratio": 44.256490952006295,
+   "effort": 359
+  },
+  {
+   "repo": "sqshq/piggymetrics",
+   "commit": "6bb2cf9",
+   "java_files": 97,
+   "code": 3292,
+   "comment": 178,
+   "test": 1365,
+   "modules": 10,
+   "deps": 75,
+   "beans": 30,
+   "endpoints": 17,
+   "commits": 290,
+   "authors": 20,
+   "contributor_months": 49,
+   "first": "2015-03-29",
+   "last": "2021-11-15",
+   "kloc": 3.292,
+   "test_share": 41.46415552855407,
+   "comment_ratio": 5.407047387606318,
+   "effort": 49
+  },
+  {
+   "repo": "traccar/traccar",
+   "commit": "e62625fdb",
+   "java_files": 1489,
+   "code": 101204,
+   "comment": 17179,
+   "test": 17882,
+   "modules": 1,
+   "deps": 64,
+   "beans": 0,
+   "endpoints": 0,
+   "commits": 10157,
+   "authors": 297,
+   "contributor_months": 712,
+   "first": "2010-04-11",
+   "last": "2026-11-03",
+   "kloc": 101.204,
+   "test_share": 17.669262084502588,
+   "comment_ratio": 16.974625508873167,
+   "effort": 712
+  },
+  {
+   "repo": "WuKongOpenSource/WukongCRM-11.0-JAVA",
+   "commit": "1fa4ec2",
+   "java_files": 1672,
+   "code": 90981,
+   "comment": 20344,
+   "test": 74,
+   "modules": 12,
+   "deps": 64,
+   "beans": 431,
+   "endpoints": 1360,
+   "commits": 148,
+   "authors": 7,
+   "contributor_months": 21,
+   "first": "2020-09-10",
+   "last": "2021-08-27",
+   "kloc": 90.981,
+   "test_share": 0.08133566349017927,
+   "comment_ratio": 22.360712676273067,
+   "effort": 21
+  },
+  {
+   "repo": "xujeff/tianti",
+   "commit": "d71add6",
+   "java_files": 64,
+   "code": 4534,
+   "comment": 919,
+   "test": 36,
+   "modules": 8,
+   "deps": 50,
+   "beans": 14,
+   "endpoints": 53,
+   "commits": 194,
+   "authors": 5,
+   "contributor_months": 19,
+   "first": "2017-02-08",
+   "last": "2022-05-20",
+   "kloc": 4.534,
+   "test_share": 0.7940008822232024,
+   "comment_ratio": 20.26907807675342,
+   "effort": 19
+  }
+ ],
+ "new": {
+  "repo": "shopizer-ecommerce/shopizer",
+  "commit": "6a4a0a6",
+  "java_files": 1205,
+  "code": 75576,
+  "comment": 11864,
+  "test": 3495,
+  "modules": 6,
+  "deps": 123,
+  "beans": 269,
+  "endpoints": 370,
+  "contributor_months": 0,
+  "kloc": 75.576,
+  "test_share": 4.624483963162909,
+  "comment_ratio": 15.698105218587912,
+  "effort": 0
+ },
+ "distances": [
+  {
+   "repo": "1Panel-dev/CordysCRM",
+   "euclid": 0.6207723446981592,
+   "manhattan": 1.2065453424623076
+  },
+  {
+   "repo": "201206030/novel",
+   "euclid": 0.7593053333406506,
+   "manhattan": 1.6806595782186462
+  },
+  {
+   "repo": "alfio-event/alf.io",
+   "euclid": 0.5938822411696759,
+   "manhattan": 1.232900711376459
+  },
+  {
+   "repo": "chillzhuang/SpringBlade",
+   "euclid": 1.2330000832454664,
+   "manhattan": 2.3324713707985087
+  },
+  {
+   "repo": "diyhi/bbs",
+   "euclid": 0.47736962605234184,
+   "manhattan": 1.0704171087998515
+  },
+  {
+   "repo": "FJ-OMS/oms-erp",
+   "euclid": 0.5995136612163569,
+   "manhattan": 0.9382611421167524
+  },
+  {
+   "repo": "getrebuild/rebuild",
+   "euclid": 0.45426982344659783,
+   "manhattan": 1.0000193596673654
+  },
+  {
+   "repo": "halo-dev/halo",
+   "euclid": 0.7009940936042935,
+   "manhattan": 1.1606476243397814
+  },
+  {
+   "repo": "jishenghua/jshERP",
+   "euclid": 0.6525938744216068,
+   "manhattan": 1.2092489174964574
+  },
+  {
+   "repo": "malizhigithub/CRM",
+   "euclid": 0.6635506341376196,
+   "manhattan": 1.3608050292867038
+  },
+  {
+   "repo": "merikbest/OnlineShop",
+   "euclid": 0.933466782624722,
+   "manhattan": 2.0925949322726205
+  },
+  {
+   "repo": "michaelliao/itranswarp",
+   "euclid": 0.6742459703164696,
+   "manhattan": 1.3157018432544245
+  },
+  {
+   "repo": "RainbowForest/e-commerce-microservices",
+   "euclid": 0.7699163615887601,
+   "manhattan": 1.5371177755246308
+  },
+  {
+   "repo": "shashirajraja/shopping-cart",
+   "euclid": 0.8532675390927112,
+   "manhattan": 1.7589957177992361
+  },
+  {
+   "repo": "spring-petclinic/spring-petclinic-microservices",
+   "euclid": 0.804922922158429,
+   "manhattan": 1.6723297014205996
+  },
+  {
+   "repo": "spring-projects/spring-petclinic",
+   "euclid": 1.2143974013901144,
+   "manhattan": 2.5224114891363283
+  },
+  {
+   "repo": "sqshq/piggymetrics",
+   "euclid": 0.8858754852095024,
+   "manhattan": 1.8572302791094426
+  },
+  {
+   "repo": "traccar/traccar",
+   "euclid": 0.7784913861091499,
+   "manhattan": 1.5618804787489446
+  },
+  {
+   "repo": "WuKongOpenSource/WukongCRM-11.0-JAVA",
+   "euclid": 0.8966504651564695,
+   "manhattan": 1.7359880204822629
+  },
+  {
+   "repo": "xujeff/tianti",
+   "euclid": 0.7022314131934511,
+   "manhattan": 1.2952464095920242
+  }
+ ],
+ "configs": [
+  {
+   "metric": "euclid",
+   "k": 1,
+   "stat": "mean",
+   "size_adj": false,
+   "mmre": 2.154413486334334,
+   "mdmre": 0.9683209441083879,
+   "pred25": 0.05,
+   "pred50": 0.2
+  },
+  {
+   "metric": "euclid",
+   "k": 1,
+   "stat": "mean",
+   "size_adj": true,
+   "mmre": 2.3002318460680553,
+   "mdmre": 0.8968896769318245,
+   "pred25": 0.2,
+   "pred50": 0.4
+  },
+  {
+   "metric": "euclid",
+   "k": 1,
+   "stat": "median",
+   "size_adj": false,
+   "mmre": 2.154413486334334,
+   "mdmre": 0.9683209441083879,
+   "pred25": 0.05,
+   "pred50": 0.2
+  },
+  {
+   "metric": "euclid",
+   "k": 1,
+   "stat": "median",
+   "size_adj": true,
+   "mmre": 2.3002318460680553,
+   "mdmre": 0.8968896769318245,
+   "pred25": 0.2,
+   "pred50": 0.4
+  },
+  {
+   "metric": "euclid",
+   "k": 2,
+   "stat": "mean",
+   "size_adj": false,
+   "mmre": 3.754107466042492,
+   "mdmre": 0.9738998127340824,
+   "pred25": 0.05,
+   "pred50": 0.1
+  },
+  {
+   "metric": "euclid",
+   "k": 2,
+   "stat": "mean",
+   "size_adj": true,
+   "mmre": 1.8837751922871226,
+   "mdmre": 0.8077357956579594,
+   "pred25": 0.0,
+   "pred50": 0.3
+  },
+  {
+   "metric": "euclid",
+   "k": 2,
+   "stat": "median",
+   "size_adj": false,
+   "mmre": 3.754107466042492,
+   "mdmre": 0.9738998127340824,
+   "pred25": 0.05,
+   "pred50": 0.1
+  },
+  {
+   "metric": "euclid",
+   "k": 2,
+   "stat": "median",
+   "size_adj": true,
+   "mmre": 1.8837751922871226,
+   "mdmre": 0.8077357956579594,
+   "pred25": 0.0,
+   "pred50": 0.3
+  },
+  {
+   "metric": "euclid",
+   "k": 3,
+   "stat": "mean",
+   "size_adj": false,
+   "mmre": 5.402000916073155,
+   "mdmre": 0.9121312763374044,
+   "pred25": 0.1,
+   "pred50": 0.25
+  },
+  {
+   "metric": "euclid",
+   "k": 3,
+   "stat": "mean",
+   "size_adj": true,
+   "mmre": 5.323843918004179,
+   "mdmre": 0.7236616665170709,
+   "pred25": 0.2,
+   "pred50": 0.4
+  },
+  {
+   "metric": "euclid",
+   "k": 3,
+   "stat": "median",
+   "size_adj": false,
+   "mmre": 2.3224593525295982,
+   "mdmre": 0.9476108849367902,
+   "pred25": 0.05,
+   "pred50": 0.2
+  },
+  {
+   "metric": "euclid",
+   "k": 3,
+   "stat": "median",
+   "size_adj": true,
+   "mmre": 1.6785747363934278,
+   "mdmre": 0.6961568913291387,
+   "pred25": 0.2,
+   "pred50": 0.45
+  },
+  {
+   "metric": "euclid",
+   "k": 4,
+   "stat": "mean",
+   "size_adj": false,
+   "mmre": 8.26576425871696,
+   "mdmre": 4.265009492168961,
+   "pred25": 0.05,
+   "pred50": 0.2
+  },
+  {
+   "metric": "euclid",
+   "k": 4,
+   "stat": "mean",
+   "size_adj": true,
+   "mmre": 4.347435239804302,
+   "mdmre": 0.6837036876651863,
+   "pred25": 0.35,
+   "pred50": 0.45
+  },
+  {
+   "metric": "euclid",
+   "k": 4,
+   "stat": "median",
+   "size_adj": false,
+   "mmre": 5.018102643335428,
+   "mdmre": 0.9667945305889529,
+   "pred25": 0.1,
+   "pred50": 0.1
+  },
+  {
+   "metric": "euclid",
+   "k": 4,
+   "stat": "median",
+   "size_adj": true,
+   "mmre": 1.4600432793763385,
+   "mdmre": 0.5175802043842042,
+   "pred25": 0.3,
+   "pred50": 0.5
+  },
+  {
+   "metric": "euclid",
+   "k": 5,
+   "stat": "mean",
+   "size_adj": false,
+   "mmre": 7.222052274990803,
+   "mdmre": 4.06953013763645,
+   "pred25": 0.1,
+   "pred50": 0.2
+  },
+  {
+   "metric": "euclid",
+   "k": 5,
+   "stat": "mean",
+   "size_adj": true,
+   "mmre": 3.98622377642922,
+   "mdmre": 0.5277252384399396,
+   "pred25": 0.3,
+   "pred50": 0.5
+  },
+  {
+   "metric": "euclid",
+   "k": 5,
+   "stat": "median",
+   "size_adj": false,
+   "mmre": 2.3970448252152923,
+   "mdmre": 0.9143467056250738,
+   "pred25": 0.05,
+   "pred50": 0.2
+  },
+  {
+   "metric": "euclid",
+   "k": 5,
+   "stat": "median",
+   "size_adj": true,
+   "mmre": 1.7541980769481005,
+   "mdmre": 0.4382720910804505,
+   "pred25": 0.1,
+   "pred50": 0.55
+  },
+  {
+   "metric": "manhattan",
+   "k": 1,
+   "stat": "mean",
+   "size_adj": false,
+   "mmre": 2.091518183283421,
+   "mdmre": 0.9442050424491897,
+   "pred25": 0.0,
+   "pred50": 0.15
+  },
+  {
+   "metric": "manhattan",
+   "k": 1,
+   "stat": "mean",
+   "size_adj": true,
+   "mmre": 1.8987012092918254,
+   "mdmre": 0.8968896769318245,
+   "pred25": 0.1,
+   "pred50": 0.35
+  },
+  {
+   "metric": "manhattan",
+   "k": 1,
+   "stat": "median",
+   "size_adj": false,
+   "mmre": 2.091518183283421,
+   "mdmre": 0.9442050424491897,
+   "pred25": 0.0,
+   "pred50": 0.15
+  },
+  {
+   "metric": "manhattan",
+   "k": 1,
+   "stat": "median",
+   "size_adj": true,
+   "mmre": 1.8987012092918254,
+   "mdmre": 0.8968896769318245,
+   "pred25": 0.1,
+   "pred50": 0.35
+  },
+  {
+   "metric": "manhattan",
+   "k": 2,
+   "stat": "mean",
+   "size_adj": false,
+   "mmre": 3.4922677964385924,
+   "mdmre": 0.9179484250869312,
+   "pred25": 0.15,
+   "pred50": 0.3
+  },
+  {
+   "metric": "manhattan",
+   "k": 2,
+   "stat": "mean",
+   "size_adj": true,
+   "mmre": 1.4409632099437304,
+   "mdmre": 0.6175010527517921,
+   "pred25": 0.1,
+   "pred50": 0.4
+  },
+  {
+   "metric": "manhattan",
+   "k": 2,
+   "stat": "median",
+   "size_adj": false,
+   "mmre": 3.4922677964385924,
+   "mdmre": 0.9179484250869312,
+   "pred25": 0.15,
+   "pred50": 0.3
+  },
+  {
+   "metric": "manhattan",
+   "k": 2,
+   "stat": "median",
+   "size_adj": true,
+   "mmre": 1.4409632099437304,
+   "mdmre": 0.6175010527517921,
+   "pred25": 0.1,
+   "pred50": 0.4
+  },
+  {
+   "metric": "manhattan",
+   "k": 3,
+   "stat": "mean",
+   "size_adj": false,
+   "mmre": 6.560283701818451,
+   "mdmre": 0.9432921783816741,
+   "pred25": 0.05,
+   "pred50": 0.2
+  },
+  {
+   "metric": "manhattan",
+   "k": 3,
+   "stat": "mean",
+   "size_adj": true,
+   "mmre": 1.818862070828949,
+   "mdmre": 0.6966210819062862,
+   "pred25": 0.3,
+   "pred50": 0.45
+  },
+  {
+   "metric": "manhattan",
+   "k": 3,
+   "stat": "median",
+   "size_adj": false,
+   "mmre": 2.2528506491376428,
+   "mdmre": 0.9008798018632318,
+   "pred25": 0.05,
+   "pred50": 0.25
+  },
+  {
+   "metric": "manhattan",
+   "k": 3,
+   "stat": "median",
+   "size_adj": true,
+   "mmre": 1.7112754381212834,
+   "mdmre": 0.7391091120062596,
+   "pred25": 0.2,
+   "pred50": 0.4
+  },
+  {
+   "metric": "manhattan",
+   "k": 4,
+   "stat": "mean",
+   "size_adj": false,
+   "mmre": 5.230337981999908,
+   "mdmre": 0.9261965211754537,
+   "pred25": 0.15,
+   "pred50": 0.3
+  },
+  {
+   "metric": "manhattan",
+   "k": 4,
+   "stat": "mean",
+   "size_adj": true,
+   "mmre": 1.6470346553034776,
+   "mdmre": 0.6584251256513765,
+   "pred25": 0.25,
+   "pred50": 0.45
+  },
+  {
+   "metric": "manhattan",
+   "k": 4,
+   "stat": "median",
+   "size_adj": false,
+   "mmre": 1.7906182053510644,
+   "mdmre": 0.8916059567173773,
+   "pred25": 0.15,
+   "pred50": 0.25
+  },
+  {
+   "metric": "manhattan",
+   "k": 4,
+   "stat": "median",
+   "size_adj": true,
+   "mmre": 1.4627776990520773,
+   "mdmre": 0.49733243017266604,
+   "pred25": 0.2,
+   "pred50": 0.5
+  },
+  {
+   "metric": "manhattan",
+   "k": 5,
+   "stat": "mean",
+   "size_adj": false,
+   "mmre": 6.423423109082786,
+   "mdmre": 2.099470864907238,
+   "pred25": 0.1,
+   "pred50": 0.2
+  },
+  {
+   "metric": "manhattan",
+   "k": 5,
+   "stat": "mean",
+   "size_adj": true,
+   "mmre": 1.783804565795332,
+   "mdmre": 0.5323741752162691,
+   "pred25": 0.25,
+   "pred50": 0.5
+  },
+  {
+   "metric": "manhattan",
+   "k": 5,
+   "stat": "median",
+   "size_adj": false,
+   "mmre": 1.490982288520226,
+   "mdmre": 0.9153100898096971,
+   "pred25": 0.05,
+   "pred50": 0.2
+  },
+  {
+   "metric": "manhattan",
+   "k": 5,
+   "stat": "median",
+   "size_adj": true,
+   "mmre": 1.649573096211849,
+   "mdmre": 0.422313543390335,
+   "pred25": 0.15,
+   "pred50": 0.55
+  }
+ ],
+ "best": {
+  "metric": "manhattan",
+  "k": 2,
+  "stat": "mean",
+  "size_adj": true,
+  "mmre": 1.4409632099437304,
+  "mdmre": 0.6175010527517921,
+  "pred25": 0.1,
+  "pred50": 0.4
+ },
+ "main": {
+  "estimate": 211.66666666666666,
+  "near": [
+   "getrebuild/rebuild",
+   "diyhi/bbs",
+   "alfio-event/alf.io"
+  ],
+  "cost_usd": 529166.6666666666,
+  "cost_uah": 24164924.999999996
+ },
+ "main_adj": {
+  "estimate": 204.59762054983412,
+  "near": [
+   "getrebuild/rebuild",
+   "diyhi/bbs",
+   "alfio-event/alf.io"
+  ],
+  "cost_usd": 511494.0513745853,
+  "cost_uah": 23357887.35007181
+ },
+ "main_manhattan": {
+  "estimate": 89.66666666666667,
+  "near": [
+   "FJ-OMS/oms-erp",
+   "getrebuild/rebuild",
+   "diyhi/bbs"
+  ],
+  "cost_usd": 224166.6666666667,
+  "cost_uah": 10236795.0
+ },
+ "main_manhattan_adj": {
+  "estimate": 98.20313322735949,
+  "near": [
+   "FJ-OMS/oms-erp",
+   "getrebuild/rebuild",
+   "diyhi/bbs"
+  ],
+  "cost_usd": 245507.83306839873,
+  "cost_uah": 11211360.704901496
+ },
+ "best_est": {
+  "estimate": 125.7935993207644,
+  "near": [
+   "FJ-OMS/oms-erp",
+   "getrebuild/rebuild"
+  ],
+  "cost_usd": 314483.998301911,
+  "cost_uah": 14361226.266455067
+ },
+ "sensitivity": [
+  {
+   "key": "all",
+   "title": "Уся база (20 проєктів)",
+   "n": 20,
+   "euclid": 211.66666666666666,
+   "euclid_near": [
+    "getrebuild/rebuild",
+    "diyhi/bbs",
+    "alfio-event/alf.io"
+   ],
+   "euclid_adj": 204.59762054983412,
+   "euclid_adj_near": [
+    "getrebuild/rebuild",
+    "diyhi/bbs",
+    "alfio-event/alf.io"
+   ],
+   "manhattan_adj": 125.7935993207644,
+   "manhattan_adj_near": [
+    "FJ-OMS/oms-erp",
+    "getrebuild/rebuild"
+   ],
+   "loo_mmre": 1.4409632099437304,
+   "loo_pred25": 0.1
+  },
+  {
+   "key": "dense",
+   "title": "Без проєктів із менше ніж 5 комітів на KLOC",
+   "n": 16,
+   "euclid": 387.6666666666667,
+   "euclid_near": [
+    "getrebuild/rebuild",
+    "alfio-event/alf.io",
+    "halo-dev/halo"
+   ],
+   "euclid_adj": 324.7568073925169,
+   "euclid_adj_near": [
+    "getrebuild/rebuild",
+    "alfio-event/alf.io",
+    "halo-dev/halo"
+   ],
+   "manhattan_adj": 311.53365084607094,
+   "manhattan_adj_near": [
+    "getrebuild/rebuild",
+    "halo-dev/halo"
+   ],
+   "loo_mmre": 0.6712713379718256,
+   "loo_pred25": 0.1875
+  },
+  {
+   "key": "noedu",
+   "title": "Без навчальних проєктів (petclinic, petclinic-microservices, piggymetrics)",
+   "n": 17,
+   "euclid": 89.66666666666667,
+   "euclid_near": [
+    "getrebuild/rebuild",
+    "diyhi/bbs",
+    "FJ-OMS/oms-erp"
+   ],
+   "euclid_adj": 98.20313322735949,
+   "euclid_adj_near": [
+    "getrebuild/rebuild",
+    "diyhi/bbs",
+    "FJ-OMS/oms-erp"
+   ],
+   "manhattan_adj": 125.7935993207644,
+   "manhattan_adj_near": [
+    "FJ-OMS/oms-erp",
+    "getrebuild/rebuild"
+   ],
+   "loo_mmre": 1.6523159593065662,
+   "loo_pred25": 0.058823529411764705
+  },
+  {
+   "key": "both",
+   "title": "Без обох груп",
+   "n": 13,
+   "euclid": 289.3333333333333,
+   "euclid_near": [
+    "getrebuild/rebuild",
+    "alfio-event/alf.io",
+    "1Panel-dev/CordysCRM"
+   ],
+   "euclid_adj": 240.87932589404113,
+   "euclid_adj_near": [
+    "getrebuild/rebuild",
+    "alfio-event/alf.io",
+    "1Panel-dev/CordysCRM"
+   ],
+   "manhattan_adj": 311.53365084607094,
+   "manhattan_adj_near": [
+    "getrebuild/rebuild",
+    "halo-dev/halo"
+   ],
+   "loo_mmre": 0.4583963923236365,
+   "loo_pred25": 0.07692307692307693
+  }
+ ],
+ "productivity": {
+  "median_pm_per_kloc": 3.809387897518799
+ }
+}

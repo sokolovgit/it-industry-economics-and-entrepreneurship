@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Аналіз функціональних точок – Економіка IT-індустрії та підприємництво</title>
+<link rel="stylesheet" href="shared/theme.css">
+<style>
+  .figure__img { background: #fff; border-radius: 0; }
+  .figure__img img { object-fit: contain; }
+  .body.fill { flex: 1; min-height: 0; display: flex; }
+  .body.fill > * { flex: 1; }
+  .cols.split { grid-template-columns: 2.4fr 1fr; }
+  .n { color: var(--ink-mute); font-size: .85em; white-space: nowrap; }
+  .formula { font-size: 24px; margin: 0 0 8px; }
+  .cols > table.tbl { align-self: start; }
+  .note { font-size: 16px; color: var(--ink-mute); margin-top: 14px; }
+</style>
+</head>
+<body class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <p class="eyebrow">КПІ ім. Ігоря Сікорського · Практична робота № 3</p>
+  <h1 class="hero">Аналіз<br>функціональних точок</h1>
+  <div class="stack" style="margin-top:40px">
+    <p class="lead">Оцінка розміру і вартості Shopizer за методом IFPUG</p>
+  </div>
+  <p class="byline">Виконав: <b>Соколов Олександр</b>, студент групи ІП-33<br>Дисципліна «Економіка IT-індустрії та підприємництво»</p>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Об'єкт і межі аналізу</h1>
+  <div class="body">
+    <div class="cols">
+      <ul class="bullets">
+        <li>Shopizer, той самий застосунок, що в ПР2 <span class="n">[1]</span></li>
+        <li>Підрахунок наявного продукту за методом IFPUG <span class="n">[2, 3]</span></li>
+        <li>Межа – REST API (sm-shop) з бізнес-логікою і моделлю даних</li>
+        <li>Адміністративний інтерфейс і вітрина – окремі застосунки, поза межею</li>
+      </ul>
+      <div class="kv" style="--k:130px">
+        <div class="kv__row"><div class="kv__k">ILF</div><div class="kv__v">логічні групи сутностей JPA</div></div>
+        <div class="kv__row"><div class="kv__k">EIF</div><div class="kv__v">дані зовнішніх сервісів</div></div>
+        <div class="kv__row"><div class="kv__k">EI, EO, EQ</div><div class="kv__v">методи контролерів REST API</div></div>
+      </div>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Методика підрахунку</h1>
+  <div class="body">
+    <ol class="steps">
+      <li>Сутності JPA (82) об'єднано в логічні файли, кожна сутність групи – RET, поля – DET</li>
+      <li>Транзакції виділено за методами контролерів: 306 процесів, версії API v1 і v2 рахуються окремо</li>
+      <li>FTR береться за файлами контролера і викликаних фасадів, DET – за полями запиту і відповіді</li>
+      <li>Складність – за матрицями IFPUG, вага – за таблицею коефіцієнтів</li>
+      <li>Вилучення даних виконано скриптом, результат перевірено вручну на вибірці</li>
+    </ol>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Внутрішні логічні файли</h1>
+  <div class="body">
+    <div class="cols">
+      <table class="tbl">
+<thead><tr><th>Файл</th><th class="num">RET</th><th class="num">DET</th><th class="num">Складність</th></tr></thead>
+<tbody>
+<tr><td>Замовлення</td><td class="num">11</td><td class="num">113</td><td class="num">Високий</td></tr>
+<tr><td>Товар</td><td class="num">7</td><td class="num">78</td><td class="num">Високий</td></tr>
+<tr><td>Клієнт</td><td class="num">3</td><td class="num">53</td><td class="num">Високий</td></tr>
+<tr><td>Опції товару</td><td class="num">6</td><td class="num">38</td><td class="num">Високий</td></tr>
+<tr><td>Довідники</td><td class="num">8</td><td class="num">30</td><td class="num">Високий</td></tr>
+<tr><td>Доставка</td><td class="num">2</td><td class="num">34</td><td class="num">Середній</td></tr>
+<tr><td>Кошик</td><td class="num">3</td><td class="num">16</td><td class="num">Низький</td></tr>
+<tr><td>Користувач</td><td class="num">3</td><td class="num">23</td><td class="num">Середній</td></tr>
+</tbody>
+</table>
+      <div class="stack">
+        <ul class="bullets">
+          <li>26 ILF: 15 низької, 6 середньої, 5 високої складності</li>
+          <li>Файлове сховище враховано як ILF: 2 RET, 7 DET</li>
+          <li>Разом 240 точок</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Зовнішні інтерфейсні файли</h1>
+  <div class="body">
+    <div class="cols">
+      <div><table class="tbl">
+<thead><tr><th>Файл</th><th class="num">RET</th><th class="num">DET</th><th class="num">Складність</th><th class="num">UFP</th></tr></thead>
+<tbody>
+<tr><td>Тарифи перевізників (UPS, USPS)</td><td class="num">2</td><td class="num">8</td><td class="num">Низький</td><td class="num">5</td></tr>
+<tr><td>Платіжні шлюзи</td><td class="num">2</td><td class="num">12</td><td class="num">Низький</td><td class="num">5</td></tr>
+</tbody>
+</table></div>
+      <ul class="bullets">
+        <li>Дані читаються із зовнішніх сервісів і не зберігаються</li>
+        <li>База GeoLite2-City не рахується: жоден метод контролера не викликає пошук за IP</li>
+        <li>Електронна пошта не EIF: застосунок лише відправляє</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Транзакції</h1>
+  <div class="body">
+    <div class="cols">
+      <ul class="bullets">
+        <li>EI: POST, PUT, PATCH, DELETE, що змінюють дані</li>
+        <li>EQ: GET без обчислень, автентифікація, пошук</li>
+        <li>EO: підсумки замовлення, вартість доставки, кошик</li>
+        <li>Кілька шляхів одного методу – один процес</li>
+      </ul>
+      <table class="tbl">
+<thead><tr><th>Тип</th><th class="num">Низький</th><th class="num">Середній</th><th class="num">Високий</th><th class="num">Усього</th></tr></thead>
+<tbody>
+<tr><td>EI</td><td class="num">92</td><td class="num">45</td><td class="num">16</td><td class="num">153</td></tr>
+<tr><td>EO</td><td class="num">9</td><td class="num">5</td><td class="num">7</td><td class="num">21</td></tr>
+<tr><td>EQ</td><td class="num">86</td><td class="num">30</td><td class="num">16</td><td class="num">132</td></tr>
+<tr><td><b>Разом</b></td><td class="num"><b>187</b></td><td class="num"><b>80</b></td><td class="num"><b>39</b></td><td class="num"><b>306</b></td></tr>
+</tbody>
+</table>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Приклади оцінки транзакцій</h1>
+  <div class="body">
+    <table class="tbl">
+<thead><tr><th>Транзакція</th><th class="num">Тип</th><th class="num">FTR</th><th class="num">DET</th><th class="num">Складність</th><th class="num">UFP</th></tr></thead>
+<tbody>
+<tr><td>GET /store/unique</td><td class="num">EQ</td><td class="num">1</td><td class="num">1</td><td class="num">Низький</td><td class="num">3</td></tr>
+<tr><td>DELETE /private/product/{id}</td><td class="num">EI</td><td class="num">2</td><td class="num">2</td><td class="num">Низький</td><td class="num">3</td></tr>
+<tr><td>PUT /private/product/{id}</td><td class="num">EI</td><td class="num">2</td><td class="num">87</td><td class="num">Високий</td><td class="num">6</td></tr>
+<tr><td>GET /private/orders/{id}</td><td class="num">EQ</td><td class="num">2</td><td class="num">147</td><td class="num">Високий</td><td class="num">6</td></tr>
+<tr><td>GET /cart/{code}</td><td class="num">EO</td><td class="num">2</td><td class="num">92</td><td class="num">Високий</td><td class="num">7</td></tr>
+</tbody>
+</table>
+    <p class="note">Для EQ складність – більша з оцінок входу і виходу. DET без технічних параметрів: магазин, мова, пагінація</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Нескориговані функціональні точки</h1>
+  <div class="body">
+    <div class="cols cols--wide">
+      <div class="figure">
+        <div class="figure__img"><img src="img/01_structure.png" alt="Структура UFP"></div>
+        <p class="figure__cap">Нескориговані точки за компонентами</p>
+      </div>
+      <ul class="bullets">
+        <li>ILF 240, EIF 10</li>
+        <li>EI 552, EO 110, EQ 474</li>
+        <li>UFP = 1 386</li>
+        <li>Транзакції дають 82% точок</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Характеристики системи</h1>
+  <div class="body">
+    <table class="tbl">
+<thead><tr><th>Характеристика</th><th class="num">Оцінка</th><th>Характеристика</th><th class="num">Оцінка</th></tr></thead>
+<tbody><tr><td>Обмін даними</td><td class="num">5</td><td>Зміна даних</td><td class="num">4</td></tr><tr><td>Розподіл обробки</td><td class="num">3</td><td>Складність обробки</td><td class="num">4</td></tr><tr><td>Продуктивність</td><td class="num">2</td><td>Повторне використання</td><td class="num">3</td></tr><tr><td>Апаратні обмеження</td><td class="num">1</td><td>Зручність інсталяції</td><td class="num">3</td></tr><tr><td>Навантаження</td><td class="num">3</td><td>Адміністрування</td><td class="num">2</td></tr><tr><td>Взаємодія з користувачем</td><td class="num">5</td><td>Портування</td><td class="num">4</td></tr><tr><td>Ергономіка</td><td class="num">3</td><td>Гнучкість</td><td class="num">3</td></tr></tbody>
+</table>
+    <p class="note">Оцінка від 0 до 5 за кодом і конфігурацією, обґрунтування – у звіті. TDI = 45, VAF = 45 · 0.01 + 0.65 = 1.10</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Нормована кількість точок</h1>
+  <div class="body">
+    <div class="cols">
+      <div>
+        <p class="formula">UFP = 1 386</p>
+        <p class="formula">VAF = TDI · 0.01 + 0.65 = 1.10</p>
+        <p class="formula">AFP = UFP · VAF = 1 525</p>
+        <p class="note">Діапазон VAF – від 0.65 до 1.35</p>
+      </div>
+      <div class="kv" style="--k:210px">
+        <div class="kv__row"><div class="kv__k">Операторів на FP, Java</div><div class="kv__v">53.33 <span class="n">[4]</span></div></div>
+        <div class="kv__row"><div class="kv__k">Оцінка розміру з AFP</div><div class="kv__v">81 307 операторів</div></div>
+        <div class="kv__row"><div class="kv__k">Виміряно в ПР2</div><div class="kv__v">50 133 операторів</div></div>
+        <div class="kv__row"><div class="kv__k">Фактично на 1 FP</div><div class="kv__v">32.9 оператора</div></div>
+      </div>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 11 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Економічні характеристики</h1>
+  <div class="body">
+    <div class="cols cols--wide">
+      <div class="figure">
+        <div class="figure__img"><img src="img/02_estimates.png" alt="Оцінки трудомісткості"></div>
+        <p class="figure__cap">Трудомісткість, людино-місяців</p>
+      </div>
+      <table class="tbl">
+<thead><tr><th>Спосіб</th><th class="num">Вартість, $</th><th class="num">$ за FP</th></tr></thead>
+<tbody>
+<tr><td>10.4 FP на місяць</td><td class="num">366 490</td><td class="num">240</td></tr>
+<tr><td>COCOMO за AFP</td><td class="num">1 550 908</td><td class="num">1 017</td></tr>
+<tr><td>COCOMO за LOC</td><td class="num">902 364</td><td class="num">592</td></tr>
+</tbody>
+</table>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 12 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Верифікація</h1>
+  <div class="body">
+    <div class="cols">
+      <ul class="bullets">
+        <li>ПР2: 940 FP зворотним розрахунком, за IFPUG 1 525, різниця в 1.6 раза; еталона немає, підрахунок міг бути завищений <span class="n">[4]</span></li>
+        <li>Ручна перевірка 10 транзакцій: тип збігся в усіх, сума UFP 36 проти 31</li>
+        <li>FTR береться за іменами сервісів, тому можливі пропуски і зайві файли</li>
+      </ul>
+      <ul class="bullets">
+        <li>Версії v1 і v2 включено обидві, три платіжні методи – заглушки; без них 1 383 AFP</li>
+        <li>Характеристики системи оцінено експертно: зміна на 1 дає 14 точок</li>
+        <li>Тип застосунку не враховано в продуктивності 10.4 FP на місяць</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 13 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Висновки</h1>
+  <div class="body">
+    <ol class="steps">
+      <li>26 ILF, 2 EIF і 306 транзакцій: UFP = 1 386</li>
+      <li>VAF = 1.10, AFP = 1 525</li>
+      <li>На одну точку 32.9 оператора, а не 53.33; розбіжність з ПР2 у 1.6 раза має кілька причин, зокрема можливе завищення підрахунку</li>
+      <li>Трудомісткість від 147 до 620 людино-місяців, вартість від $366 тис. до $1.5 млн залежно від моделі</li>
+    </ol>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 14 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Основні джерела</h1>
+  <div class="body">
+    <ol class="srcs" style="--rows:4">
+      <li value="1"><b>Shopizer</b>, github.com/shopizer-ecommerce/shopizer</li>
+      <li value="2"><b>IFPUG</b> Function Point Counting Practices Manual 4.3.1, 2010</li>
+      <li value="3"><b>ISO/IEC 20926:2009</b> IFPUG functional size measurement method</li>
+      <li value="4"><b>Jones C.</b> Software Economics and Function Point Metrics, 2017</li>
+      <li value="5"><b>DOU</b> Зарплати українських розробників – літо 2026</li>
+      <li value="6"><b>НБУ</b> Офіційний курс USD на 04.11.2026</li>
+      <li value="7"><b>Boehm B. W.</b> Software Engineering Economics, 1981</li>
+    </ol>
+    <p class="note">Повний список – у звіті</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<script src="shared/deck.js"></script>
+</body>
+</html>

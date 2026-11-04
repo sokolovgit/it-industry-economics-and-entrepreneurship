@@ -1,0 +1,178 @@
+{
+  "commit": "6a4a0a6",
+  "all_languages": {
+    "Java": {
+      "nFiles": 1205,
+      "blank": 27159,
+      "comment": 11864,
+      "code": 75576
+    },
+    "Freemarker Template": {
+      "nFiles": 18,
+      "blank": 642,
+      "comment": 0,
+      "code": 3208
+    },
+    "JSON": {
+      "nFiles": 6,
+      "blank": 19,
+      "comment": 0,
+      "code": 3186
+    },
+    "Properties": {
+      "nFiles": 37,
+      "blank": 578,
+      "comment": 593,
+      "code": 2484
+    },
+    "Maven": {
+      "nFiles": 6,
+      "blank": 222,
+      "comment": 271,
+      "code": 998
+    },
+    "XML": {
+      "nFiles": 12,
+      "blank": 160,
+      "comment": 130,
+      "code": 644
+    },
+    "Bourne Shell": {
+      "nFiles": 1,
+      "blank": 31,
+      "comment": 60,
+      "code": 195
+    },
+    "DOS Batch": {
+      "nFiles": 1,
+      "blank": 32,
+      "comment": 0,
+      "code": 129
+    },
+    "Markdown": {
+      "nFiles": 3,
+      "blank": 91,
+      "comment": 0,
+      "code": 119
+    },
+    "Drools": {
+      "nFiles": 4,
+      "blank": 21,
+      "comment": 0,
+      "code": 69
+    },
+    "YAML": {
+      "nFiles": 1,
+      "blank": 7,
+      "comment": 8,
+      "code": 57
+    },
+    "Text": {
+      "nFiles": 1,
+      "blank": 0,
+      "comment": 0,
+      "code": 9
+    },
+    "Dockerfile": {
+      "nFiles": 1,
+      "blank": 0,
+      "comment": 0,
+      "code": 7
+    },
+    "SQL": {
+      "nFiles": 1,
+      "blank": 0,
+      "comment": 0,
+      "code": 1
+    },
+    "SUM": {
+      "blank": 28962,
+      "comment": 12926,
+      "code": 86682,
+      "nFiles": 1297
+    }
+  },
+  "modules": {
+    "sm-core-model/main": {
+      "files": 186,
+      "blank": 4003,
+      "comment": 652,
+      "code": 11931,
+      "physical": 16586,
+      "logical": 7809,
+      "parse_failed": 0
+    },
+    "sm-core-modules/main": {
+      "files": 14,
+      "blank": 142,
+      "comment": 68,
+      "code": 317,
+      "physical": 527,
+      "logical": 237,
+      "parse_failed": 0
+    },
+    "sm-core/main": {
+      "files": 335,
+      "blank": 9026,
+      "comment": 4187,
+      "code": 21207,
+      "physical": 34420,
+      "logical": 15056,
+      "parse_failed": 0
+    },
+    "sm-core/test": {
+      "files": 22,
+      "blank": 1143,
+      "comment": 873,
+      "code": 2110,
+      "physical": 4126,
+      "logical": 1903,
+      "parse_failed": 0
+    },
+    "sm-shop-model/main": {
+      "files": 322,
+      "blank": 2768,
+      "comment": 1743,
+      "code": 7996,
+      "physical": 12507,
+      "logical": 5922,
+      "parse_failed": 0
+    },
+    "sm-shop/main": {
+      "files": 310,
+      "blank": 9513,
+      "comment": 4073,
+      "code": 30565,
+      "physical": 44151,
+      "logical": 21109,
+      "parse_failed": 0
+    },
+    "sm-shop/test": {
+      "files": 15,
+      "blank": 551,
+      "comment": 236,
+      "code": 1385,
+      "physical": 2172,
+      "logical": 1156,
+      "parse_failed": 0
+    }
+  },
+  "java_main": {
+    "files": 1167,
+    "blank": 25452,
+    "comment": 10723,
+    "code": 72016,
+    "physical": 108191,
+    "logical": 50133,
+    "parse_failed": 0
+  },
+  "java_test": {
+    "files": 37,
+    "blank": 1694,
+    "comment": 1109,
+    "code": 3495,
+    "physical": 6298,
+    "logical": 3059,
+    "parse_failed": 0
+  }
+}
