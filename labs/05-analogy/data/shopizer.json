@@ -1,0 +1,12 @@
+{
+ "repo": "shopizer-ecommerce/shopizer",
+ "commit": "6a4a0a6",
+ "java_files": 1205,
+ "code": 75576,
+ "comment": 11864,
+ "test": 3495,
+ "modules": 6,
+ "deps": 123,
+ "beans": 269,
+ "endpoints": 370
+}

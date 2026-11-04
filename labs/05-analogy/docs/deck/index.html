@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Оцінка вартості ПЗ за методом аналогії – Економіка IT-індустрії та підприємництво</title>
+<link rel="stylesheet" href="shared/theme.css">
+<style>
+  .figure__img { background: #fff; border-radius: 0; }
+  .figure__img img { object-fit: contain; }
+  .body.fill { flex: 1; min-height: 0; display: flex; }
+  .body.fill > * { flex: 1; }
+  .cols.split { grid-template-columns: 2.4fr 1fr; }
+  .n { color: var(--ink-mute); font-size: .85em; white-space: nowrap; }
+  .formula { font-size: 24px; margin: 0 0 8px; }
+  .cols > table.tbl { align-self: start; }
+  .note { font-size: 16px; color: var(--ink-mute); margin-top: 14px; }
+</style>
+</head>
+<body class="deck">
+
+<!-- 1 -->
+<section class="slide slide--cover">
+  <p class="eyebrow">КПІ ім. Ігоря Сікорського · Практична робота № 5</p>
+  <h1 class="hero">Оцінка вартості ПЗ<br>за методом аналогії</h1>
+  <div class="stack" style="margin-top:40px">
+    <p class="lead">Оцінка зусиль Shopizer за 20 відкритими Java-проєктами</p>
+  </div>
+  <p class="byline">Виконав: <b>Соколов Олександр</b>, студент групи ІП-33<br>Дисципліна «Економіка IT-індустрії та підприємництво»</p>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Метод аналогії</h1>
+  <div class="body">
+    <div class="cols">
+      <ol class="steps">
+        <li>Описати новий проєкт атрибутами</li>
+        <li>Обчислити відстані до проєктів бази</li>
+        <li>Вибрати k найближчих як аналоги</li>
+        <li>Оцінка – середнє або медіана зусиль аналогів, за потреби з корекцією за розміром <span class="n">[1]</span></li>
+      </ol>
+      <div class="kv" style="--k:150px">
+        <div class="kv__row"><div class="kv__k">Новий проєкт</div><div class="kv__v">Shopizer <span class="n">[2]</span></div></div>
+        <div class="kv__row"><div class="kv__k">Аналоги</div><div class="kv__v">20 Java-проєктів з GitHub</div></div>
+        <div class="kv__row"><div class="kv__k">Мова</div><div class="kv__v">Java: у новому проєкті і в усіх аналогах</div></div>
+      </div>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">База проєктів</h1>
+  <div class="body">
+    <div class="cols">
+      <ul class="bullets">
+        <li>З 30 кандидатів за темами erp, crm, cms, e-commerce відібрано 20</li>
+        <li>Критерії: від 1.8 тис. рядків коду, 20 комітів, 5 людино-місяців активності</li>
+        <li>Розмір від 1.9 до 137.3 KLOC, зусилля від 6 до 712</li>
+        <li>Зусилля – людино-місяці активності: пари «автор, місяць» з хоча б одним комітом</li>
+      </ul>
+      <table class="tbl">
+<thead><tr><th>Проєкт</th><th class="num">KLOC</th><th class="num">Зусилля</th></tr></thead>
+<tbody>
+<tr><td>rebuild</td><td class="num">70.9</td><td class="num">206</td></tr>
+<tr><td>bbs</td><td class="num">75.5</td><td class="num">43</td></tr>
+<tr><td>alf.io</td><td class="num">83.1</td><td class="num">386</td></tr>
+<tr><td>oms-erp</td><td class="num">47.2</td><td class="num">20</td></tr>
+<tr><td>CordysCRM</td><td class="num">137.3</td><td class="num">276</td></tr>
+<tr><td>halo</td><td class="num">106.9</td><td class="num">571</td></tr>
+<tr><td>traccar</td><td class="num">101.2</td><td class="num">712</td></tr>
+</tbody>
+</table>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Атрибути проєктів</h1>
+  <div class="body">
+<table class="tbl">
+<thead><tr><th>Атрибут</th><th class="num">Як визначено</th><th class="num">Shopizer</th></tr></thead>
+<tbody>
+<tr><td>Збірні модулі</td><td class="num">файли pom.xml і build.gradle</td><td class="num">6</td></tr>
+<tr><td>Залежності</td><td class="num">оголошені у файлах збірки</td><td class="num">123</td></tr>
+<tr><td>Частка тестів, %</td><td class="num">тестовий код серед рядків Java</td><td class="num">4.6</td></tr>
+<tr><td>Частка коментарів, %</td><td class="num">коментарі до рядків коду</td><td class="num">15.7</td></tr>
+<tr><td>Spring-компоненти</td><td class="num">класи з анотаціями Service, Controller та ін.</td><td class="num">269</td></tr>
+<tr><td>Ендпоінти</td><td class="num">анотації Get-, Post-, RequestMapping та ін.</td><td class="num">370</td></tr>
+</tbody>
+</table>
+    <p class="note">Без розміру, зусиль і мови; усі атрибути визначені за вихідним кодом</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Відстані</h1>
+  <div class="body">
+    <div class="cols">
+      <div>
+        <p class="formula">x′ = (x − min) / (max − min)</p>
+        <p class="formula">d<sub>E</sub> = √Σ(x′ − y′)²</p>
+        <p class="formula">d<sub>M</sub> = Σ|x′ − y′|</p>
+        <p class="note">k = 6 атрибутів, нормування за 21 проєктом</p>
+      </div>
+      <div class="kv" style="--k:150px">
+        <div class="kv__row"><div class="kv__k">Евклід</div><div class="kv__v">rebuild 0.454, bbs 0.477, alf.io 0.594</div></div>
+        <div class="kv__row"><div class="kv__k">Манхеттен</div><div class="kv__v">oms-erp 0.938, rebuild 1.000, bbs 1.070</div></div>
+      </div>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Найближчі проєкти</h1>
+  <div class="body">
+    <div class="cols cols--wide">
+      <div class="figure">
+        <div class="figure__img"><img src="img/01_distances.png" alt="Відстані до Shopizer"></div>
+        <p class="figure__cap">Евклідова відстань до Shopizer</p>
+      </div>
+      <ul class="bullets">
+        <li>Три найближчі за Евклідом мають розмір 71–83 KLOC</li>
+        <li>Розмір як атрибут не використовувався</li>
+        <li>Найдальші – SpringBlade і spring-petclinic</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Оцінка зусиль Shopizer</h1>
+  <div class="body">
+<table class="tbl">
+<thead><tr><th>Конфігурація</th><th class="num">Зусилля</th><th class="num">Вартість, $</th></tr></thead>
+<tbody>
+<tr><td>Евклід, k = 3, середнє</td><td class="num">211.7</td><td class="num">529 167</td></tr>
+<tr><td>Евклід, k = 3, з корекцією за розміром</td><td class="num">204.6</td><td class="num">511 494</td></tr>
+<tr><td>Манхеттен, k = 3, середнє</td><td class="num">89.7</td><td class="num">224 167</td></tr>
+<tr><td>Манхеттен, k = 3, з корекцією</td><td class="num">98.2</td><td class="num">245 508</td></tr>
+<tr><td>Калібрована: Манхеттен, k = 2, з корекцією</td><td class="num">125.8</td><td class="num">314 484</td></tr>
+</tbody>
+</table>
+    <p class="note">Зусилля в людино-місяцях; E = (E1 + E2 + E3) / 3 = (206 + 43 + 386) / 3 = 211.7. Зарплата $2 500 (медіана Middle, усі мови) <span class="n">[4]</span>, курс 45.666 грн <span class="n">[5]</span></p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Калібрування</h1>
+  <div class="body">
+    <div class="cols cols--wide">
+      <div class="figure">
+        <div class="figure__img"><img src="img/02_calibration.png" alt="MMRE за конфігураціями"></div>
+        <p class="figure__cap">Перехресна перевірка, MMRE</p>
+      </div>
+      <ul class="bullets">
+        <li>Кожен проєкт оцінено за рештою 19 <span class="n">[6]</span></li>
+        <li>Найкращий MMRE 144%, Pred(25) не вище 35%</li>
+        <li>Корекція за розміром зменшує MMRE у більшості конфігурацій</li>
+        <li>Найкраща з 40 конфігурацій обрана на тих самих даних: оцінка оптимістична</li>
+      </ul>
+    </div>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Порівняння з іншими оцінками</h1>
+  <div class="body">
+<table class="tbl">
+<thead><tr><th>Метод</th><th class="num">Зусилля, людино-місяців</th></tr></thead>
+<tbody>
+<tr><td>Аналогія, калібрована</td><td class="num">125.8</td></tr>
+<tr><td>Функціональні точки (ПР3)</td><td class="num">146.6</td></tr>
+<tr><td>Feature points (ПР4)</td><td class="num">158.4</td></tr>
+<tr><td>COCOMO за LOC (ПР2)</td><td class="num">360.9</td></tr>
+<tr><td>Аналогія, діапазон конфігурацій</td><td class="num">89.7 – 211.7</td></tr>
+</tbody>
+</table>
+    <p class="note">Калібрована оцінка на 14–21% нижча за точки і майже втричі нижча за COCOMO. Без проєктів зі слабкою історією комітів оцінка 241–388, тобто на рівні COCOMO</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Обмеження</h1>
+  <div class="body">
+    <ul class="bullets">
+      <li>Зусилля аналогів – активність за комітами, а не фактичні трудовитрати</li>
+      <li>Історія деяких проєктів коротша за фактичну розробку: bbs, WukongCRM, oms-erp; без них оцінка зростає до 241–388</li>
+      <li>У базі 20 проєктів, 10 із них менші за 20 KLOC, є 3 навчальні</li>
+      <li>Атрибути обрано за доступністю в коді, досвід команди не враховано</li>
+    </ul>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 11 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Висновки</h1>
+  <div class="body">
+    <ol class="steps">
+      <li>База з 20 Java-проєктів, 6 атрибутів без розміру, зусиль і мови</li>
+      <li>Найближчі за Евклідом: rebuild, bbs, alf.io; за Манхеттеном: oms-erp, rebuild, bbs</li>
+      <li>Оцінка 211.7 людино-місяців за Евклідом і 89.7 за Манхеттеном</li>
+      <li>Калібрована оцінка 125.8 людино-місяців, порядку $314 тис. (14.4 млн грн); MMRE не менше 144%</li>
+    </ol>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<!-- 12 -->
+<section class="slide">
+  <div class="rule"></div>
+  <h1 class="title">Основні джерела</h1>
+  <div class="body">
+    <ol class="srcs" style="--rows:3">
+      <li value="1"><b>Shepperd M., Schofield C.</b> Estimating Software Project Effort Using Analogies, 1997</li>
+      <li value="2"><b>Shopizer</b>, github.com/shopizer-ecommerce/shopizer</li>
+      <li value="3"><b>Adler D.</b> cloc: Count Lines of Code, 2.10</li>
+      <li value="4"><b>DOU</b> Зарплати українських розробників – літо 2026</li>
+      <li value="5"><b>НБУ</b> Офіційний курс USD на 04.11.2026</li>
+      <li value="6"><b>Conte S. D. et al.</b> Software Engineering Metrics and Models, 1986</li>
+    </ol>
+    <p class="note">Повний список і посилання на 20 проєктів – у звіті</p>
+  </div>
+  <span class="slide__kicker">Економіка IT-індустрії та підприємництво</span>
+  <span class="slide__num"></span>
+</section>
+
+<script src="shared/deck.js"></script>
+</body>
+</html>

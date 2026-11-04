@@ -1,0 +1,29 @@
+SKILL := env_var('HOME') / '.claude/skills/kpi-lab-report'
+DECK := env_var('HOME') / '.claude/skills/kpi-html-deck'
+REPORT := 'docs/report/report.md'
+
+# Список доступних рецептів
+default:
+    @just --list
+
+# Зібрати базу проєктів з GitHub (кілька хвилин), порахувати відстані і оцінки, побудувати рисунки
+data:
+    python3 data/collect.py
+    python3 data/shopizer.py
+    python3 data/analogy.py
+    uv run --no-project --with matplotlib python data/figures.py
+
+# Пронумерувати посилання [@Key] і згенерувати список джерел: report.src.md -> report.md
+cite:
+    python3 data/cite.py
+
+# Зібрати звіт і зберегти PDF через Word: report.docx + report.pdf
+report: cite
+    python3 {{SKILL}}/scripts/build_report.py {{REPORT}} report.docx
+    python3 {{SKILL}}/scripts/export_pdf.py docs/report/report.docx
+
+# Зібрати презентацію: PDF + pptx з нотатками з speech.md лягають у docs/deck (PNG – в out/deck)
+deck:
+    PPTX=1 bash {{DECK}}/scripts/build.sh docs/deck out/deck presentation
+    uv run --quiet --no-project --with python-pptx python docs/deck/notes.py docs/deck/speech.md out/deck/presentation.pptx
+    cp out/deck/presentation.pdf out/deck/presentation.pptx docs/deck/
