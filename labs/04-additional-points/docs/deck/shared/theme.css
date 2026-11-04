@@ -1,0 +1,734 @@
+/* Self-hosted Inter — no network fetch at render time. */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/Inter-400-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/Inter-400-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/Inter-400-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/Inter-400-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/Inter-500-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/Inter-500-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/Inter-500-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/Inter-500-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/Inter-600-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/Inter-600-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/Inter-600-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/Inter-600-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/Inter-700-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/Inter-700-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/Inter-700-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/Inter-700-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/InterTight-500-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/InterTight-500-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/InterTight-500-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/InterTight-500-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/InterTight-600-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/InterTight-600-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/InterTight-600-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/InterTight-600-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/InterTight-700-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/InterTight-700-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/InterTight-700-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/InterTight-700-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Design tokens */
+:root {
+  --slide-w: 1280px;
+  --slide-h: 720px;
+
+  --ink:        #14181f;
+  --ink-soft:   #46505f;
+  --ink-mute:   #8a94a3;
+  --rule:       #dfe4ea;
+  --paper:      #fbfbfa;
+  --paper-alt:  #f2f3f0;
+
+  --accent:      #1d4ed8;
+  --accent-soft: #e8edfb;
+  --accent-deep: #0f2a6b;
+
+  --pad-x: 88px;
+  --pad-y: 58px;
+
+  --f-display: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  --f-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+
+  --t-hero: 76px;
+  --t-h1:   46px;
+  --t-h2:   36px;
+  --t-body: 22px;
+  --t-cap:  18px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #e7e9e6;
+  font-family: var(--f-body);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Slide frame ---------- */
+.slide {
+  position: relative;
+  width: var(--slide-w);
+  height: var(--slide-h);
+  padding: var(--pad-y) var(--pad-x);
+  background: var(--paper);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide__num {
+  position: absolute;
+  right: var(--pad-x);
+  bottom: 36px;
+  font-size: var(--t-cap);
+  color: var(--ink-mute);
+  font-variant-numeric: tabular-nums;
+}
+
+.slide__kicker {
+  position: absolute;
+  left: var(--pad-x);
+  bottom: 36px;
+  font-size: var(--t-cap);
+  color: var(--ink-mute);
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Typography ---------- */
+.hero {
+  font-family: var(--f-display);
+  font-size: var(--t-hero);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+h1.title {
+  font-family: var(--f-display);
+  font-size: var(--t-h1);
+  font-weight: 680;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 30px;
+  text-wrap: balance;
+}
+
+h2.sub {
+  font-size: var(--t-h2);
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 20px;
+}
+
+.eyebrow {
+  font-size: var(--t-cap);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 24px;
+}
+
+.lead {
+  font-size: var(--t-body);
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 24em;
+  margin: 0;
+}
+
+.rule {
+  width: 72px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin: 0 0 32px;
+}
+
+/* ---------- Layout helpers ---------- */
+.body { flex: 1; min-height: 0; }
+
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  height: 100%;
+}
+
+.cols--wide  { grid-template-columns: 1.4fr 1fr; }
+.cols--narrow{ grid-template-columns: 1fr 1.4fr; }
+
+.stack   { display: flex; flex-direction: column; gap: 20px; }
+.center  { justify-content: center; }
+
+/* ---------- Lists ---------- */
+ul.bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ul.bullets li {
+  position: relative;
+  padding-left: 34px;
+  font-size: var(--t-body);
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+
+ul.bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.52em;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--accent);
+}
+
+ul.bullets li strong { color: var(--ink); font-weight: 650; }
+
+ol.steps {
+  counter-reset: s;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ol.steps li {
+  counter-increment: s;
+  position: relative;
+  padding-left: 60px;
+  font-size: var(--t-body);
+  line-height: 1.42;
+  color: var(--ink-soft);
+  min-height: 42px;
+}
+
+ol.steps li::before {
+  content: counter(s);
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  font-weight: 680;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 20px 24px;
+}
+
+.card .card__label {
+  font-size: var(--t-cap);
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin: 0 0 10px;
+}
+
+.card .card__value {
+  font-family: var(--f-display);
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+  color: var(--accent-deep);
+}
+
+.card > p { margin: 0; font-size: 18px; line-height: 1.4; color: var(--ink-soft); }
+
+.quote {
+  font-family: var(--f-display);
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.32;
+  letter-spacing: -0.015em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.quote__src {
+  margin-top: 28px;
+  font-size: var(--t-cap);
+  color: var(--ink-mute);
+}
+
+/* ---------- Slide variants ---------- */
+.slide--cover   { background: var(--paper-alt); justify-content: center; }
+.slide--section { background: var(--accent-deep); color: #fff; justify-content: center; }
+.slide--section .hero      { color: #fff; }
+.slide--section .eyebrow   { color: #9dbaff; }
+.slide--section .slide__num,
+.slide--section .slide__kicker { color: rgba(255,255,255,.55); }
+
+/* ---------- Screen presentation mode ---------- */
+@media screen {
+  body.deck {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  body.deck .slide {
+    display: none;
+    box-shadow: 0 24px 70px rgba(0,0,0,.20);
+    border-radius: 6px;
+    transform-origin: center center;
+  }
+  body.deck .slide.is-active { display: flex; }
+
+  /* contact-sheet review mode: ?all */
+  body.deck.show-all { display: block; overflow: auto; padding: 40px; }
+  body.deck.show-all .slide { display: flex; margin: 0 auto 40px; }
+}
+
+/* ---------- Print / PDF ---------- */
+@page { size: 1280px 720px; margin: 0; }
+
+@media print {
+  html, body { background: #fff; }
+  .slide {
+    display: flex !important;
+    page-break-after: always;
+    break-after: page;
+    box-shadow: none;
+    border-radius: 0;
+    transform: none !important;
+  }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+}
+
+/* ---------- Inline legal reference ---------- */
+.ref {
+  display: inline-block;
+  font-size: 0.72em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--accent-deep);
+  background: var(--accent-soft);
+  border-radius: 5px;
+  padding: 0.14em 0.5em;
+  margin-left: 0.3em;
+  vertical-align: 0.1em;
+  white-space: nowrap;
+}
+
+.slide--section .ref { background: rgba(255,255,255,.14); color: #cfe0ff; }
+
+/* ---------- Grids of cards ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 3), 1fr);
+  gap: 20px;
+}
+
+.grid .card { padding: 18px 20px; }
+.grid .card .card__value { font-size: 32px; margin-bottom: 5px; }
+.grid .card > p { font-size: 17px; line-height: 1.38; }
+
+/* ---------- Comparison pair ---------- */
+.vs { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+.vs__side {
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 20px 24px;
+  background: #fff;
+}
+
+.vs__side--muted { background: var(--paper-alt); }
+
+.vs__head {
+  font-family: var(--f-display);
+  font-size: 22px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  margin: 0 0 14px;
+}
+
+.vs__side ul { margin: 0; padding-left: 20px; }
+.vs__side li { font-size: 18px; line-height: 1.4; color: var(--ink-soft); margin-bottom: 6px; }
+
+/* ---------- Key/value rows ---------- */
+.kv { display: flex; flex-direction: column; gap: 0; }
+
+.kv__row {
+  display: grid;
+  grid-template-columns: var(--k, 300px) 1fr;
+  gap: 28px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: baseline;
+}
+
+.kv__row:last-child { border-bottom: none; }
+.kv__k { font-weight: 650; font-size: 19px; color: var(--ink); }
+.kv__v { font-size: 19px; line-height: 1.38; color: var(--ink-soft); }
+
+/* ---------- Table ---------- */
+table.tbl { width: 100%; border-collapse: collapse; font-size: 18px; }
+table.tbl th {
+  text-align: left;
+  font-size: var(--t-cap);
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  padding: 0 14px 12px 0;
+  border-bottom: 2px solid var(--rule);
+}
+table.tbl td {
+  padding: 7px 14px 7px 0;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink-soft);
+}
+table.tbl td:first-child { font-weight: 600; color: var(--ink); }
+table.tbl .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+table.tbl tr.is-out td { color: var(--ink-mute); }
+
+/* ---------- Source list ---------- */
+ol.srcs {
+  margin: 0;
+  padding-left: 26px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(var(--rows, 5), auto);
+  grid-auto-flow: column;
+  gap: 12px 44px;
+}
+ol.srcs li { font-size: 17px; line-height: 1.38; color: var(--ink-soft); }
+ol.srcs li b { color: var(--ink); font-weight: 620; }
+
+/* ---------- Full-bleed photo slides ---------- */
+.slide--photo {
+  position: relative;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  justify-content: flex-end;
+  /* content is bottom-aligned, so leave the footer band clear */
+  padding-bottom: 92px;
+}
+
+/* Scrim keeps the headline legible over any photo. */
+.slide--photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg,
+    rgba(8,14,30,.93) 0%, rgba(8,14,30,.86) 30%,
+    rgba(8,14,30,.58) 62%, rgba(8,14,30,.22) 100%);
+}
+
+.slide--photo > *:not(.slide__num):not(.slide__kicker):not(.credit) {
+  position: relative;
+  z-index: 1;
+}
+.slide--photo > .slide__num,
+.slide--photo > .slide__kicker,
+.slide--photo > .credit { z-index: 1; }
+.slide--photo .hero    { color: #fff; }
+.slide--photo .lead    { color: rgba(255,255,255,.80); }
+.slide--photo .eyebrow { color: #9dbaff; }
+
+/* ---------- Cover byline: author and discipline ---------- */
+.byline {
+  margin: 40px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+  max-width: 34em;
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.byline b { color: var(--ink); font-weight: 620; }
+.slide--photo .byline   { color: rgba(255,255,255,.78); border-top-color: rgba(255,255,255,.28); }
+.slide--photo .byline b { color: #fff; }
+.slide--photo .slide__num,
+.slide--photo .slide__kicker { color: rgba(255,255,255,.55); }
+
+.credit {
+  position: absolute;
+  right: calc(var(--pad-x) + 52px);
+  bottom: 36px;
+  z-index: 1;
+  font-size: 12px;
+  line-height: 1.3;
+  text-align: right;
+  max-width: 34em;
+  color: rgba(255,255,255,.45);
+}
+
+.slide:not(.slide--photo) .credit { color: var(--ink-mute); opacity: .8; }
+
+/* ---------- Figures on content slides ---------- */
+.figure {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.figure__img {
+  flex: 1;
+  min-height: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--paper-alt);
+}
+
+.figure__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.figure--portrait .figure__img { flex: none; aspect-ratio: 3 / 4; }
+.figure--portrait .figure__img img { object-position: center 18%; }
+
+.figure__cap {
+  margin: 9px 0 0;
+  font-size: 13px;
+  line-height: 1.32;
+  color: var(--ink-mute);
+}
+
+.figure__cap b { color: var(--ink-soft); font-weight: 620; }
+
+/* ---------- Chart legend ---------- */
+.keys {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.key { display: flex; align-items: baseline; gap: 6px; font-size: 16px; }
+.key__dot { width: 11px; height: 11px; border-radius: 50%; flex: none; transform: translateY(1px); }
+.key__name { font-weight: 620; color: var(--ink); }
+.key__num  { font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; }
+.key__pct  { font-size: 16px; color: var(--ink-mute); font-variant-numeric: tabular-nums; }

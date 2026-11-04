@@ -1,0 +1,673 @@
+{
+ "fep": {
+  "counts": {
+   "EI": 153,
+   "EO": 21,
+   "EQ": 132,
+   "ILF": 26,
+   "EIF": 2,
+   "ALG": 19
+  },
+  "ufep": 1498,
+  "vaf": 1.1,
+  "afep": 1647.8000000000002,
+  "ufep_alg_min": 1460,
+  "ufep_alg_max": 1631,
+  "without_alg": 1441
+ },
+ "op": {
+  "screens": [
+   {
+    "controller": "AuthenticateCustomerApi",
+    "views": 4,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "AuthenticateUserApi",
+    "views": 2,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "CacheApi",
+    "views": 1,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "CatalogApi",
+    "views": 9,
+    "tables": 2,
+    "level": "m",
+    "weight": 2
+   },
+   {
+    "controller": "CategoryApi",
+    "views": 10,
+    "tables": 2,
+    "level": "m",
+    "weight": 2
+   },
+   {
+    "controller": "ConfigurationsApi",
+    "views": 3,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ContactApi",
+    "views": 1,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ContentAdministrationApi",
+    "views": 6,
+    "tables": 2,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ContentApi",
+    "views": 24,
+    "tables": 1,
+    "level": "m",
+    "weight": 2
+   },
+   {
+    "controller": "CustomerApi",
+    "views": 10,
+    "tables": 2,
+    "level": "m",
+    "weight": 2
+   },
+   {
+    "controller": "CustomerNewsletterApi",
+    "views": 3,
+    "tables": 2,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "CustomerReviewApi",
+    "views": 4,
+    "tables": 2,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "DefaultController",
+    "views": 1,
+    "tables": 0,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "FilesController",
+    "views": 2,
+    "tables": 2,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ImagesController",
+    "views": 4,
+    "tables": 3,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "MarketPlaceApi",
+    "views": 3,
+    "tables": 2,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "MerchantStoreApi",
+    "views": 15,
+    "tables": 2,
+    "level": "m",
+    "weight": 2
+   },
+   {
+    "controller": "OptinApi",
+    "views": 1,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "OrderApi",
+    "views": 9,
+    "tables": 3,
+    "level": "m",
+    "weight": 2
+   },
+   {
+    "controller": "OrderPaymentApi",
+    "views": 8,
+    "tables": 5,
+    "level": "d",
+    "weight": 3
+   },
+   {
+    "controller": "OrderShippingApi",
+    "views": 2,
+    "tables": 6,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "OrderStatusHistoryApi",
+    "views": 2,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "OrderTotalApi",
+    "views": 2,
+    "tables": 5,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "PaymentApi",
+    "views": 3,
+    "tables": 3,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ProductApi",
+    "views": 10,
+    "tables": 2,
+    "level": "m",
+    "weight": 2
+   },
+   {
+    "controller": "ProductApiV2",
+    "views": 10,
+    "tables": 2,
+    "level": "m",
+    "weight": 2
+   },
+   {
+    "controller": "ProductAttributeOptionApi",
+    "views": 20,
+    "tables": 1,
+    "level": "m",
+    "weight": 2
+   },
+   {
+    "controller": "ProductGroupApi",
+    "views": 7,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ProductImageApi",
+    "views": 5,
+    "tables": 2,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ProductInventoryApi",
+    "views": 5,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ProductManufacturerApi",
+    "views": 8,
+    "tables": 1,
+    "level": "m",
+    "weight": 2
+   },
+   {
+    "controller": "ProductPriceApi",
+    "views": 7,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ProductPropertySetApi",
+    "views": 6,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ProductRelationshipApi",
+    "views": 1,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ProductReviewApi",
+    "views": 4,
+    "tables": 2,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ProductTypeApi",
+    "views": 6,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ProductVariantApi",
+    "views": 6,
+    "tables": 2,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ProductVariantGroupApi",
+    "views": 7,
+    "tables": 2,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ProductVariationApi",
+    "views": 8,
+    "tables": 4,
+    "level": "d",
+    "weight": 3
+   },
+   {
+    "controller": "PublicConfigsApi",
+    "views": 1,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ReferencesApi",
+    "views": 5,
+    "tables": 2,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ResetCustomerPasswordApi",
+    "views": 3,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ResetUserPasswordApi",
+    "views": 3,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "SearchApi",
+    "views": 2,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "SearchToolsApi",
+    "views": 1,
+    "tables": 2,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "SecurityApi",
+    "views": 3,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ShippingConfigurationApi",
+    "views": 10,
+    "tables": 2,
+    "level": "m",
+    "weight": 2
+   },
+   {
+    "controller": "ShippingExpeditionApi",
+    "views": 3,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "ShoppingCartApi",
+    "views": 9,
+    "tables": 3,
+    "level": "m",
+    "weight": 2
+   },
+   {
+    "controller": "StoreContactRESTController",
+    "views": 2,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "SystemRESTController",
+    "views": 4,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "TaxClassApi",
+    "views": 6,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "TaxRatesApi",
+    "views": 6,
+    "tables": 1,
+    "level": "s",
+    "weight": 1
+   },
+   {
+    "controller": "UserApi",
+    "views": 9,
+    "tables": 1,
+    "level": "m",
+    "weight": 2
+   }
+  ],
+  "screen_counts": {
+   "s": 39,
+   "m": 13,
+   "d": 2
+  },
+  "screen_pts": 71,
+  "reports": 21,
+  "report_pts": 42,
+  "gl3": 23,
+  "gl3_pts": 230,
+  "op": 343,
+  "effort": {
+   "дуже низька": {
+    "effort": 85.75,
+    "prod": 4
+   },
+   "низька": {
+    "effort": 49.0,
+    "prod": 7
+   },
+   "номінальна": {
+    "effort": 26.384615384615383,
+    "prod": 13
+   },
+   "висока": {
+    "effort": 13.72,
+    "prod": 25
+   },
+   "дуже висока": {
+    "effort": 6.86,
+    "prod": 50
+   }
+  }
+ },
+ "ucp": {
+  "uaw": 18,
+  "uucw": 290,
+  "uucp": 308,
+  "tfactor": 48.0,
+  "tcf": 1.08,
+  "efactor": 18.0,
+  "ef": 0.8599999999999999,
+  "ucp": 286.0704,
+  "use_cases": [
+   {
+    "name": "Автентифікація і відновлення пароля клієнта",
+    "actors": "Покупець",
+    "transactions": 7,
+    "level": "m",
+    "weight": 10
+   },
+   {
+    "name": "Керування профілем клієнта",
+    "actors": "Покупець",
+    "transactions": 13,
+    "level": "d",
+    "weight": 15
+   },
+   {
+    "name": "Перегляд товарів і категорій",
+    "actors": "Покупець; адміністратор магазину",
+    "transactions": 28,
+    "level": "d",
+    "weight": 15
+   },
+   {
+    "name": "Пошук товарів",
+    "actors": "Покупець",
+    "transactions": 3,
+    "level": "s",
+    "weight": 5
+   },
+   {
+    "name": "Відгуки про товари і клієнтів",
+    "actors": "Покупець; адміністратор магазину",
+    "transactions": 8,
+    "level": "d",
+    "weight": 15
+   },
+   {
+    "name": "Керування кошиком",
+    "actors": "Покупець",
+    "transactions": 9,
+    "level": "d",
+    "weight": 15
+   },
+   {
+    "name": "Розрахунок підсумку замовлення",
+    "actors": "Покупець",
+    "transactions": 1,
+    "level": "s",
+    "weight": 5
+   },
+   {
+    "name": "Розрахунок вартості доставки",
+    "actors": "Покупець; служби доставки",
+    "transactions": 2,
+    "level": "s",
+    "weight": 5
+   },
+   {
+    "name": "Оплата замовлення",
+    "actors": "Покупець; платіжний шлюз",
+    "transactions": 10,
+    "level": "d",
+    "weight": 15
+   },
+   {
+    "name": "Оформлення і перегляд замовлень",
+    "actors": "Покупець; адміністратор магазину; пошта",
+    "transactions": 8,
+    "level": "d",
+    "weight": 15
+   },
+   {
+    "name": "Керування каталогом і категоріями",
+    "actors": "Адміністратор магазину",
+    "transactions": 9,
+    "level": "d",
+    "weight": 15
+   },
+   {
+    "name": "Керування варіантами товару",
+    "actors": "Адміністратор магазину",
+    "transactions": 21,
+    "level": "d",
+    "weight": 15
+   },
+   {
+    "name": "Керування опціями товару",
+    "actors": "Адміністратор магазину",
+    "transactions": 26,
+    "level": "d",
+    "weight": 15
+   },
+   {
+    "name": "Керування зображеннями товару",
+    "actors": "Адміністратор магазину; хмарне сховище",
+    "transactions": 9,
+    "level": "d",
+    "weight": 15
+   },
+   {
+    "name": "Керування типами, виробниками і групами",
+    "actors": "Адміністратор магазину",
+    "transactions": 26,
+    "level": "d",
+    "weight": 15
+   },
+   {
+    "name": "Керування контентом і файлами",
+    "actors": "Адміністратор магазину; хмарне сховище",
+    "transactions": 31,
+    "level": "d",
+    "weight": 15
+   },
+   {
+    "name": "Керування магазином",
+    "actors": "Адміністратор магазину; адміністратор роздрібного продавця; пошта",
+    "transactions": 21,
+    "level": "d",
+    "weight": 15
+   },
+   {
+    "name": "Керування користувачами і правами",
+    "actors": "Суперадміністратор; адміністратор магазину",
+    "transactions": 17,
+    "level": "d",
+    "weight": 15
+   },
+   {
+    "name": "Налаштування доставки",
+    "actors": "Адміністратор магазину",
+    "transactions": 13,
+    "level": "d",
+    "weight": 15
+   },
+   {
+    "name": "Керування податками",
+    "actors": "Адміністратор магазину",
+    "transactions": 12,
+    "level": "d",
+    "weight": 15
+   },
+   {
+    "name": "Керування модулями, конфігурацією і кешем",
+    "actors": "Суперадміністратор; адміністратор магазину",
+    "transactions": 10,
+    "level": "d",
+    "weight": 15
+   },
+   {
+    "name": "Довідники",
+    "actors": "Покупець; адміністратор магазину",
+    "transactions": 5,
+    "level": "m",
+    "weight": 10
+   }
+  ],
+  "uc_counts": {
+   "m": 2,
+   "d": 17,
+   "s": 3
+  },
+  "hours": {
+   "20": 5721.408,
+   "36": 10298.5344
+  }
+ },
+ "ucp_fine": {
+  "use_cases": 54,
+  "counts": {
+   "s": 22,
+   "m": 20,
+   "d": 12
+  },
+  "uucw": 490,
+  "ucp": 471.83039999999994,
+  "effort_pm_20": 58.97879999999999
+ },
+ "ucp2": {
+  "operations": 289,
+  "by_type": {
+   "EQ": 123,
+   "EI": 146,
+   "EO": 20
+  },
+  "tr_ufp": 1063,
+  "data_ufp": 250,
+  "ufp": 1313,
+  "vaf": 1.1,
+  "afp": 1444.3000000000002,
+  "fp3_afp": 1524.6000000000001
+ },
+ "economy": {
+  "salary": 2500,
+  "rate": 45.666,
+  "hours_pm": 160,
+  "fp3": {
+   "effort_pm": 146.59615384615387,
+   "cost_usd": 366490.3846153847,
+   "cost_uah": 16736149.903846156
+  },
+  "cocomo_loc": {
+   "effort_pm": 360.945581500784,
+   "cost_usd": 902363.95375196,
+   "cost_uah": 41207352.312037
+  },
+  "fep": {
+   "effort_pm": 158.4423076923077,
+   "cost_usd": 396105.76923076925,
+   "cost_uah": 18088566.057692308
+  },
+  "op": {
+   "effort_pm": 26.384615384615383,
+   "cost_usd": 65961.53846153845,
+   "cost_uah": 3012199.615384615
+  },
+  "ucp20": {
+   "effort_pm": 35.7588,
+   "cost_usd": 89397.0,
+   "cost_uah": 4082403.402
+  },
+  "ucp36": {
+   "effort_pm": 64.36584,
+   "cost_usd": 160914.6,
+   "cost_uah": 7348326.1236
+  },
+  "ucp2": {
+   "effort_pm": 138.875,
+   "cost_usd": 347187.5,
+   "cost_uah": 15854664.374999998
+  }
+ }
+}
