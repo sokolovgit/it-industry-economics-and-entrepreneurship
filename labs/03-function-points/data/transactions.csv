@@ -1,0 +1,307 @@
+controller,method,http,path,type,ftr,det,level,ufp,files
+FilesController,downloadFile,GET,/static/files/{storeCode}/{fileName}.{extension},EQ,2,1,L,3,Контент; Файлове сховище
+FilesController,downloadProduct,GET,/admin/files/downloads/{storeCode}/{fileName}.{extension},EQ,2,1,L,3,Контент; Файлове сховище
+ImagesController,printImage,GET,/static/files/{storeCode}/{imageType}/{imageName}.{extension},EQ,2,1,L,3,Контент; Файлове сховище
+ImagesController,printImage,GET,/static/{storeCode}/{imageType}/{productCode}/{imageName}.{extension},EQ,2,1,A,4,Зображення товару; Файлове сховище
+ImagesController,printImage,GET,/static/products/{storeCode}/{productCode}/{imageSize}/{imageName}.{extension},EQ,2,1,A,4,Зображення товару; Файлове сховище
+ImagesController,printImage,GET,/static/products/{storeCode}/{productCode}/{imageName}.{extension},EQ,2,1,L,3,Зображення товару; Файлове сховище
+DefaultController,version,GET,/,EQ,0,1,L,3,
+StoreContactRESTController,store,GET,/services/public/{store},EQ,1,1,L,3,Магазин
+StoreContactRESTController,contact,POST,/services/public/{store}/contact,EI,1,6,L,3,Магазин
+SystemRESTController,createOrUpdateModule,POST,/services/private/system/module,EI,1,2,L,3,Інтеграційний модуль
+SystemRESTController,createOptin,POST,/services/private/system/optin,EI,1,2,L,3,Інтеграційний модуль
+SystemRESTController,deleteOptin,DELETE,/services/private/system/optin/{code},EI,1,2,L,3,Інтеграційний модуль
+SystemRESTController,createOptinCustomer,POST,/services/private/system/optin/{code}/customer,EI,1,2,L,3,Інтеграційний модуль
+CatalogApi,getCatalogs,GET,/api/v1/private/catalogs,EQ,2,5,L,3,Каталог; Категорія
+CatalogApi,exists,GET,/api/v1/private/catalog/unique,EQ,2,1,L,3,Каталог; Категорія
+CatalogApi,createCatalog,POST,/api/v1/private/catalog,EI,2,5,A,4,Каталог; Категорія
+CatalogApi,updateCatalog,PATCH,/api/v1/private/catalog/{id},EI,2,6,A,4,Каталог; Категорія
+CatalogApi,getCatalog,GET,/api/v1/private/catalog/{id},EQ,2,49,H,6,Каталог; Категорія
+CatalogApi,deleteCatalog,DELETE,/api/v1/private/catalog/{id},EI,2,2,L,3,Каталог; Категорія
+CatalogApi,addCatalogEntry,POST,/api/v1/private/catalog/{id},EI,2,7,A,4,Каталог; Категорія
+CatalogApi,removeCatalogEntry,DELETE,/api/v1/private/catalog/{id}/entry/{entryId},EI,2,3,L,3,Каталог; Категорія
+CatalogApi,getCatalogEntry,GET,/api/v1/private/catalog/{id}/entry,EQ,2,5,L,3,Каталог; Категорія
+CategoryApi,get,GET,/api/v1/category/{id},EQ,1,17,L,3,Категорія
+CategoryApi,getByfriendlyUrl,GET,/api/v1/category/{friendlyUrl},EQ,1,17,L,3,Категорія
+CategoryApi,exists,GET,/api/v1/private/category/unique,EQ,1,1,L,3,Категорія
+CategoryApi,list,GET,/api/v1/category,EQ,1,21,A,4,Категорія
+CategoryApi,list,GET,/api/v1/category/product/{ProductId},EQ,1,21,A,4,Категорія
+CategoryApi,create,POST,/api/v1/private/category,EI,2,16,H,6,Категорія; Користувач
+CategoryApi,update,PUT,/api/v1/private/category/{id},EI,2,17,H,6,Категорія; Користувач
+CategoryApi,updateVisible,PATCH,/api/v1/private/category/{id}/visible,EI,2,17,H,6,Категорія; Користувач
+CategoryApi,move,PUT,/api/v1/private/category/{id}/move/{parent},EI,2,3,L,3,Категорія; Користувач
+CategoryApi,delete,DELETE,/api/v1/private/category/{id},EI,2,2,L,3,Категорія; Користувач
+CacheApi,clearCache,DELETE,/api/v1/auth/cache/store/{storeId}/clear,EI,1,3,L,3,Магазин
+ConfigurationsApi,create,POST,/api/v1/private/configurations/payment,EI,1,1,L,3,Конфігурація
+ConfigurationsApi,listPaymentConfigurations,GET,/api/v1/private/configurations/payment,EQ,1,8,L,3,Конфігурація
+ConfigurationsApi,listShippingConfigurations,GET,/api/v1/private/configurations/shipping,EO,1,8,L,4,Конфігурація
+ContentAdministrationApi,list,GET,/api/v1/private/content/list,EQ,2,6,A,4,Контент; Файлове сховище
+ContentAdministrationApi,folder,GET,/api/v1/private/content/folder,EQ,2,3,L,3,Контент; Файлове сховище
+ContentAdministrationApi,upload,POST,/api/v1/private/content/images/add,EI,2,8,A,4,Контент; Файлове сховище
+ContentAdministrationApi,download,GET,/api/v1/content/images/download,EQ,2,1,L,3,Контент; Файлове сховище
+ContentAdministrationApi,rename,POST,/api/v1/private/content/images/rename,EI,2,3,L,3,Контент; Файлове сховище
+ContentAdministrationApi,remove,DELETE,/api/v1/private/content/images/remove,EI,2,2,L,3,Контент; Файлове сховище
+ContentApi,pages,GET,/api/v1/private/content/pages,EQ,1,5,L,3,Контент
+ContentApi,pagesSummary,GET,/api/v1/content/summary,EQ,1,11,L,3,Контент
+ContentApi,boxes,GET,/api/v1/content/boxes,EQ,1,5,L,3,Контент
+ContentApi,page,GET,/api/v1/content/pages/{code},EQ,1,13,L,3,Контент
+ContentApi,pageByName,GET,/api/v1/content/pages/name/{name},EQ,1,13,L,3,Контент
+ContentApi,createBox,POST,/api/v1/private/content/box,EI,1,12,L,3,Контент
+ContentApi,boxExists,GET,/api/v1/private/content/box/{code}/exists,EQ,1,1,L,3,Контент
+ContentApi,pageExists,GET,/api/v1/private/content/page/{code}/exists,EQ,1,1,L,3,Контент
+ContentApi,createPage,POST,/api/v1/private/content/page,EI,1,13,L,3,Контент
+ContentApi,deletePage,DELETE,/api/v1/private/content/page/{id},EI,1,2,L,3,Контент
+ContentApi,deleteBox,DELETE,/api/v1/private/content/box/{id},EI,1,2,L,3,Контент
+ContentApi,updatePage,PUT,/api/v1/private/content/page/{id},EI,1,14,L,3,Контент
+ContentApi,updateBox,PUT,/api/v1/private/content/box/{id},EI,1,13,L,3,Контент
+ContentApi,content,GET,/api/v1/private/content/any/{code},EQ,1,13,L,3,Контент
+ContentApi,contents,GET,/api/v1/private/contents/any,EQ,1,13,L,3,Контент
+ContentApi,manageBoxByCode,GET,/api/v1/private/content/boxes/{code},EQ,1,11,L,3,Контент
+ContentApi,getBoxByCode,GET,/api/v1/content/boxes/{code},EQ,1,11,L,3,Контент
+ContentApi,addFolder,DELETE,/api/v1/content/folder,EI,1,3,L,3,Контент
+ContentApi,images,GET,/api/v1/content/images,EQ,1,3,L,3,Контент
+ContentApi,upload,POST,/api/v1/private/file,EI,1,2,L,3,Контент
+ContentApi,uploadMultipleFiles,POST,/api/v1/private/files,EI,1,2,L,3,Контент
+ContentApi,updatePage,PUT,/api/v1/private/content/{id},EI,1,15,L,3,Контент
+ContentApi,deleteContent,DELETE,/api/v1/private/content/{id},EI,1,1,L,3,Контент
+ContentApi,deleteFile,DELETE,/api/v1/private/content/,EI,1,3,L,3,Контент
+AuthenticateCustomerApi,register,POST,/api/v1/customer/register,EI,1,23,A,4,Клієнт
+AuthenticateCustomerApi,authenticate,POST,/api/v1/customer/login,EQ,1,1,L,3,Клієнт
+AuthenticateCustomerApi,refreshToken,GET,/api/v1/auth/customer/refresh,EQ,1,1,L,3,Клієнт
+AuthenticateCustomerApi,changePassword,POST,/api/v1/auth/customer/password,EI,1,5,L,3,Клієнт
+CustomerApi,create,POST,/api/v1/private/customer,EI,1,23,A,4,Клієнт
+CustomerApi,update,PUT,/api/v1/private/customer/{id},EI,1,24,A,4,Клієнт
+CustomerApi,updateAddress,PATCH,/api/v1/private/customer/{id}/address,EI,1,24,A,4,Клієнт
+CustomerApi,delete,DELETE,/api/v1/private/customer/{id},EI,2,2,L,3,Клієнт; Користувач
+CustomerApi,list,GET,/api/v1/private/customers,EQ,1,38,A,4,Клієнт
+CustomerApi,get,GET,/api/v1/private/customer/{id},EQ,1,34,A,4,Клієнт
+CustomerApi,getAuthUser,GET,/api/v1/private/customer/profile,EQ,1,34,A,4,Клієнт
+CustomerApi,updateAuthUserAddress,PATCH,/api/v1/auth/customer/address,EI,1,23,A,4,Клієнт
+CustomerApi,update,PATCH,/api/v1/auth/customer/,EI,1,23,A,4,Клієнт
+CustomerApi,delete,DELETE,/api/v1/auth/customer/,EI,1,1,L,3,Клієнт
+CustomerNewsletterApi,create,POST,/api/v1/newsletter,EI,2,5,A,4,Клієнт; Підписка
+CustomerNewsletterApi,update,PUT,/api/v1/newsletter/{email},EI,2,24,H,6,Клієнт; Підписка
+CustomerNewsletterApi,delete,DELETE,/api/v1/newsletter/{email},EI,2,2,L,3,Клієнт; Підписка
+CustomerReviewApi,create,POST,/api/v1/private/customers/{id}/reviews,EI,2,9,A,4,Відгук клієнта; Клієнт
+CustomerReviewApi,getAll,GET,/api/v1/customers/{id}/reviews,EQ,2,38,H,6,Відгук клієнта; Клієнт
+CustomerReviewApi,update,PUT,/api/v1/private/customers/{id}/reviews/{reviewid},EI,2,10,A,4,Відгук клієнта; Клієнт
+CustomerReviewApi,delete,DELETE,/api/v1/private/customers/{id}/reviews/{reviewId},EI,2,3,L,3,Відгук клієнта; Клієнт
+ResetCustomerPasswordApi,passwordResetRequest,POST,/api/v1/customer/password/reset/request,EI,1,3,L,3,Клієнт
+ResetCustomerPasswordApi,passwordResetVerify,GET,/api/v1/customer/{store}/reset/{token},EQ,1,1,L,3,Клієнт
+ResetCustomerPasswordApi,changePassword,POST,/api/v1/customer/{store}/password/{token},EI,1,7,L,3,Клієнт
+MarketPlaceApi,marketPlace,GET,/api/v1/private/marketplace/{store},EQ,1,29,A,4,Магазин
+MarketPlaceApi,signup,POST,/api/v1/store/signup,EI,2,14,A,4,Користувач; Магазин
+MarketPlaceApi,storeSignupVerify,GET,/api/v1/store/{store}/signup/{token},EQ,1,1,L,3,Магазин
+OrderApi,list,GET,/api/v1/private/orders/customers/{id},EQ,2,133,H,6,Замовлення; Клієнт
+OrderApi,list,GET,/api/v1/auth/orders,EQ,2,133,H,6,Замовлення; Клієнт
+OrderApi,list,GET,/api/v1/private/orders,EQ,2,133,H,6,Замовлення; Клієнт
+OrderApi,get,GET,/api/v1/private/orders/{id},EQ,2,147,H,6,Замовлення; Клієнт
+OrderApi,getOrder,GET,/api/v1/auth/orders/{id},EQ,2,147,H,6,Замовлення; Клієнт
+OrderApi,checkout,POST,/api/v1/auth/cart/{code}/checkout,EI,3,14,H,6,Замовлення; Клієнт; Кошик
+OrderApi,checkout,POST,/api/v1/cart/{code}/checkout,EI,3,35,H,6,Замовлення; Клієнт; Кошик
+OrderApi,updateOrderCustomer,PATCH,/api/v1/private/orders/{id}/customer,EI,2,24,H,6,Замовлення; Клієнт
+OrderApi,updateOrderStatus,PUT,/api/v1/private/orders/{id}/status,EI,2,3,L,3,Замовлення; Клієнт
+OrderPaymentApi,init,POST,/api/v1/cart/{code}/payment/init,EI,4,7,H,6,"Замовлення; Кошик; Платіжна транзакція; Платіжні шлюзи (Stripe, PayPal, Braintree, BeanStream)"
+OrderPaymentApi,init,POST,/api/v1/auth/cart/{code}/payment/init,EI,5,7,H,6,"Замовлення; Клієнт; Кошик; Платіжна транзакція; Платіжні шлюзи (Stripe, PayPal, Braintree, BeanStream)"
+OrderPaymentApi,nextTransaction,GET,/api/v1/private/orders/{id}/payment/nextTransaction,EQ,3,1,A,4,"Замовлення; Платіжна транзакція; Платіжні шлюзи (Stripe, PayPal, Braintree, BeanStream)"
+OrderPaymentApi,listTransactions,GET,/api/v1/private/orders/{id}/payment/transactions,EQ,3,7,A,4,"Замовлення; Платіжна транзакція; Платіжні шлюзи (Stripe, PayPal, Braintree, BeanStream)"
+OrderPaymentApi,listCapturableOrders,GET,/api/v1/private/orders/payment/capturable,EQ,3,133,H,6,"Замовлення; Платіжна транзакція; Платіжні шлюзи (Stripe, PayPal, Braintree, BeanStream)"
+OrderPaymentApi,capturePayment,POST,/api/v1/private/orders/{id}/capture,EI,3,2,A,4,"Замовлення; Платіжна транзакція; Платіжні шлюзи (Stripe, PayPal, Braintree, BeanStream)"
+OrderPaymentApi,refundPayment,POST,/api/v1/private/orders/{id}/refund,EI,3,2,A,4,"Замовлення; Платіжна транзакція; Платіжні шлюзи (Stripe, PayPal, Braintree, BeanStream)"
+OrderPaymentApi,authorizePayment,POST,/api/v1/private/orders/{id}/authorize,EI,3,2,A,4,"Замовлення; Платіжна транзакція; Платіжні шлюзи (Stripe, PayPal, Braintree, BeanStream)"
+OrderShippingApi,shipping,GET,/api/v1/auth/cart/{code}/shipping,EO,5,30,H,7,"Доставка; Замовлення; Клієнт; Кошик; Тарифи перевізників (UPS, USPS)"
+OrderShippingApi,shipping,POST,/api/v1/cart/{code}/shipping,EO,5,30,H,7,"Довідники; Доставка; Замовлення; Кошик; Тарифи перевізників (UPS, USPS)"
+OrderStatusHistoryApi,list,GET,/api/v1private/orders/{id}/history,EQ,1,5,L,3,Замовлення
+OrderStatusHistoryApi,create,POST,/api/v1private/orders/{id}/history,EI,1,7,L,3,Замовлення
+OrderTotalApi,payment,GET,/api/v1/auth/cart/{id}/total,EO,5,12,H,7,"Доставка; Замовлення; Клієнт; Кошик; Тарифи перевізників (UPS, USPS)"
+OrderTotalApi,calculateTotal,GET,/api/v1/cart/{code}/total,EO,4,12,H,7,"Доставка; Замовлення; Кошик; Тарифи перевізників (UPS, USPS)"
+PaymentApi,paymentModules,GET,/api/v1/private/modules/payment,EQ,3,7,A,4,"Інтеграційний модуль; Платіжна транзакція; Платіжні шлюзи (Stripe, PayPal, Braintree, BeanStream)"
+PaymentApi,configure,POST,/api/v1/private/modules/payment,EI,3,8,H,6,"Інтеграційний модуль; Платіжна транзакція; Платіжні шлюзи (Stripe, PayPal, Braintree, BeanStream)"
+PaymentApi,paymentModule,GET,/api/v1/private/modules/payment/{code},EQ,3,7,A,4,"Інтеграційний модуль; Платіжна транзакція; Платіжні шлюзи (Stripe, PayPal, Braintree, BeanStream)"
+ProductApi,create,POST,/api/v1/private/product,EI,2,86,H,6,Категорія; Товар
+ProductApi,update,PUT,/api/v1/private/product/{id},EI,2,87,H,6,Категорія; Товар
+ProductApi,update,PATCH,/api/v1/private/product/{id},EI,2,6,A,4,Категорія; Товар
+ProductApi,delete,DELETE,/api/v1/private/product/{id},EI,2,2,L,3,Категорія; Товар
+ProductApi,list,GET,/api/v1/products,EQ,2,106,H,6,Категорія; Товар
+ProductApi,getByfriendlyUrl,GET,/api/v1/product/{friendlyUrl},EQ,2,102,H,6,Категорія; Товар
+ProductApi,exists,GET,/api/v1/private/product/unique,EQ,2,1,L,3,Категорія; Товар
+ProductApi,addProductToCategory,POST,/api/v1/private/product/{productId}/category/{categoryId},EI,2,3,L,3,Категорія; Товар
+ProductApi,removeProductFromCategory,DELETE,/api/v1/private/product/{productId}/category/{categoryId},EI,2,3,L,3,Категорія; Товар
+ProductApi,changeProductOrder,PATCH,/api/v1/private/product/{id},EI,2,2,L,3,Категорія; Товар
+ProductAttributeOptionApi,createOption,POST,/api/v1/private/product/option,EI,1,15,L,3,Опції товару
+ProductAttributeOptionApi,optionExists,GET,/api/v1/private/product/option/unique,EQ,1,1,L,3,Опції товару
+ProductAttributeOptionApi,optionValueExists,GET,/api/v1/private/product/option/value/unique,EQ,1,1,L,3,Опції товару
+ProductAttributeOptionApi,createOptionValue,POST,/api/v1/private/product/option/value,EI,1,16,A,4,Опції товару
+ProductAttributeOptionApi,addOptionValueImage,POST,/api/v1/private/product/option/value/{id}/image,EI,1,3,L,3,Опції товару
+ProductAttributeOptionApi,removeOptionValueImage,DELETE,/api/v1/private/product/option/value/{id}/image,EI,1,2,L,3,Опції товару
+ProductAttributeOptionApi,getOption,GET,/api/v1/private/product/option/{id},EQ,1,14,L,3,Опції товару
+ProductAttributeOptionApi,getOptionValue,GET,/api/v1/private/product/option/value/{id},EQ,1,9,L,3,Опції товару
+ProductAttributeOptionApi,updateOption,PUT,/api/v1/private/product/option/{optionId},EI,1,16,A,4,Опції товару
+ProductAttributeOptionApi,deleteOption,DELETE,/api/v1/private/product/option/{optionId},EI,1,2,L,3,Опції товару
+ProductAttributeOptionApi,updateOptionValue,PUT,/api/v1/private/product/option/value/{id},EI,1,17,A,4,Опції товару
+ProductAttributeOptionApi,deleteOptionValue,DELETE,/api/v1/private/product/option/value/{id},EI,1,2,L,3,Опції товару
+ProductAttributeOptionApi,options,GET,/api/v1/private/product/options,EQ,1,18,L,3,Опції товару
+ProductAttributeOptionApi,optionsValues,GET,/api/v1/private/product/options/values,EQ,1,13,L,3,Опції товару
+ProductAttributeOptionApi,attributes,GET,/api/v1/private/product/{id}/attributes,EQ,1,32,A,4,Опції товару
+ProductAttributeOptionApi,getAttribute,GET,/api/v1/private/product/{id}/attribute/{attributeId},EQ,1,28,A,4,Опції товару
+ProductAttributeOptionApi,createAttribute,POST,/api/v1/private/product/{id}/attribute,EI,1,26,A,4,Опції товару
+ProductAttributeOptionApi,createAttributes,POST,/api/v1/private/product/{id}/attributes,EI,1,26,A,4,Опції товару
+ProductAttributeOptionApi,updateAttribute,PUT,/api/v1/private/product/{id}/attribute/{attributeId},EI,1,27,A,4,Опції товару
+ProductAttributeOptionApi,deleteAttribute,DELETE,/api/v1/private/product/{id}/attribute/{attributeId},EI,1,3,L,3,Опції товару
+ProductGroupApi,creteGroup,POST,/api/v1/private/products/group,EI,1,4,L,3,Товар
+ProductGroupApi,updateGroup,PATCH,/api/v1/private/products/group/{code},EI,1,5,L,3,Товар
+ProductGroupApi,list,GET,/api/v1/private/product/groups,EQ,1,1,L,3,Товар
+ProductGroupApi,getProductItemsByGroup,GET,/api/v1/products/group/{code},EQ,1,106,A,4,Товар
+ProductGroupApi,addProductToGroup,POST,/api/v1/private/products/{productId}/group/{code},EI,1,3,L,3,Товар
+ProductGroupApi,removeProductFromGroup,DELETE,/api/v1/private/products/{productId}/group/{code},EI,1,3,L,3,Товар
+ProductGroupApi,deleteGroup,DELETE,/api/v1/products/group/{code},EI,1,2,L,3,Товар
+ProductImageApi,uploadImage,POST,/api/v1/private/product/{id}/image,EI,2,4,L,3,Зображення товару; Товар
+ProductImageApi,deleteImage,DELETE,/api/v1/private/product/image/{id},EI,2,2,L,3,Зображення товару; Товар
+ProductImageApi,deleteImage,DELETE,/api/v1/private/product/{id}/image/{imageId},EI,2,5,A,4,Зображення товару; Товар
+ProductImageApi,images,GET,/api/v1/product/{productId}/images,EQ,2,2,L,3,Зображення товару; Товар
+ProductImageApi,imageDetails,PATCH,/api/v1/private/product/{id}/image/{imageId},EI,2,3,L,3,Зображення товару; Товар
+ProductInventoryApi,create,POST,/api/v1/private/product/{productId}/inventory,EI,1,32,A,4,Товар
+ProductInventoryApi,update,PUT,/api/v1/private/product/{productId}/inventory/{id},EI,1,33,A,4,Товар
+ProductInventoryApi,delete,DELETE,/api/v1/private/product/{productId}/inventory/{id},EI,1,3,L,3,Товар
+ProductInventoryApi,getBySku,GET,/api/v1/private/product/{sku}/inventory,EQ,1,5,L,3,Товар
+ProductInventoryApi,getByProductId,GET,/api/v1/private/product/inventory,EQ,1,5,L,3,Товар
+ProductManufacturerApi,create,POST,/api/v1/private/manufacturer,EI,1,12,L,3,Виробник
+ProductManufacturerApi,get,GET,/api/v1/manufacturer/{id},EQ,1,11,L,3,Виробник
+ProductManufacturerApi,listByStore,GET,/api/v1/private/manufacturers,EQ,1,15,L,3,Виробник
+ProductManufacturerApi,list,GET,/api/v1/manufacturers,EQ,1,15,L,3,Виробник
+ProductManufacturerApi,exists,GET,/api/v1/private/manufacturer/unique,EQ,1,1,L,3,Виробник
+ProductManufacturerApi,update,PUT,/api/v1/private/manufacturer/{id},EI,1,13,L,3,Виробник
+ProductManufacturerApi,delete,DELETE,/api/v1/private/manufacturer/{id},EI,1,2,L,3,Виробник
+ProductManufacturerApi,list,GET,/api/v1/category/{id}/manufacturer,EQ,1,11,L,3,Виробник
+ProductPriceApi,save,POST,/api/v1/private/product/{sku}/inventory/{inventoryId}/price,EI,1,22,A,4,Товар
+ProductPriceApi,save,POST,/api/v1/private/product/{sku}/price,EI,1,21,A,4,Товар
+ProductPriceApi,edit,PUT,/api/v1/private/product/{sku}/inventory/{inventoryId}/price/{priceId},EI,1,23,A,4,Товар
+ProductPriceApi,get,GET,/api/v1/private/product/{sku}/price/{priceId},EQ,1,14,L,3,Товар
+ProductPriceApi,list,GET,/api/v1/private/product/{sku}/inventory/{inventoryId}/price,EQ,1,14,L,3,Товар
+ProductPriceApi,list,GET,/api/v1/private/product/{sku}/prices,EQ,1,14,L,3,Товар
+ProductPriceApi,delete,DELETE,/api/v1/private/product/{sku}/price/{priceId},EI,1,3,L,3,Товар
+ProductPropertySetApi,create,POST,/api/v1/private/product/property/set,EI,1,7,L,3,Опції товару
+ProductPropertySetApi,exists,GET,/api/v1/private/product/property/set/unique,EQ,1,1,L,3,Опції товару
+ProductPropertySetApi,get,GET,/api/v1/private/product/property/set/{id},EQ,1,29,A,4,Опції товару
+ProductPropertySetApi,update,PUT,/api/v1/private/product/property/set/{id},EI,1,8,L,3,Опції товару
+ProductPropertySetApi,delete,DELETE,/api/v1/private/product/property/set/{id},EI,1,2,L,3,Опції товару
+ProductPropertySetApi,list,GET,/api/v1/private/product/property/set,EQ,1,29,A,4,Опції товару
+ProductRelationshipApi,getAll,GET,/api/v1/product/{id}/related,EQ,1,102,A,4,Товар
+ProductReviewApi,create,POST,/api/v1/private/products/{id}/reviews,EI,2,9,A,4,Відгук про товар; Товар
+ProductReviewApi,getAll,GET,/api/v1/product/{id}/reviews,EQ,2,38,H,6,Відгук про товар; Товар
+ProductReviewApi,update,PUT,/api/v1/private/products/{id}/reviews/{reviewid},EI,2,10,A,4,Відгук про товар; Товар
+ProductReviewApi,delete,DELETE,/api/v1/private/products/{id}/reviews/{reviewid},EI,2,3,L,3,Відгук про товар; Товар
+ProductTypeApi,list,GET,/api/v1/private/product/types,EQ,1,16,L,3,Тип товару
+ProductTypeApi,get,GET,/api/v1/private/product/type/{id},EQ,1,12,L,3,Тип товару
+ProductTypeApi,exists,GET,/api/v1/private/product/type/unique,EQ,1,1,L,3,Тип товару
+ProductTypeApi,create,POST,/api/v1/private/product/type,EI,1,13,L,3,Тип товару
+ProductTypeApi,update,PUT,/api/v1/private/product/type/{id},EI,1,14,L,3,Тип товару
+ProductTypeApi,delete,DELETE,/api/v1/private/product/type/{id},EI,1,2,L,3,Тип товару
+ReferencesApi,getLanguages,GET,/api/v1/languages,EQ,1,2,L,3,Довідники
+ReferencesApi,getCountry,GET,/api/v1/country,EQ,2,7,A,4,Довідники; Магазин
+ReferencesApi,getZones,GET,/api/v1/zones,EQ,2,4,L,3,Довідники; Магазин
+ReferencesApi,getCurrency,GET,/api/v1/currency,EQ,1,5,L,3,Довідники
+ReferencesApi,measures,GET,/api/v1/measures,EQ,1,2,L,3,Довідники
+SearchApi,search,POST,/api/v1/search,EQ,1,1,L,3,Товар
+SearchApi,autocomplete,POST,/api/v1/search/autocomplete,EQ,1,1,L,3,Товар
+SecurityApi,listPermissions,GET,/api/v1/sec/private/{group}/permissions,EQ,1,2,L,3,Користувач
+SecurityApi,permissions,GET,/api/v1/sec/private/permissions,EQ,1,2,L,3,Користувач
+SecurityApi,groups,GET,/api/v1/sec/private/groups,EQ,1,3,L,3,Користувач
+ShippingConfigurationApi,shippingOrigin,GET,/api/v1/private/shipping/origin,EO,2,6,A,5,Інтеграційний модуль; Доставка
+ShippingConfigurationApi,saveShippingOrigin,POST,/api/v1/private/shipping/origin,EO,2,1,L,4,Інтеграційний модуль; Доставка
+ShippingConfigurationApi,listPackages,GET,/api/v1/private/shipping/packages,EO,2,10,A,5,Інтеграційний модуль; Доставка
+ShippingConfigurationApi,getPackage,GET,/api/v1/private/shipping/package/{code},EO,2,10,A,5,Інтеграційний модуль; Доставка
+ShippingConfigurationApi,createPackage,POST,/api/v1/private/shipping/package,EO,2,1,L,4,Інтеграційний модуль; Доставка
+ShippingConfigurationApi,updatePackage,PUT,/api/v1/private/shipping/package/{code},EO,2,1,L,4,Інтеграційний модуль; Доставка
+ShippingConfigurationApi,deletePackage,DELETE,/api/v1/private/shipping/package/{code},EO,2,1,L,4,Інтеграційний модуль; Доставка
+ShippingConfigurationApi,shippingModules,GET,/api/v1/private/modules/shipping,EO,2,7,A,5,Інтеграційний модуль; Доставка
+ShippingConfigurationApi,shippingModule,GET,/api/v1/private/modules/shipping/{code},EO,2,6,A,5,Інтеграційний модуль; Доставка
+ShippingConfigurationApi,configure,POST,/api/v1/private/modules/shipping,EO,2,1,L,4,Інтеграційний модуль; Доставка
+ShippingExpeditionApi,expedition,GET,/api/v1/private/shipping/expedition,EO,1,3,L,4,Доставка
+ShippingExpeditionApi,getCountry,GET,/api/v1/shipping/country,EO,1,7,L,4,Доставка
+ShippingExpeditionApi,saveExpedition,POST,/api/v1/private/shipping/expedition,EO,1,1,L,4,Доставка
+ShoppingCartApi,addToCart,POST,/api/v1/cart,EI,2,5,A,4,Кошик; Товар
+ShoppingCartApi,modifyCart,PUT,/api/v1/cart/{code},EI,2,6,A,4,Кошик; Товар
+ShoppingCartApi,modifyCart,POST,/api/v1/cart/{code}/promo/{promo},EI,2,3,L,3,Кошик; Товар
+ShoppingCartApi,modifyCart,POST,/api/v1/cart/{code}/multi,EI,2,3,L,3,Кошик; Товар
+ShoppingCartApi,getByCode,GET,/api/v1/cart/{code},EO,2,92,H,7,Кошик; Товар
+ShoppingCartApi,addToCart,POST,/api/v1/customers/{id}/cart,EI,2,6,A,4,Кошик; Товар
+ShoppingCartApi,getByCustomer,GET,/api/v1/auth/customer/{id}/cart,EO,3,92,H,7,Клієнт; Кошик; Товар
+ShoppingCartApi,getByCustomer,GET,/api/v1/auth/customer/cart,EO,3,92,H,7,Клієнт; Кошик; Товар
+ShoppingCartApi,deleteCartItem,DELETE,/api/v1/cart/{code}/product/{sku},EI,2,4,L,3,Кошик; Товар
+MerchantStoreApi,store,GET,/api/v1/store/{code},EQ,1,28,A,4,Магазин
+MerchantStoreApi,storeFull,GET,/api/v1/private/store/{code},EQ,2,28,H,6,Користувач; Магазин
+MerchantStoreApi,list,GET,/api/v1/private/merchant/{code}/stores,EQ,2,32,H,6,Користувач; Магазин
+MerchantStoreApi,get,GET,/api/v1/private/stores,EQ,2,32,H,6,Користувач; Магазин
+MerchantStoreApi,list,GET,/api/v1/private/stores/names,EQ,2,28,H,6,Користувач; Магазин
+MerchantStoreApi,supportedLanguages,GET,/api/v1/store/languages,EQ,1,2,L,3,Магазин
+MerchantStoreApi,create,POST,/api/v1/private/store,EI,2,23,H,6,Користувач; Магазин
+MerchantStoreApi,update,PUT,/api/v1/private/store/{code},EI,1,24,A,4,Магазин
+MerchantStoreApi,getStoreMarketing,GET,/api/v1/private/store/{code}/marketing,EQ,1,7,L,3,Магазин
+MerchantStoreApi,children,GET,/api/v1/private/merchant/{code}/children,EQ,1,32,A,4,Магазин
+MerchantStoreApi,saveStoreMarketing,POST,/api/v1/private/store/{code}/marketing,EI,1,7,L,3,Магазин
+MerchantStoreApi,addLogo,POST,/api/v1/private/store/{code}/marketing/logo,EI,1,3,L,3,Магазин
+MerchantStoreApi,deleteStoreLogo,DELETE,/api/v1/private/store/{code}/marketing/logo,EI,1,2,L,3,Магазин
+MerchantStoreApi,exists,GET,/api/v1/store/unique,EQ,1,1,L,3,Магазин
+MerchantStoreApi,delete,DELETE,/api/v1/private/store/{code},EI,1,2,L,3,Магазин
+ContactApi,contact,POST,/api/v1/contact,EI,1,5,L,3,Магазин
+OptinApi,create,POST,/api/v1/private/optin,EI,1,8,L,3,Підписка
+PublicConfigsApi,getConfig,GET,/api/v1/config,EQ,1,12,L,3,Конфігурація
+SearchToolsApi,contact,POST,/api/v1/private/system/search/index,EQ,2,1,L,3,Користувач; Товар
+TaxClassApi,create,POST,/api/v1/private/tax/class,EI,1,5,L,3,Податки
+TaxClassApi,exists,GET,/api/v1/private/tax/class/unique,EQ,1,1,L,3,Податки
+TaxClassApi,update,PUT,/api/v1/private/tax/class/{id},EI,1,6,L,3,Податки
+TaxClassApi,list,GET,/api/v1/private/tax/class,EQ,1,5,L,3,Податки
+TaxClassApi,get,GET,/api/v1/private/tax/class/{code},EQ,1,4,L,3,Податки
+TaxClassApi,delete,DELETE,/api/v1/private/tax/class/{id},EI,1,2,L,3,Податки
+TaxRatesApi,create,POST,/api/v1/private/tax/rate,EI,1,17,A,4,Податки
+TaxRatesApi,exists,GET,/api/v1/private/tax/rate/unique,EQ,1,1,L,3,Податки
+TaxRatesApi,update,PUT,/api/v1/private/tax/rate/{id},EI,1,18,A,4,Податки
+TaxRatesApi,list,GET,/api/v1/private/tax/rates,EQ,1,5,L,3,Податки
+TaxRatesApi,get,GET,/api/v1/private/tax/rate/{id},EQ,1,18,L,3,Податки
+TaxRatesApi,delete,DELETE,/api/v1/private/tax/rate/{id},EI,1,2,L,3,Податки
+AuthenticateUserApi,authenticate,POST,/api/v1/private/login,EQ,1,1,L,3,Користувач
+AuthenticateUserApi,refreshAndGetAuthenticationToken,GET,/api/v1/auth/refresh,EQ,1,2,L,3,Користувач
+ResetUserPasswordApi,passwordResetRequest,POST,/api/v1/user/password/reset/request,EI,1,3,L,3,Користувач
+ResetUserPasswordApi,passwordResetVerify,GET,/api/v1/user/{store}/reset/{token},EQ,1,1,L,3,Користувач
+ResetUserPasswordApi,changePassword,POST,/api/v1/user/{store}/password/{token},EI,1,7,L,3,Користувач
+UserApi,get,GET,/api/v1/private/users/{id},EQ,1,17,L,3,Користувач
+UserApi,create,POST,/api/v1/private/user/,EI,1,15,L,3,Користувач
+UserApi,update,PUT,/api/v1/private/user/{id},EI,1,16,A,4,Користувач
+UserApi,password,PATCH,/api/v1/private/user/{id}/password,EI,1,4,L,3,Користувач
+UserApi,list,GET,/api/v1/private/users,EQ,1,21,A,4,Користувач
+UserApi,updateEnabled,PATCH,/api/v1/private/user/{id}/enabled,EI,1,16,A,4,Користувач
+UserApi,delete,DELETE,/api/v1/private/user/{id},EI,1,2,L,3,Користувач
+UserApi,exists,POST,/api/v1/private/user/unique,EI,1,3,L,3,Користувач
+UserApi,getAuthUser,GET,/api/v1/private/user/profile,EQ,1,17,L,3,Користувач
+ProductApiV2,create,POST,/api/v2/private/product/inventory,EI,1,86,A,4,Товар
+ProductApiV2,createV2,POST,/api/v2/private/product,EI,1,46,A,4,Товар
+ProductApiV2,updateV2,PUT,/api/v2/private/product/{id},EI,1,47,A,4,Товар
+ProductApiV2,getV2,GET,/api/v2/private/product/{id},EQ,1,97,A,4,Товар
+ProductApiV2,deleteV2,DELETE,/api/v2/private/product/{id},EI,1,2,L,3,Товар
+ProductApiV2,getByfriendlyUrl,GET,/api/v2/product/name/{friendlyUrl},EQ,1,102,A,4,Товар
+ProductApiV2,list,GET,/api/v2/products/category/{friendlyUrl},EQ,2,106,H,6,Категорія; Товар
+ProductApiV2,list,GET,/api/v2/products,EQ,1,106,A,4,Товар
+ProductApiV2,update,PATCH,/api/v2/private/product/{sku},EI,1,6,L,3,Товар
+ProductApiV2,get,GET,/api/v2/product/{sku},EQ,1,102,A,4,Товар
+ProductVariantApi,create,POST,/api/v2/private/product/{productId}/variant,EI,2,40,H,6,Варіанти товару; Користувач
+ProductVariantApi,update,PUT,/api/v2/private/product/{id}/variant/{variantId},EI,2,41,H,6,Варіанти товару; Користувач
+ProductVariantApi,exists,GET,/api/v2/private/product/{id}/variant/{sku}/unique,EQ,2,1,L,3,Варіанти товару; Користувач
+ProductVariantApi,get,GET,/api/v2/private/product/{id}/variant/{variantId},EQ,1,9,L,3,Варіанти товару
+ProductVariantApi,list,GET,/api/v2/private/product/{id}/variants,EQ,1,5,L,3,Варіанти товару
+ProductVariantApi,delete,DELETE,/api/v2/private/product/{id}/variant/{variantId},EI,1,3,L,3,Варіанти товару
+ProductVariantGroupApi,create,POST,/api/v2/private/product/productVariantGroup,EI,2,3,L,3,Варіанти товару; Користувач
+ProductVariantGroupApi,update,PUT,/api/v2/private/product/productVariantGroup/{id},EI,2,4,L,3,Варіанти товару; Користувач
+ProductVariantGroupApi,get,GET,/api/v2/private/product/productVariantGroup/{id},EQ,2,11,A,4,Варіанти товару; Користувач
+ProductVariantGroupApi,delete,DELETE,/api/v2/private/product/productVariantGroup/{id},EI,2,2,L,3,Варіанти товару; Користувач
+ProductVariantGroupApi,list,GET,/api/v2/private/product/{id}/productVariantGroup,EQ,2,5,L,3,Варіанти товару; Користувач
+ProductVariantGroupApi,addImage,POST,/api/v2/private/product/productVariantGroup/{id}/image,EI,2,3,L,3,Варіанти товару; Користувач
+ProductVariantGroupApi,removeImage,DELETE,/api/v2/private/product/productVariantGroup/{id}/image/{imageId},EI,2,3,L,3,Варіанти товару; Користувач
+ProductVariationApi,calculateVariant,POST,/api/v2/product/{id}/variation,EI,3,8,H,6,Варіанти товару; Опції товару; Товар
+ProductVariationApi,categoryVariantList,GET,/api/v2/category/{id}/variations,EQ,3,9,A,4,Варіанти товару; Категорія; Опції товару
+ProductVariationApi,create,POST,/api/v2/private/product/variation,EI,2,8,A,4,Варіанти товару; Опції товару
+ProductVariationApi,exists,GET,/api/v2/private/product/variation/unique,EQ,2,1,L,3,Варіанти товару; Опції товару
+ProductVariationApi,get,GET,/api/v2/private/product/variation/{variationId},EQ,2,19,A,4,Варіанти товару; Опції товару
+ProductVariationApi,update,PUT,/api/v2/private/product/variation/{variationId},EI,2,9,A,4,Варіанти товару; Опції товару
+ProductVariationApi,delete,DELETE,/api/v2/private/product/variation/{variationId},EI,2,2,L,3,Варіанти товару; Опції товару
+ProductVariationApi,list,GET,/api/v2/private/product/variations,EQ,2,5,L,3,Варіанти товару; Опції товару

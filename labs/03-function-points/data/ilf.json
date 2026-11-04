@@ -1,0 +1,293 @@
+{
+ "ilf": {
+  "Товар": {
+   "entities": [
+    "Product",
+    "ProductDescription",
+    "ProductAvailability",
+    "ProductPrice",
+    "ProductPriceDescription",
+    "DigitalProduct",
+    "ProductRelationship"
+   ],
+   "ret": 7,
+   "det": 78,
+   "level": "H"
+  },
+  "Зображення товару": {
+   "entities": [
+    "ProductImage",
+    "ProductImageDescription"
+   ],
+   "ret": 2,
+   "det": 15,
+   "level": "L"
+  },
+  "Опції товару": {
+   "entities": [
+    "ProductOption",
+    "ProductOptionDescription",
+    "ProductOptionValue",
+    "ProductOptionValueDescription",
+    "ProductOptionSet",
+    "ProductAttribute"
+   ],
+   "ret": 6,
+   "det": 38,
+   "level": "H"
+  },
+  "Варіанти товару": {
+   "entities": [
+    "ProductVariation",
+    "ProductVariant",
+    "ProductVariantGroup",
+    "ProductVariantImage",
+    "ProductVariantImageDescription"
+   ],
+   "ret": 5,
+   "det": 29,
+   "level": "A"
+  },
+  "Тип товару": {
+   "entities": [
+    "ProductType",
+    "ProductTypeDescription"
+   ],
+   "ret": 2,
+   "det": 11,
+   "level": "L"
+  },
+  "Виробник": {
+   "entities": [
+    "Manufacturer",
+    "ManufacturerDescription"
+   ],
+   "ret": 2,
+   "det": 14,
+   "level": "L"
+  },
+  "Відгук про товар": {
+   "entities": [
+    "ProductReview",
+    "ProductReviewDescription"
+   ],
+   "ret": 2,
+   "det": 16,
+   "level": "L"
+  },
+  "Категорія": {
+   "entities": [
+    "Category",
+    "CategoryDescription"
+   ],
+   "ret": 2,
+   "det": 22,
+   "level": "A"
+  },
+  "Каталог": {
+   "entities": [
+    "Catalog",
+    "CatalogCategoryEntry",
+    "CatalogDescription"
+   ],
+   "ret": 3,
+   "det": 15,
+   "level": "L"
+  },
+  "Контент": {
+   "entities": [
+    "Content",
+    "ContentDescription"
+   ],
+   "ret": 2,
+   "det": 19,
+   "level": "L"
+  },
+  "Клієнт": {
+   "entities": [
+    "Customer",
+    "CustomerAttribute",
+    "UserConnection"
+   ],
+   "ret": 3,
+   "det": 53,
+   "level": "H"
+  },
+  "Опції клієнта": {
+   "entities": [
+    "CustomerOption",
+    "CustomerOptionDescription",
+    "CustomerOptionValue",
+    "CustomerOptionValueDescription",
+    "CustomerOptionSet"
+   ],
+   "ret": 5,
+   "det": 26,
+   "level": "A"
+  },
+  "Відгук клієнта": {
+   "entities": [
+    "CustomerReview",
+    "CustomerReviewDescription"
+   ],
+   "ret": 2,
+   "det": 16,
+   "level": "L"
+  },
+  "Магазин": {
+   "entities": [
+    "MerchantStore"
+   ],
+   "ret": 1,
+   "det": 27,
+   "level": "L"
+  },
+  "Замовлення": {
+   "entities": [
+    "Order",
+    "OrderTotal",
+    "OrderAttribute",
+    "OrderProduct",
+    "OrderProductAttribute",
+    "OrderProductPrice",
+    "OrderProductDownload",
+    "OrderStatusHistory",
+    "OrderAccount",
+    "OrderAccountProduct",
+    "FileHistory"
+   ],
+   "ret": 11,
+   "det": 113,
+   "level": "H"
+  },
+  "Платіжна транзакція": {
+   "entities": [
+    "Transaction"
+   ],
+   "ret": 1,
+   "det": 8,
+   "level": "L"
+  },
+  "Кошик": {
+   "entities": [
+    "ShoppingCart",
+    "ShoppingCartItem",
+    "ShoppingCartAttributeItem"
+   ],
+   "ret": 3,
+   "det": 16,
+   "level": "L"
+  },
+  "Доставка": {
+   "entities": [
+    "ShippingOrigin",
+    "Quote"
+   ],
+   "ret": 2,
+   "det": 34,
+   "level": "A"
+  },
+  "Податки": {
+   "entities": [
+    "TaxClass",
+    "TaxRate",
+    "TaxRateDescription"
+   ],
+   "ret": 3,
+   "det": 20,
+   "level": "A"
+  },
+  "Користувач": {
+   "entities": [
+    "User",
+    "Group",
+    "Permission"
+   ],
+   "ret": 3,
+   "det": 23,
+   "level": "A"
+  },
+  "Інтеграційний модуль": {
+   "entities": [
+    "IntegrationModule"
+   ],
+   "ret": 1,
+   "det": 10,
+   "level": "L"
+  },
+  "Конфігурація": {
+   "entities": [
+    "MerchantConfiguration",
+    "SystemConfiguration"
+   ],
+   "ret": 2,
+   "det": 9,
+   "level": "L"
+  },
+  "Підписка": {
+   "entities": [
+    "Optin",
+    "CustomerOptin"
+   ],
+   "ret": 2,
+   "det": 15,
+   "level": "L"
+  },
+  "Журнал і сповіщення": {
+   "entities": [
+    "MerchantLog",
+    "SystemNotification"
+   ],
+   "ret": 2,
+   "det": 11,
+   "level": "L"
+  },
+  "Довідники": {
+   "entities": [
+    "Country",
+    "CountryDescription",
+    "Zone",
+    "ZoneDescription",
+    "Currency",
+    "Language",
+    "GeoZone",
+    "GeoZoneDescription"
+   ],
+   "ret": 8,
+   "det": 30,
+   "level": "H"
+  },
+  "Файлове сховище": {
+   "entities": [
+    "Зображення (товару)",
+    "Файл (контенту)"
+   ],
+   "ret": 2,
+   "det": 7,
+   "level": "L"
+  }
+ },
+ "eif": {
+  "Тарифи перевізників (UPS, USPS)": {
+   "ret": 2,
+   "det": 8,
+   "note": "пропозиція доставки і послуга: код, назва, ціна, валюта, термін, вага, пункти відправлення і призначення",
+   "level": "L"
+  },
+  "Платіжні шлюзи (Stripe, PayPal, Braintree, BeanStream)": {
+   "ret": 2,
+   "det": 12,
+   "note": "запит і відповідь шлюзу: ідентифікатор, статус, сума, валюта, токен, код помилки",
+   "level": "L"
+  }
+ },
+ "file_storage": {
+  "ret": 2,
+  "det": 7,
+  "entities": [
+   "Зображення (товару)",
+   "Файл (контенту)"
+  ]
+ },
+ "unassigned": []
+}
